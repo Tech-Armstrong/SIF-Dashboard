@@ -1,0 +1,4294 @@
+{
+  "meta": {
+    "title": "Specialised Investment Funds — Research Dashboard",
+    "source": "Derived from SIFs peer-comparison; returns/performance sections intentionally excluded.",
+    "sebiEffective": "2025-04-01",
+    "minInvestment": "₹10,00,000 (PAN level, per AMC)",
+    "colorTokens": {
+      "--ink": "#1a1d21",
+      "--ink-soft": "#3c4248",
+      "--muted": "#6c757a",
+      "--faint": "#9aa2a8",
+      "--paper": "#f4f1ea",
+      "--paper-2": "#ece7dc",
+      "--card": "#fbf9f4",
+      "--line": "#ddd6c8",
+      "--line-strong": "#c3b9a4",
+      "--gold": "#9a7b2e",
+      "--accent": "#1b4332",
+      "--pos": "#1f7a4d",
+      "--neg": "#b5341f",
+      "--isif": "#c0392b",
+      "--qsif": "#0e7c66",
+      "--arudha": "#a21d5a",
+      "--diviniti": "#4338ca",
+      "--dyna": "#b7791f",
+      "--titanium": "#1d5fae",
+      "--sapphire": "#6d28d9",
+      "--altiva": "#c2410c",
+      "--apex": "#be123c",
+      "--magnum": "#0c5a8a"
+    }
+  },
+  "primerHtml": "\n<p class=\"lead\">In a move to bridge the gap between traditional mutual funds and Portfolio Management Services (PMS), SEBI introduced a new category — <b>Specialised Investment Funds (SIFs)</b> — effective 1 April 2025. Designed for seasoned investors, SIFs allow sophisticated strategies such as long-short positions, sector rotation and dynamic asset allocation, with a minimum investment of ₹10 lakh, regulated under SEBI's mutual fund framework.</p>\n<h3>Key Takeaways</h3>\n<ul>\n<li>The full form is <b>Specialised Investment Fund</b> — a new SEBI category bridging traditional mutual funds and PMS.</li>\n<li>Offers sophisticated, strategy-based options sitting <b>between mutual funds and PMS</b>.</li>\n<li><b>Minimum ₹10 lakh per investor</b> (PAN level) across all SIF strategies within a single AMC — unless accredited.</li>\n<li>Permits <b>long-short strategies, sectoral rotation and dynamic asset allocation</b> for greater flexibility.</li>\n<li>Redemption may be less frequent; AMCs may impose <b>notice periods of up to 15 days</b>.</li>\n<li>Best suited to experienced / high-net-worth investors comfortable with volatility who don't need high liquidity.</li>\n</ul>\n<h3>What is a Specialised Investment Fund?</h3>\n<p>A SIF is a new investment structure introduced by SEBI (effective 1 April 2025) that lets AMCs offer strategy-focused schemes with greater portfolio flexibility than traditional mutual funds.</p>\n<ul>\n<li>Serves investors seeking advanced asset-allocation methods within a regulated framework.</li>\n<li>Permitted to use complex strategies — long-short equity, sector positioning, active asset allocation — and can take <b>unhedged short positions up to 25%</b> of the portfolio using derivatives.</li>\n<li>Suitable for investors comfortable with moderately complex products who can meet the ₹10 lakh minimum.</li>\n<li>May follow <b>equity-oriented, debt-oriented or hybrid</b> strategies.</li>\n</ul>\n<h3>How Do SIFs Work?</h3>\n<p>SIFs operate under SEBI Mutual Fund Regulations as a distinct category of strategy-specific schemes, structured as open-ended or interval funds. AMCs can invest across listed equities, debt, commodity derivatives and REITs/InvITs, and may take unhedged shorts of up to 25% of net assets via derivatives — capturing both upward and downward moves.</p>\n<p>Investors must meet the ₹10 lakh minimum (accredited investors exempt). SIP, SWP and STP are permitted as long as the overall commitment meets the threshold. Redemption can be less frequent (daily to monthly or fixed maturity), with notice periods up to 15 working days, plus strict disclosure norms.</p>\n<h3>SEBI Regulations &amp; Minimum-Investment Rules (2025)</h3>\n<ul>\n<li>The ₹10 lakh minimum is mandated under <b>Regulation 49X(1)</b>, per investor at PAN level across all SIF strategies of a single AMC.</li>\n<li>The threshold is <b>not scheme-specific</b> — it is the total commitment across all SIFs under one AMC, excluding regular MF schemes.</li>\n<li><b>Accredited investors</b> are exempt from the ₹10 lakh minimum.</li>\n<li>SIP / SWP / STP allowed provided the cumulative commitment meets the threshold.</li>\n<li>Daily monitoring applies — passive market-driven breaches are fine; active redemptions below ₹10 lakh may require exit.</li>\n</ul>\n<h3>Strategies Allowed Under SIFs</h3>\n<h4>A. Equity-Oriented Strategies</h4>\n<ul>\n<li><b>Equity Long-Short Fund</b> — min 80% equity; up to 25% unhedged short; open-ended/interval; daily redemption.</li>\n<li><b>Equity Ex-Top 100 Long-Short Fund</b> — min 65% outside top 100 by market cap; up to 25% short in mid/small caps.</li>\n<li><b>Sector Rotation Long-Short Fund</b> — min 80% equity across a maximum of four sectors; up to 25% short at sector level.</li>\n</ul>\n<h4>B. Debt-Oriented Strategies</h4>\n<ul>\n<li><b>Debt Long-Short Fund</b> — fixed-income across durations; shorts via exchange-traded debt derivatives; interval; weekly redemption.</li>\n<li><b>Sectoral Debt Long-Short Fund</b> — debt across ≥2 sectors (≤75% in one); up to 25% short within a sector.</li>\n</ul>\n<h4>C. Hybrid Strategies</h4>\n<ul>\n<li><b>Active Asset Allocator Long-Short Fund</b> — equity, debt, derivatives, REITs/InvITs, commodity derivatives; max 25% short; interval; redemption twice a week or more.</li>\n<li><b>Hybrid Long-Short Fund</b> — min 25% equity, min 25% debt; up to 25% unhedged short across both; interval.</li>\n</ul>\n<h3>Benefits &amp; Risks</h3>\n<div class=\"kt\">\n<div class=\"ktc\"><b>✓ Differentiated strategies</b>Long-short equity, tactical allocation and sector rotation not found in regular MFs.</div>\n<div class=\"ktc\"><b>✓ Cross-asset diversification</b>Equities, debt, derivatives, REITs/InvITs and commodities in one wrapper.</div>\n<div class=\"ktc\"><b>✓ Customised exposure</b>Focused, high-conviction portfolios run by experienced managers.</div>\n<div class=\"ktc\"><b>✓ Enhanced-return potential</b>Short selling &amp; dynamic rebalancing aim for alpha even in falling markets.</div>\n<div class=\"ktc\"><b>✗ High ₹10 lakh minimum</b>Restricts access to HNI / financially-prepared investors.</div>\n<div class=\"ktc\"><b>✗ Lower liquidity</b>Less-frequent redemption, notice periods up to 15 days, possible exit loads.</div>\n<div class=\"ktc\"><b>✗ Market &amp; manager risk</b>Equity, rate &amp; credit risk plus dependence on manager skill.</div>\n</div>\n<h3>SIF vs Traditional Mutual Funds</h3>\n<table>\n<thead><tr><th>Feature</th><th>SIF</th><th>Traditional MF</th></tr></thead>\n<tbody>\n<tr><td>Investor eligibility</td><td>Accredited, HNI &amp; institutional</td><td>General public incl. retail</td></tr>\n<tr><td>Minimum investment</td><td>From ₹10 lakh (PAN level)</td><td>As low as ₹100</td></tr>\n<tr><td>Regulation</td><td>SEBI MF Regs with special SIF provisions</td><td>SEBI Mutual Fund Regulations</td></tr>\n<tr><td>Liquidity</td><td>Lower — daily to quarterly; lock-in / notice possible</td><td>High — daily redemption</td></tr>\n<tr><td>Asset flexibility</td><td>Niche/alternative incl. derivatives, REITs, commodities</td><td>Primarily stocks &amp; bonds</td></tr>\n<tr><td>Risk profile</td><td>High — short selling, concentration (0% leverage)</td><td>Moderate to high by type</td></tr>\n</tbody>\n</table>\n<h3>Who Should Invest?</h3>\n<ul>\n<li>Investors with surplus capital (₹10 lakh+) willing to commit for a longer horizon.</li>\n<li>Those who understand derivatives, long-short positions and asset-allocation shifts.</li>\n<li>Investors wanting non-traditional strategies unavailable in regular mutual funds.</li>\n<li>Those comfortable with lower liquidity, market fluctuation and higher volatility.</li>\n</ul>\n",
+  "categories": [
+    {
+      "id": "ex-top-100-long-short",
+      "chip": "Equity · Ex-Top 100 Long-Short",
+      "chipColor": "var(--isif)",
+      "title": "Equity Ex-Top 100 Long-Short",
+      "desc": "SMID-cap long-short strategies investing in companies beyond the Top 100 by market cap (min 65% Ex-Top 100), with up to 25% unhedged short via derivatives. Both benchmark to Nifty 500 TRI.",
+      "cols": [
+        {
+          "short": "iSIF",
+          "amc": "ICICI Pru",
+          "color": "var(--isif)"
+        },
+        {
+          "short": "qsif",
+          "amc": "Quant",
+          "color": "var(--qsif)"
+        }
+      ],
+      "cards": [
+        {
+          "ac": "var(--isif)",
+          "amc": "ICICI Prudential Mutual Fund",
+          "name": "iSIF Equity Ex-Top 100 Long-Short",
+          "facts": [
+            [
+              "Fund Size",
+              "₹1,535.22 Cr"
+            ],
+            [
+              "Inception",
+              "4 Feb 2026"
+            ],
+            [
+              "NAV (Reg)",
+              "₹9.76"
+            ],
+            [
+              "Expense (Reg)",
+              "1.81%"
+            ],
+            [
+              "Investment Style",
+              "SMID Cap · up to 25% Short"
+            ]
+          ],
+          "tags": [
+            [
+              "Nifty 500 TRI",
+              "tg"
+            ],
+            [
+              "Fundamental",
+              "tg"
+            ],
+            [
+              "Bottom-up",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--qsif)",
+          "amc": "Quant Mutual Fund",
+          "name": "qsif Equity Ex-Top 100 Long-Short",
+          "facts": [
+            [
+              "Fund Size",
+              "₹211.68 Cr"
+            ],
+            [
+              "Inception",
+              "12 Nov 2025"
+            ],
+            [
+              "NAV (Reg)",
+              "₹9.65"
+            ],
+            [
+              "Expense (Reg)",
+              "Refer qsif.com"
+            ],
+            [
+              "Investment Style",
+              "SMID · Beta mgmt, 25% Short"
+            ]
+          ],
+          "tags": [
+            [
+              "Nifty 500 TRI",
+              "tg"
+            ],
+            [
+              "Systematic / Quant",
+              "tg"
+            ],
+            [
+              "Beta 0.49",
+              "tg"
+            ]
+          ]
+        }
+      ],
+      "single": null,
+      "sections": [
+        {
+          "id": "A",
+          "title": "Fund Overview & Key Facts",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Asset Manager",
+              "ICICI Prudential Mutual Fund",
+              "Quant Mutual Fund (quant Money Managers Ltd)"
+            ],
+            [
+              "SIF Category",
+              "Equity — Ex-Top 100 Long-Short",
+              "Equity — Ex-Top 100 Long-Short (SMID)"
+            ],
+            [
+              "Investment Type",
+              "Open-ended equity: equity & equity-related + limited short via derivatives, of Ex-Top 100 stocks",
+              "Open-ended: equity & equity-related + limited short via derivatives, of stocks other than large caps (Ex-Top 100)"
+            ],
+            [
+              "Benchmark",
+              "Nifty 500 TRI",
+              "Nifty 500 Total Return Index (TRI)"
+            ],
+            [
+              "Inception Date",
+              "4 February 2026",
+              "12 November 2025"
+            ],
+            [
+              "NAV (Reg)",
+              "₹9.76 (30-Apr-26)",
+              "₹9.65 (18-May-26)"
+            ],
+            [
+              "Fund Size (AUM)",
+              "Closing ₹1,535.22 Cr · AAUM ₹1,408.98 Cr (30-Apr-26)",
+              "₹211.68 Cr ($0.02 Bn) (30-Apr-26)"
+            ],
+            [
+              "Min. Investment",
+              "₹10,00,000 · Additional ₹10,000",
+              "₹10,00,000 · Additional ₹10,000 · Min. redemption ₹1,000"
+            ],
+            [
+              "Entry / Exit Load",
+              "Entry Nil · Exit 1% if &lt;12 months; Nil after",
+              "Entry Nil · Exit 1% if &lt;15 days; Nil after"
+            ],
+            [
+              "SIP",
+              "Daily ₹5,000 · Wk/FN/Mthly ₹10,000 · Qtrly ₹20,000",
+              "₹10,000 and in multiples of Re.1"
+            ],
+            [
+              "Expense (Reg)",
+              "1.81% (30-Apr-26)",
+              "Refer qsif.com (not stated in factsheet)"
+            ],
+            [
+              "Taxation",
+              "Equity-oriented: LTCG 12.5% (&gt;12 months)",
+              "Equity-oriented MF taxation; high tax efficiency"
+            ],
+            [
+              "Investment Horizon",
+              "3 years and above",
+              "Short–medium (FM); long-term (investors)"
+            ],
+            [
+              "Fund Managers",
+              "Sankaran Naren · Manan Tijoriwala · Divya Jain",
+              "Sandeep Tandon · Lokesh Garg · Sameer Kate · Ankit Pande · Sanjeev Sharma"
+            ],
+            [
+              "Framework",
+              "Bottom-up · fundamental/technical/macro screening",
+              "Systematic Active Investing (MARCOV) — 70% HFA + 30% LFA"
+            ]
+          ]
+        },
+        {
+          "id": "B",
+          "title": "Investment Strategy & Core Allocation",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "note": "iSIF — Asset Allocation Framework  vs  qsif — Indicative Allocation, Risk & Ranges. Both maintain min equity (long+short); qsif min = 65%; 0% leverage.",
+          "rows": [
+            [
+              "Core SMID",
+              "<b>Ex-Top 100 (Mid/Small) incl. ≤25% unhedged short:</b> 65%–100% — core SMID long + short alpha",
+              "<b>SMID cash equity / arbitrage:</b> 65–100% (High/Low risk)"
+            ],
+            [
+              "Long derivatives",
+              "—",
+              "<b>SMID unhedged derivatives (Long):</b> 0–35% (High)"
+            ],
+            [
+              "Short derivatives",
+              "—",
+              "<b>SMID unhedged derivatives (Short):</b> 0–25% (High)"
+            ],
+            [
+              "Other equity / large cap",
+              "<b>Other Equity & related + Debt:</b> 0%–35% — large caps, debt & MM, debt MF units",
+              "<b>Large cap long-only:</b> 0–35% (High)"
+            ],
+            [
+              "Hedging",
+              "(within toolkit)",
+              "<b>Hedging:</b> 0–100% (Moderate)"
+            ],
+            [
+              "Others / Margins",
+              "<b>Others (InvITs):</b> 0%–20%",
+              "<b>Margins (Cash, T-bills, G-secs):</b> 0–15% (Minimal)"
+            ]
+          ]
+        },
+        {
+          "id": "C",
+          "title": "Methodology & Investment Approach",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Approach 1",
+              "<b>Fundamental Focused</b> — stock selection driven by valuations & earnings revision; bottom-up research on the Ex-Top 100 universe.",
+              "<b>Signal Generation (MARCOV + quantamine)</b> — ingests macro, microstructure, sentiment, liquidity & volatility; MARCOV at 70% HFA + 30% LFA with liquidity/tradability/regime filters."
+            ],
+            [
+              "Approach 2",
+              "<b>Technical Focused</b> — market-trend signals time and size exposure to mid & small caps.",
+              "<b>Stock Selection (Long & Short)</b> — Long: mid & small caps; Short: mid caps in F&O basket; money-manager inputs overlay quant signals."
+            ],
+            [
+              "Approach 3",
+              "<b>Macro Focused</b> — liquidity and the Real Effective Exchange Rate (REER) guide allocation.",
+              "<b>Portfolio Construction & Sizing</b> — Risk Management Matrix + Money Management Matrix + Smart Order Routing."
+            ],
+            [
+              "Approach 4",
+              "<b>Bottom-Up Selection</b> — long high-conviction mid/small caps; short overvalued names via derivatives (≤25%).",
+              "<b>Dynamic Rebalancing & Monitoring</b> — daily monitoring, stress tests, small/mid rebalancing, attribution & model updates."
+            ]
+          ]
+        },
+        {
+          "id": "D",
+          "title": "Stock Selection Criteria",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Criterion 1",
+              "<b>Potential Market Leader</b> — well-established player with strong network",
+              "<b>Long Book</b> — high-quality mid & small caps; strong balance sheets, earnings visibility, scalable models"
+            ],
+            [
+              "Criterion 2",
+              "<b>Strengthening Balance Sheet</b> — low leverage, cash rich, tangible assets",
+              "<b>Short Book</b> — mid caps in the F&O basket; overvalued or fundamentally weak names"
+            ],
+            [
+              "Criterion 3",
+              "<b>Low Cost Producer</b> — cost advantage, entry barriers, economic moat",
+              "<b>Signal Engine</b> — MARCOV (70% HFA + 30% LFA) → liquidity/tradability → regime filters"
+            ],
+            [
+              "Criterion 4",
+              "<b>Earnings Potential</b> — high earnings visibility & growth across cycles",
+              "<b>Human Overlay</b> — money-manager inputs finalise long & short selection"
+            ],
+            [
+              "Criterion 5",
+              "<b>Valuation Comfort</b> — reasonable and relative valuations",
+              "<b>Positioning</b> — high active share vs benchmark; opportunistic shorting"
+            ]
+          ]
+        },
+        {
+          "id": "E",
+          "title": "Long-Short / Derivative Toolkit",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Tool 1",
+              "<b>Arbitrage</b> — short futures against the underlying stock",
+              "<b>Arbitrage</b> — cash-futures spread capture (low risk)"
+            ],
+            [
+              "Tool 2",
+              "<b>Covered Calls</b> — short calls against the underlying stock",
+              "<b>Covered Call / Protective Put</b> — income & downside protection (low risk)"
+            ],
+            [
+              "Tool 3",
+              "<b>Portfolio Hedging</b> — buy index puts or short index futures",
+              "<b>Bear Put / Bear Call Spreads</b> — directional spreads (low/moderate risk)"
+            ],
+            [
+              "Tool 4",
+              "<b>Protective Options</b> — buy puts or long calls to protect positions",
+              "<b>Long Straddle</b> — volatility play (low risk)"
+            ],
+            [
+              "Tool 5",
+              "<b>Long & Short Options/Futures</b> — gain from declining or advancing prices",
+              "<b>Short Call / Put / Straddle</b> — high-risk option-writing strategies"
+            ],
+            [
+              "Tool 6",
+              "<b>Bear Put / Bear Call Spreads</b> — buy & short options at different strikes",
+              "<b>Hedging</b> — index/stock hedges to manage beta"
+            ],
+            [
+              "Tool 7",
+              "<b>Shorting Straddle/Strangle</b> — benefit in range-bound markets",
+              "<b>Unhedged (Naked) Shorts</b> — up to 25%; a distinct alpha source"
+            ],
+            [
+              "Plus",
+              "Stock & sector selection by market outlook",
+              "Carry-based debt (Corp Bonds/CPs/CDs) + IPOs/QIPs/Block/Buyback"
+            ]
+          ]
+        },
+        {
+          "id": "F",
+          "title": "Investment Framework & Philosophy",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Pillar 1",
+              "<b>Philosophy</b> — aims for risk-adjusted returns with lower volatility",
+              "<b>Systematic Active Investing</b> — rules-based, conviction-driven, risk-aware; blends machines & money-manager insight"
+            ],
+            [
+              "Pillar 2",
+              "<b>Universe</b> — Ex-Top 100 focus; companies beyond the top 100, targeting broader-market opportunities",
+              "<b>MARCOV</b> — cross-asset, regime-aware; long winners, short laggards, curb drawdowns"
+            ],
+            [
+              "Pillar 3",
+              "<b>Valuations</b> — long attractive mid & small caps; short overvalued ones to manage beta",
+              "<b>HFA (High Frequency Analytics)</b> — real-time microstructure intelligence; 70% HFA + 30% LFA"
+            ],
+            [
+              "Pillar 4",
+              "<b>Taxation</b> — equity-oriented: LTCG 12.5% over 12 months",
+              "<b>quantamine Platform</b> — integrated intelligence & execution across macro, microstructure, sentiment, liquidity & volatility"
+            ]
+          ]
+        },
+        {
+          "id": "G",
+          "title": "Why This SIF — What Makes It Unique",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "1",
+              "Deep Ex-Top 100 / SMID universe backed by ICICI Pru research depth (₹1,49,530 Cr Ex-Top 100 exposure across schemes).",
+              "India's 1st SMID-cap long-short fund — a genuinely new category combining small & mid cap with up to 25% short."
+            ],
+            [
+              "2",
+              "Long-short flexibility — up to 25% unhedged short to actively manage volatility, unavailable in long-only SMID funds.",
+              "Systematic Active Investing via MARCOV + HFA (70/30) — a quant, data-driven edge."
+            ],
+            [
+              "3",
+              "Bottom-up multi-factor selection (fundamental + technical + macro) for lower-volatility, risk-adjusted returns.",
+              "quant heritage: AUM grown from ~₹35 Cr (2020) to ~₹96,000+ Cr; deep derivatives & dynamic-management DNA."
+            ],
+            [
+              "4",
+              "Mutual-fund wrapper — transparency, daily NAV, equity taxation (LTCG 12.5%) at a ₹10 lakh entry.",
+              "0% leverage with up to 25% unhedged short; beta optimisation (month-end beta 0.49)."
+            ]
+          ]
+        },
+        {
+          "id": "H",
+          "title": "Track Record & Experience",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Metric 1",
+              "<b>Experience managing investments:</b> 30+ years",
+              "<b>Heritage:</b> 30 years (quantamine since 1995)"
+            ],
+            [
+              "Metric 2",
+              "<b>Fund managers & analysts:</b> 70",
+              "<b>Founder & CIO experience:</b> 33+ years"
+            ],
+            [
+              "Metric 3",
+              "<b>Research coverage:</b> 655+ companies · 24+ sectors",
+              "<b>AUM growth:</b> ₹35 Cr (2020) → ₹96,000+ Cr"
+            ],
+            [
+              "Metric 4",
+              "<b>Ex-Top 100 exposure (IPRU schemes):</b> ₹1,49,530 Cr",
+              "<b>Investor folios:</b> 9.6 million (96 lakh)"
+            ],
+            [
+              "Metric 5",
+              "<b>Derivatives managed (MF schemes):</b> ₹59,107 Cr",
+              "<b>Proprietary frameworks:</b> VLRT & MARCOV; HFA desk"
+            ],
+            [
+              "Metric 6",
+              "<b>SMID coverage:</b> Mid 113 cos · Small 326 cos",
+              "<b>Prop-desk track:</b> 2008–2018 absolute returns"
+            ]
+          ]
+        },
+        {
+          "id": "K",
+          "title": "Why Add This Fund to Your Portfolio",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "1",
+              "Access India's Ex-Top 100 / SMID growth with active downside management.",
+              "Reduction in overall portfolio volatility (month-end beta 0.49)."
+            ],
+            [
+              "2",
+              "Up to 25% short reduces portfolio volatility vs long-only SMID funds.",
+              "Enhanced diversification and reduced drawdowns via the short book."
+            ],
+            [
+              "3",
+              "Backed by ICICI Prudential's research depth and Ex-Top 100 experience.",
+              "Additional source of alpha from opportunistic short positions."
+            ],
+            [
+              "4",
+              "MF structure: transparency, daily NAV, equity taxation (LTCG 12.5%).",
+              "Unleveraged structure (0% leverage) — a controlled risk profile."
+            ],
+            [
+              "5",
+              "Targets lower-volatility, risk-adjusted SMID returns over a 3-yr+ horizon.",
+              "India's 1st SMID long-short with a MARCOV + HFA systematic edge."
+            ]
+          ]
+        },
+        {
+          "id": "O",
+          "title": "AMC Market Outlook (Apr 2026)",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "note": "Respective AMCs' house views as on Apr-2026 — time-sensitive opinions, not advice or a forecast.",
+          "rows": [
+            [
+              "View 1",
+              "India saw a 4th straight monthly index dip on FPI outflows (~₹60,847 Cr in Apr); Sensex/Nifty rose +6.9%/+7.5% on DII buying; West-Asia conflict, rupee ~95.2/USD, crude ~$108.",
+              "Views Apr-2026 as a turning point — global markets recovering; US Fed on hold (historic 8-4 dissent); Fed leadership transition underway."
+            ],
+            [
+              "View 2",
+              "Macros resilient — controlled fiscal deficit, robust demand; IMF projects India FY26 real GDP +6.5%; valuations in the &ldquo;neutral zone&rdquo;.",
+              "India seen as the premier global growth story — structural bull run, nominal GDP growth &gt;2x China; small caps favoured."
+            ],
+            [
+              "View 3",
+              "Equity: invest in a staggered manner via SIP/STP; prefer Hybrid / Asset-Allocation given near-term volatility.",
+              "RBI signalling low rates for an extended period — quant calls this &ldquo;the most significant buying opportunity since the pandemic&rdquo;."
+            ],
+            [
+              "View 4",
+              "Debt: rate hikes unlikely near-term; prefers 1–3yr corporate bonds plus SDLs & long-end G-secs.",
+              "Positioning: rebalance actively, prioritise liquid value over growth; separate short-term noise from durable trends."
+            ]
+          ]
+        },
+        {
+          "id": "P",
+          "title": "Investment Process",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Step 1",
+              "Bottom-up research on the Ex-Top 100 universe (Mid & Small caps).",
+              "Investment universe → quantamine data cleaning & processing."
+            ],
+            [
+              "Step 2",
+              "Screen on fundamental (valuations, earnings revision), technical (market trend) and macro (liquidity, REER).",
+              "MARCOV signal generation (70% HFA + 30% LFA) → liquidity/tradability & regime filters → money-manager inputs."
+            ],
+            [
+              "Step 3",
+              "Long high-conviction names; short overvalued ones via derivatives (≤25%).",
+              "Long & short stock selection → position sizing (Risk + Money Management Matrix) → portfolio construction."
+            ],
+            [
+              "Step 4",
+              "Dynamic asset focus by scenario: Positive → SMID up to 100%; Negative → min 65% SMID, ≤35% large cap, more call-writing.",
+              "Smart Order Routing → risk & compliance → daily monitoring, stress tests → attribution & model updates."
+            ]
+          ]
+        },
+        {
+          "id": "Q",
+          "title": "Fund Management Team",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Member 1",
+              "<b>Sankaran Naren</b> — managing since Feb-2026 · 36 years experience",
+              "<b>Sandeep Tandon</b> — Founder & CIO · 33+ yrs · architect of VLRT & MARCOV; grew quant to ~₹96,000+ Cr"
+            ],
+            [
+              "Member 2",
+              "<b>Manan Tijoriwala</b> — managing since Feb-2026 · 13 years",
+              "<b>Lokesh Garg</b> — Money Manager · 20 yrs (Kotak, CS/UBS) · IIM-A, IIT Roorkee, CFA L3"
+            ],
+            [
+              "Member 3",
+              "<b>Divya Jain</b> — managing since Feb-2026 · 10 years",
+              "<b>Sameer Kate</b> — Money Manager · 20+ yrs Indian equities & derivatives dealing"
+            ],
+            [
+              "Member 4",
+              "—",
+              "<b>Ankit Pande</b> — Money Manager · 13+ yrs · CFA; StarMine Award 2014 (IT)"
+            ],
+            [
+              "Member 5",
+              "—",
+              "<b>Sanjeev Sharma</b> — Money Manager · 18+ yrs · credit-risk specialist; M.Com"
+            ]
+          ]
+        },
+        {
+          "id": "S",
+          "title": "Conclusion",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Verdict",
+              "A research-driven Ex-Top 100 long-short from India's largest AMC. Combines SMID-cap growth with up to 25% short to manage volatility, in a transparent, equity-taxed MF wrapper. Best for investors seeking risk-managed SMID exposure over 3-year+ horizons who value research depth and a fundamental bottom-up process.",
+              "India's first SMID-cap long-short, powered by a systematic MARCOV + HFA engine. With 0% leverage, up to 25% unhedged short and beta optimisation (0.49), it targets asymmetric, lower-drawdown returns. Best for investors wanting a quant-driven, actively risk-managed SMID alpha layer alongside long-only equity."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equity-long-short",
+      "chip": "Equity · Long-Short",
+      "chipColor": "var(--diviniti)",
+      "title": "Equity Long-Short SIF",
+      "desc": "Min 80% equity, up to 25% unhedged short via derivatives. Six funds across six AMCs. Most benchmark to Nifty 500 TRI; Diviniti uses Nifty 50 TRI and DynaSIF uses BSE 500 TRI.",
+      "cols": [
+        {
+          "short": "Arudha",
+          "amc": "Bandhan",
+          "color": "var(--arudha)"
+        },
+        {
+          "short": "Diviniti",
+          "amc": "ITI",
+          "color": "var(--diviniti)"
+        },
+        {
+          "short": "DynaSIF",
+          "amc": "360 ONE",
+          "color": "var(--dyna)"
+        },
+        {
+          "short": "Titanium",
+          "amc": "Tata",
+          "color": "var(--titanium)"
+        },
+        {
+          "short": "Sapphire",
+          "amc": "Franklin",
+          "color": "var(--sapphire)"
+        },
+        {
+          "short": "qsif",
+          "amc": "Quant",
+          "color": "var(--qsif)"
+        }
+      ],
+      "cards": [
+        {
+          "ac": "var(--arudha)",
+          "amc": "Bandhan MF",
+          "name": "Arudha Equity Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.11"
+            ],
+            [
+              "Inception",
+              "5 Mar 2026"
+            ],
+            [
+              "Benchmark",
+              "Nifty 500 TRI"
+            ],
+            [
+              "Exit Load",
+              "0.50% &lt;30d"
+            ]
+          ],
+          "tags": [
+            [
+              "NFO / New",
+              "tg nfo"
+            ],
+            [
+              "4 Return Engines",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--diviniti)",
+          "amc": "ITI MF",
+          "name": "Diviniti Equity Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹949.15"
+            ],
+            [
+              "Inception",
+              "1 Dec 2025"
+            ],
+            [
+              "AUM",
+              "₹415.67 Cr"
+            ],
+            [
+              "Expense (Reg)",
+              "2.44%"
+            ]
+          ],
+          "tags": [
+            [
+              "LIVE",
+              "tg live"
+            ],
+            [
+              "Nifty 50 TRI",
+              "tg"
+            ],
+            [
+              "Conservative",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--dyna)",
+          "amc": "360 ONE Asset",
+          "name": "DynaSIF Equity Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.31"
+            ],
+            [
+              "Inception",
+              "6 Feb 2026"
+            ],
+            [
+              "Benchmark",
+              "BSE 500 TRI"
+            ],
+            [
+              "Exit Load",
+              "0.50% &lt;3m"
+            ]
+          ],
+          "tags": [
+            [
+              "NFO / New",
+              "tg nfo"
+            ],
+            [
+              "Cap-agnostic",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--titanium)",
+          "amc": "Tata MF",
+          "name": "Titanium Equity Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.08"
+            ],
+            [
+              "Inception",
+              "27 Apr 2026"
+            ],
+            [
+              "Benchmark",
+              "Nifty 500 TRI"
+            ],
+            [
+              "Exit Load",
+              "1% &lt;1m"
+            ]
+          ],
+          "tags": [
+            [
+              "Newest",
+              "tg nfo"
+            ],
+            [
+              "Valuation tool",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--sapphire)",
+          "amc": "Franklin Templeton",
+          "name": "Sapphire Equity Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹1,004.25"
+            ],
+            [
+              "Inception",
+              "29 Apr 2026"
+            ],
+            [
+              "Expense (Reg)",
+              "~4.81%*"
+            ],
+            [
+              "Exit Load",
+              "1% &lt;1yr"
+            ]
+          ],
+          "tags": [
+            [
+              "New",
+              "tg nfo"
+            ],
+            [
+              "Multi-factor quant",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--qsif)",
+          "amc": "Quant MF",
+          "name": "qsif Equity Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.17"
+            ],
+            [
+              "Inception",
+              "17 Sep 2025"
+            ],
+            [
+              "Expense (Reg)",
+              "~11.34%*"
+            ],
+            [
+              "Exit Load",
+              "1% &lt;15d"
+            ]
+          ],
+          "tags": [
+            [
+              "LIVE — longest",
+              "tg live"
+            ],
+            [
+              "VLRT+MARCOV+HFA",
+              "tg"
+            ]
+          ]
+        }
+      ],
+      "single": null,
+      "sections": [
+        {
+          "id": "A",
+          "title": "Fund Overview & Key Facts",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "note": "Three benchmarks: Arudha = Nifty 500 TRI · Diviniti = Nifty 50 TRI · DynaSIF = BSE 500 TRI. Most other facts are closely aligned across the six.",
+          "rows": [
+            [
+              "Asset Manager",
+              "Bandhan MF",
+              "ITI MF",
+              "360 ONE Asset",
+              "Tata MF",
+              "Franklin Templeton MF",
+              "Quant MF"
+            ],
+            [
+              "Investment Type",
+              "Open-ended equity + limited short via derivatives",
+              "Open-ended equity + limited short, across market caps",
+              "Open-ended equity + limited short via derivatives",
+              "Open-ended equity + debt/MM + limited short",
+              "Open-ended equity + limited short via derivatives",
+              "Open-ended equity + limited short via derivatives"
+            ],
+            [
+              "Benchmark",
+              "Nifty 500 TRI",
+              "Nifty 50 (TRI)",
+              "BSE 500 TRI",
+              "Nifty 500 (TRI)",
+              "Nifty 500 TRI",
+              "Nifty 500 TRI"
+            ],
+            [
+              "Status / Inception",
+              "NFO 5–18 Mar 26; Incep 5 Mar 26",
+              "Live since 1 Dec 2025",
+              "NFO 6–20 Feb; Incep 6 Feb 26",
+              "Incep 27 Apr 2026 (new)",
+              "NFO 10–24 Apr; Allot 29 Apr 26",
+              "Incep 17 Sep 2025"
+            ],
+            [
+              "NAV (Reg)",
+              "₹10.11 (27 May)",
+              "₹949.15 (30 Apr)",
+              "₹10.31",
+              "₹10.08",
+              "₹1,004.25",
+              "₹10.17"
+            ],
+            [
+              "Fund Size (AUM)",
+              "Not yet disclosed",
+              "₹415.67 Cr · AAUM ₹397.01 Cr",
+              "Not yet disclosed",
+              "Not yet disclosed",
+              "Not yet disclosed",
+              "Not yet disclosed"
+            ],
+            [
+              "Min. Investment",
+              "₹10L · ₹1L (accredited)",
+              "₹10,00,000",
+              "₹10L · ₹1L (accredited)",
+              "₹10 lakh (PAN-level)",
+              "₹10 lakh (first time)",
+              "₹10,00,000"
+            ],
+            [
+              "Entry / Exit Load",
+              "Exit 0.50% &lt;30d",
+              "10% free in 6m; 0.50% &lt;6m",
+              "Exit 0.50% &lt;3m",
+              "Exit 1% &lt;1m",
+              "Exit 1% &lt;1yr",
+              "Exit 1% &lt;15d"
+            ],
+            [
+              "SIP",
+              "Refer ISID",
+              "₹5,000 (Daily/Wk/Mthly)",
+              "Refer ISID",
+              "₹1,000 (min 6); top-up ₹500",
+              "Refer leaflet / ISID",
+              "₹10,000"
+            ],
+            [
+              "Expense (Reg)",
+              "Not yet published",
+              "2.44%",
+              "Not yet published",
+              "Not yet published",
+              "4.81%*",
+              "11.34%*"
+            ],
+            [
+              "Taxation",
+              "Equity-oriented: LTCG 12.5%",
+              "Equity LTCG 12.5%; Debt slab",
+              "Equity taxation",
+              "Equity taxation",
+              "Equity taxation",
+              "Equity taxation"
+            ],
+            [
+              "Plans / Options",
+              "Growth",
+              "Growth & IDCW",
+              "Growth & IDCW",
+              "Growth & IDCW",
+              "Growth & IDCW",
+              "Growth & IDCW"
+            ],
+            [
+              "Fund Manager(s)",
+              "Nilesh Saha (Eq), Brijesh Shah (Debt)",
+              "Vasav Sahgal (FM); Rajesh Bhatia (CIO); Laukik Bagwe",
+              "Harsh Agarwal",
+              "Tata AMC SIF team (not named)",
+              "Arihant Jain (CFA)",
+              "Tandon, Garg, Kate, Pande, Sharma"
+            ],
+            [
+              "Framework",
+              "Four return engines: Debt · Long · Short · Covered Calls",
+              "Strategic core (~55%) + tactical overlay",
+              "Active stock/asset selection; multi-cap, qual+quant",
+              "Dynamic net-equity by valuation tool",
+              "Multi-factor quant (Quality/Value/Sentiment/Alt)",
+              "Systematic active (VLRT/MARCOV + HFA); flexi-cap"
+            ]
+          ]
+        },
+        {
+          "id": "B",
+          "title": "Investment Strategy & Core Allocation",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Equity & related",
+              "80–100% (incl. ≤25% unhedged short)",
+              "80–100% (equity/REITs/related)",
+              "80–100%",
+              "Min 80% (gross ~100%)",
+              "Long 75–100%",
+              "65–100% all-cap; min 80% (long+short)"
+            ],
+            [
+              "Debt & Money Mkt",
+              "0–20% (accrual return engine)",
+              "0–20% (liquidity & tactical)",
+              "0–20% (MM/T-bills/G-sec/corp)",
+              "Permitted (cash/margin)",
+              "Cash/arbitrage for hedging",
+              "Margins 0–15%"
+            ],
+            [
+              "Unhedged Short",
+              "Up to 25%",
+              "Up to 25%",
+              "0–25%",
+              "Up to 25% (naked)",
+              "0–25%",
+              "Up to 25%; long deriv ≤35%"
+            ],
+            [
+              "InvITs",
+              "0–20%",
+              "0–20%",
+              "0–20%",
+              "Per ISID",
+              "Per ISID",
+              "Per ISID"
+            ],
+            [
+              "Hedging Derivatives",
+              "Index/stock; covered calls ≤100% of unencumbered",
+              "Up to 100% of net assets",
+              "Index & stock; options part-hedge",
+              "Short futures 0–25% by phase",
+              "Hedging 0–100% (futures)",
+              "Hedging 0–100%"
+            ],
+            [
+              "Typical Net Equity",
+              "Dynamic; equity-like with risk overlay",
+              "-25% to +100%; avg 40–60%; typical 25–65%",
+              "Calibrated to macro/regime; lower beta",
+              "Dynamic 65–100% (valuation-driven)",
+              "Long 75–100% less short 0–25%",
+              "Beta-managed; flexi-cap"
+            ],
+            [
+              "Single-Security Limit",
+              "Per ISID",
+              "Max 10% at cost; long 2–8%, short 1–4%",
+              "Per ISID",
+              "Per ISID",
+              "Per ISID",
+              "Per ISID"
+            ]
+          ]
+        },
+        {
+          "id": "C",
+          "title": "Methodology & Investment Approach",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Asset Allocation",
+              "Counter-cyclical valuation model (valuation, credit-spread, currency, vol index)",
+              "Strategic core ~55% + dynamic tactical overlay",
+              "Calibrated on macro, liquidity & business signals",
+              "Internal valuation tool across phases",
+              "Multi-factor model; sector-agnostic",
+              "VLRT + MARCOV; predictive analytics"
+            ],
+            [
+              "Stock Selection (Long)",
+              "30–40 high-conviction names from ~650 coverage",
+              "Fundamentals-over-forecasts; margin of safety",
+              "500-stock universe; cap-agnostic",
+              "Multi-sectoral cash equity + derivatives",
+              "Multi-factor quant (Q/V/S/Alt)",
+              "Quant model: >40 indicators; flexi-cap"
+            ],
+            [
+              "Signal Inputs",
+              "Fundamental + technical + macro; quant short model",
+              "Qualitative research, both sides",
+              "Qual (macro/themes) + Quant (factor/regime/trend)",
+              "Valuation-based net-equity tool",
+              "Quality/Value/Sentiment/Alternatives",
+              "VLRT + HFA microstructure"
+            ],
+            [
+              "Risk / Sizing",
+              "Short 0% to -25% via quant model; covered-call overlay",
+              "Stress tests, stop-loss, beta & liquidity",
+              "Continuous monitoring; beta control",
+              "Dynamic gross/net by phase",
+              "Long 75–100%, short 0–25%; arbitrage hedge",
+              "Beta mgmt with 25% shorting; systematic controls"
+            ]
+          ]
+        },
+        {
+          "id": "D",
+          "title": "Stock Selection Criteria",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Long Book",
+              "Quality: high ROCE, low leverage, low vol, predictable growth, cash generation",
+              "Secular growers, well-managed, reasonable value, margin of safety",
+              "Multi-cap agnostic; best risk-reward (qual+quant)",
+              "Cash equity across sectors; valuation-led",
+              "Multi-factor model (Q/V/S/Alt)",
+              "Quant-selected via >40 indicators; flexi-cap"
+            ],
+            [
+              "Short Book",
+              "Full F&O: weak profitability, high leverage, rich value, earnings-downgrade risk",
+              "Tactical shorts on weakening cycles/sectors/governance",
+              "Short faltering businesses / bearish views",
+              "Unhedged shorts + hedges, scaled in bear",
+              "Naked shorts via futures (lagging indicators)",
+              "Quant-driven shorts (≤25%)"
+            ],
+            [
+              "Positioning",
+              "High-conviction long + opportunistic shorts",
+              "Strategic core + tactical; currently defensive",
+              "Unconstrained; alpha both sides",
+              "Dynamic net-equity, multi-sectoral",
+              "40+ indicator factor model",
+              "Systematic active, flexi-cap, derivative-driven"
+            ]
+          ]
+        },
+        {
+          "id": "E",
+          "title": "Long-Short / Derivative Toolkit",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Long / Short",
+              "Long conviction equity; short overvalued (unhedged ≤25%)",
+              "Tactical longs & shorts via futures",
+              "Stock derivatives incl. limited shorting",
+              "Cash-equity long + unhedged long/short deriv",
+              "Long equity + naked shorts via futures",
+              "Long & short via extensive derivatives"
+            ],
+            [
+              "Covered Calls",
+              "Up to 100% of unencumbered shares (full F&O)",
+              "Used within strategy",
+              "Derivative yields via covered calls",
+              "Per ISID",
+              "Per ISID",
+              "Per ISID"
+            ],
+            [
+              "Hedging",
+              "Index/stock hedges; protective options",
+              "Hedges ≤100% of strategic longs",
+              "Part-hedge; trade vol & mispricing; lower beta",
+              "Short futures (scales in bear)",
+              "Arbitrage + futures hedge",
+              "Hedging ≤100%; beta management"
+            ],
+            [
+              "Distinct Source",
+              "Four return engines incl. covered-call income",
+              "Strategic+tactical dual book",
+              "Beta-lowering regime-aware overlay",
+              "Valuation-tool net-equity",
+              "Pure multi-factor quant",
+              "VLRT + MARCOV + HFA engine"
+            ]
+          ]
+        },
+        {
+          "id": "F",
+          "title": "Investment Framework & Philosophy",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Core Idea",
+              "Reimagining equity performance with lower volatility",
+              "Building long-term value with controlled risk",
+              "Dynamic — unbiased, agile, adaptive",
+              "Time, Taxation, Nimble, Un-matched (TINU)",
+              "Factor-driven, rules-based investing",
+              "Predictive (not reactive) systematic active"
+            ],
+            [
+              "Guiding Principle",
+              "Equity return + active risk management",
+              "Fundamentals over forecasts; quality-focused",
+              "Absolute focus on alpha over benchmark",
+              "Dynamic net-equity; capture both sides",
+              "Outperform across phases; manage risk",
+              "Be relevant & predictive; capture money flow early"
+            ],
+            [
+              "Ethos",
+              "Combine low-correlated strategies; hedge to limit losses",
+              "Buffett-style &ldquo;don't lose money&rdquo;; margin of safety",
+              "Across the risk curve; perform across regimes",
+              "Speed & agility across phases",
+              "Disciplined, model-driven, emotion-free",
+              "Adaptive precision; risk-appetite aware"
+            ]
+          ]
+        },
+        {
+          "id": "G",
+          "title": "Why This SIF — What Makes It Unique",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Edge 1",
+              "Four distinct return engines (Debt, Long, Short, Covered Calls)",
+              "Only fund with a live track record & real portfolio",
+              "Multi-cap, fully sector/style/cap agnostic",
+              "Backed by Tata AMC brand & scale",
+              "Pure quant multi-factor (Q/V/S/Alt)",
+              "Quant's VLRT + MARCOV + HFA platform"
+            ],
+            [
+              "Edge 2",
+              "Covered calls across full F&O (vs MF Nifty-50/30% cap)",
+              "Strategic core + tactical; defensive now (net eq ~26.5%)",
+              "Explicit alpha-over-benchmark mandate",
+              "Dynamic valuation-driven net-equity (65–100%)",
+              "Sector-agnostic, emotion-free model",
+              "Longest live track record of Batch 2 (Sep-25)"
+            ],
+            [
+              "Edge 3",
+              "Bandhan AMC research (~650-stock coverage)",
+              "Live, real portfolio; CIO Bhatia 30+yr L/S",
+              "360 ONE (~₹47,185 Cr listed eq) + 10-analyst team",
+              "Backed by Tata AMC scale & governance",
+              "FM Arihant Jain: 8 yrs factor-quant",
+              "5-member quant team led by Sandeep Tandon"
+            ],
+            [
+              "Edge 4",
+              "Backtest ~14.1% 10-yr CAGR at ~8% vol*",
+              "Backtest Sharpe 1.53, beta 0.29 (vs Nifty 0.70)*",
+              "Beta-lowering derivative use; regime-aware",
+              "Phase-based exposure grid (bull/flat/bear)",
+              "40+ leading & lagging indicators",
+              "Early live: 1M +2.59%, 3M +5.39%"
+            ]
+          ]
+        },
+        {
+          "id": "H",
+          "title": "Track Record & Experience",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "AMC AUM",
+              "Bandhan MF (full-suite)",
+              "ITI MF ~₹11,545 Cr",
+              "360 ONE ~₹51,574 Cr; listed eq ~₹47,185 Cr",
+              "Tata MF (large, established)",
+              "Franklin Templeton (global)",
+              "Quant MF (fast-growing)"
+            ],
+            [
+              "Backtest (illustrative)",
+              "10-yr CAGR 14.1% vs Nifty500 13.3%; vol 8% vs 16%",
+              "Since Apr-18: L/S 160.25% vs Nifty 130.70%; Sharpe 1.53",
+              "Not published (NFO)",
+              "Not published (NFO)",
+              "Not published (leaflet)",
+              "Live: 1M +2.59% / 3M +5.39% / 6M +1.60%"
+            ],
+            [
+              "Key People Experience",
+              "Saha 11 yrs; Shah 15 yrs",
+              "CIO Bhatia 30+ yrs (decade in L/S)",
+              "CIO Maheshwari 30 yrs; FM Agarwal ~2 decades",
+              "Tata AMC team (FM not named)",
+              "Jain ~8 yrs factor investing",
+              "Tandon 30+ yrs; deep quant bench"
+            ],
+            [
+              "Research Depth",
+              "~650-stock coverage",
+              "Fundamentals-driven desk",
+              "10 analysts, ~90 yrs combined",
+              "Tata AMC research platform",
+              "Global factor lineage (Franklin/MSCI)",
+              "Quantamine; VLRT + AI/ML"
+            ]
+          ]
+        },
+        {
+          "id": "K",
+          "title": "Why Add This Fund to Your Portfolio",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "1",
+              "Equity participation with partial risk mitigation via four return engines",
+              "A live, track-recorded L/S option with strong downside-protection ethos",
+              "Multi-cap, style-agnostic alpha across full universe",
+              "Dynamic net-equity that flexes with valuations",
+              "Disciplined, emotion-free multi-factor quant",
+              "Live track record + quant's systematic platform"
+            ],
+            [
+              "2",
+              "Covered-call income + active downside management",
+              "Currently defensively positioned (low net equity)",
+              "Long + short alpha across cycles",
+              "Tata AMC brand, scale & governance",
+              "Sector-agnostic factor diversification",
+              "Beta management with up to 25% shorting"
+            ],
+            [
+              "3",
+              "Backtested equity-like returns at lower volatility",
+              "Most conservative posture of the six",
+              "Beta management via derivative overlay",
+              "Valuation-driven dynamic net-equity",
+              "Factor lineage from Franklin/MSCI",
+              "Early live returns ahead of peers (1M +2.59%)"
+            ],
+            [
+              "4",
+              "Bandhan AMC research depth",
+              "Strong long-short pedigree (CIO Bhatia)",
+              "360 ONE research franchise; alpha-focused mandate",
+              "Phase-based exposure discipline",
+              "Rules-based, repeatable process",
+              "Quantamine / AI-ML (MARCOV, HFA)"
+            ]
+          ]
+        },
+        {
+          "id": "O",
+          "title": "AMC Market Outlook",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "note": "AMCs' opinions as on their stated dates, time-sensitive. Not advice or a forecast.",
+          "rows": [
+            [
+              "House View",
+              "Indian equities show elevated earnings expectations — actual EPS trailing consensus by ~9.9% (among widest globally), a tailwind for the short book; valuations elevated → active downside management.",
+              "&ldquo;Tale of two markets&rdquo; (Apr-26): Nifty +7.3% MoM to 23,997; FII outflows &gt;₹60,000 Cr; crude ~$115; RBI cautious into FY27. Bear case largely played out; building in banks/financials/healthcare/consumption; large-cap tilt.",
+              "No static view — dynamic, regime-aware; adjusts long/short & beta using qual macro + quant regime signals.",
+              "No static view — dynamic net-equity (65–100%) via valuation tool; defensive in expensive markets, higher equity when favourable.",
+              "No view in leaflet — rules-based multi-factor model drives positioning; sector-agnostic, emotion-free.",
+              "No static view — VLRT + MARCOV/HFA detect money-flow & risk-appetite shifts early; position predictively."
+            ]
+          ]
+        },
+        {
+          "id": "P",
+          "title": "Investment Process",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Step 1",
+              "Dynamic equity/debt via counter-cyclical valuation model",
+              "Define universe; fundamentals-driven core selection",
+              "Universe of 500 stocks",
+              "Assess market phase via valuation tool",
+              "Define multi-cap universe",
+              "VLRT framework scan (all-cap)"
+            ],
+            [
+              "Step 2",
+              "Equity sleeve: long / short / covered call",
+              "Add tactical overlay (longs & shorts)",
+              "Qualitative + quantitative screening",
+              "Set dynamic net-equity (65–100%)",
+              "Score on Quality/Value/Sentiment/Alt",
+              "MARCOV signal generation per position"
+            ],
+            [
+              "Step 3",
+              "Funnel stock selection (quality filters) + quant short model",
+              "Position sizing within risk limits",
+              "Long & short selection + derivatives overlay",
+              "Build cash-equity + long/short derivatives",
+              "Construct long (75–100%) & short (0–25%) book",
+              "Long & short selection + sizing (risk-appetite)"
+            ],
+            [
+              "Step 4",
+              "Dynamic asset focus by scenario",
+              "Risk checklist: stress tests, stop-loss, beta, liquidity",
+              "Continuous risk monitoring",
+              "Add hedges/shorts scaled to phase",
+              "Rebalance per model signals",
+              "HFA execution + continuous monitoring"
+            ]
+          ]
+        },
+        {
+          "id": "Q",
+          "title": "Fund Management Team",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Key People",
+              "<b>Nilesh Saha</b> (Eq): 11 yrs, ex-Julius Baer, 9 yrs Edelweiss L/S AIFs; IIM-B, CFA. <b>Brijesh Shah</b> (Debt): 15 yrs FI; ex-IDBI AMC.",
+              "<b>Vasav Sahgal</b> (FM): CFA, 7+ yrs. <b>Rajesh Bhatia</b> (CIO): 30+ yrs, ex-Heritage India, ex-Reliance PMS; ACMA, CFA. <b>Laukik Bagwe</b>: 25+ yrs FI. <b>Jatinder Pal Singh</b> (CEO): 25+ yrs.",
+              "<b>Harsh Agarwal</b> (FM): ~2 decades L/S, ex-Head Alt Strategies Tata AMC (CAT III AIFs &gt;₹3,000 Cr). <b>Anup Maheshwari</b> (CIO): 30 yrs, ex-DSP BlackRock CIO. Research: 10 analysts, ~90 yrs.",
+              "Fund Manager not named in the NFO deck — managed by Tata AMC's SIF investment team; deep equity research platform.",
+              "<b>Arihant Jain</b> (FM): CFA, BITS Pilani; ~8 yrs quant/multi-factor. Ex-Franklin (2022–), MSCI (2020–22), Morgan Stanley, Quant One. Manages Franklin India Multi-Factor Fund.",
+              "<b>Sandeep Tandon</b> (Founder & CIO): 33+ yrs; architect of VLRT & MARCOV. Garg, Kate, Pande, Sharma — money managers across equities, derivatives & credit."
+            ]
+          ]
+        },
+        {
+          "id": "DIFF",
+          "title": "How These Funds Are Unique / Different",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "note": "A factual, like-for-like read — the differentiation matrix.",
+          "rows": [
+            [
+              "Benchmark",
+              "Nifty 500 TRI (broad)",
+              "Nifty 50 TRI (large-cap)",
+              "BSE 500 TRI (broad)",
+              "Nifty 500 TRI (broad)",
+              "Nifty 500 TRI (broad)",
+              "Nifty 500 TRI (broad)"
+            ],
+            [
+              "Track Record",
+              "NFO / very new (Mar-26)",
+              "<span class='pos'>LIVE since Dec-25</span> (real portfolio)",
+              "NFO / new (Feb-26)",
+              "Newest (Apr-26)",
+              "New (Apr-26)",
+              "<span class='pos'>Live since Sep-25</span>"
+            ],
+            [
+              "Signature Framing",
+              "&ldquo;Four return engines&rdquo;",
+              "&ldquo;Strategic core + tactical&rdquo;",
+              "&ldquo;Dynamic&rdquo; qual+quant, beta-aware",
+              "&ldquo;Dynamic net-equity&rdquo; valuation tool",
+              "Pure multi-factor quant",
+              "VLRT + MARCOV + HFA"
+            ],
+            [
+              "Stock Universe",
+              "~650 (AMC coverage)",
+              "Fundamentals-led",
+              "500 stocks",
+              "Multi-sectoral",
+              "Multi-cap (factor)",
+              "All-cap (quant)"
+            ],
+            [
+              "Cap Orientation",
+              "Across market caps",
+              "Large-cap tilted (now)",
+              "Cap-agnostic",
+              "Multi-sectoral",
+              "Sector-agnostic multi-cap",
+              "Flexi-cap"
+            ],
+            [
+              "Covered Calls",
+              "Central pillar (full F&O, ≤100%)",
+              "Within strategy",
+              "Derivative-yield tool",
+              "Per ISID",
+              "Per ISID",
+              "Per ISID"
+            ],
+            [
+              "Current Positioning",
+              "Pre-portfolio",
+              "Defensive: net eq ~26.5%",
+              "Pre-portfolio",
+              "Pre-portfolio",
+              "Pre-portfolio",
+              "Portfolio not published"
+            ],
+            [
+              "Manager Pedigree",
+              "Saha (ex-Edelweiss L/S)",
+              "Bhatia (30+yr L/S)",
+              "Agarwal + Maheshwari",
+              "Tata AMC team",
+              "Jain (factor quant)",
+              "Tandon + quant team"
+            ],
+            [
+              "AMC Equity Scale",
+              "Bandhan (full-suite)",
+              "ITI ~₹11,545 Cr",
+              "360 ONE ~₹47,185 Cr",
+              "Tata (large)",
+              "Franklin (global)",
+              "Quant (fast-growing)"
+            ],
+            [
+              "Min. / Exit",
+              "₹10L · exit 30d",
+              "₹10L · exit 6m (10% free)",
+              "₹10L · exit 3m",
+              "₹10L · exit 1m",
+              "₹10L · exit 1yr",
+              "₹10L · exit 15d"
+            ]
+          ]
+        },
+        {
+          "id": "PLAIN",
+          "title": "Are They Genuinely Different? — Plain-English Read",
+          "type": "callouts",
+          "items": [
+            {
+              "h": "Where they OVERLAP (the &ldquo;same&rdquo; part)",
+              "p": "All six are SEBI SIF Equity Long-Short funds sharing an identical structural skeleton: minimum 80% equity, up to 25% unhedged short via derivatives, ₹10 lakh minimum, equity taxation, and the same &ldquo;participate in upside, cushion the downside&rdquo; pitch. Five of six benchmark to Nifty 500 TRI (only Diviniti uses Nifty 50). At the wrapper level they are near-identical — the regulation makes them so."
+            },
+            {
+              "h": "Where they genuinely DIFFER (the part that matters)",
+              "p": "<b>1) Process DNA</b> splits the field in two: fundamental/discretionary (Arudha = quality long + 4 engines; Diviniti = strategic-core + tactical; DynaSIF = qual+quant blend) vs systematic/quant (Sapphire = pure multi-factor; qsif = VLRT+MARCOV+HFA; Titanium = valuation-tool net-equity). <b>2) Track record:</b> Diviniti and qsif are the only two with real live data. <b>3) Risk posture:</b> Diviniti is the conservative outlier (net equity ~26.5%, heavily hedged); the rest run fuller directional/derivative exposure. <b>4) Cost & terms vary sharply:</b> qsif ~11.34% and Sapphire ~4.81% (early annualised on tiny AUM — likely to normalise); exit windows range 15 days (qsif) to 1 year (Sapphire). <b>5) Covered calls</b> are a headline engine only for Arudha."
+            },
+            {
+              "h": "Bottom line",
+              "p": "The real fork is <b>fundamental vs systematic</b>. Live track record → Diviniti or qsif; conservative/hedged → Diviniti (most defensive posture); covered-call income engine → Arudha; pure rules-based factor model → Sapphire; AI/quant money-flow → qsif; large-franchise discretionary-quant blend → DynaSIF; valuation-driven dynamic net-equity from a large AMC → Titanium. Watch the headline Expense (Reg) ratios on qsif and Sapphire — distorted by very small launch AUM, they should fall as assets grow. The edge is in execution and team, which only a real track record will prove."
+            }
+          ]
+        },
+        {
+          "id": "S",
+          "title": "Conclusion (per fund)",
+          "type": "table",
+          "cols": [
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "Diviniti",
+              "ITI",
+              "var(--diviniti)"
+            ],
+            [
+              "DynaSIF",
+              "360 ONE",
+              "var(--dyna)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Sapphire",
+              "Franklin",
+              "var(--sapphire)"
+            ],
+            [
+              "qsif",
+              "Quant",
+              "var(--qsif)"
+            ]
+          ],
+          "rows": [
+            [
+              "Verdict",
+              "Risk-managed equity built on four return engines, with covered-call income as a distinctive lever. Backtest pitches equity-like returns at lower vol. For sophisticated investors comfortable with derivative-driven L/S risk. (Track record yet to build.)",
+              "The most established of the set — live since Dec-25 with a real, currently defensive portfolio and a seasoned L/S CIO, and the most conservative posture of the set. For investors wanting a proven-team, downside-aware L/S vehicle anchored in large caps.",
+              "Dynamic, quant-blended, cap-agnostic L/S from a large equity franchise, with explicit alpha-over-benchmark mandate & active beta management. For investors wanting an unconstrained, regime-aware approach.",
+              "Valuation-tool-driven L/S from Tata AMC; dials net-equity (65–100%) across phases, hedges/shorts scaling in weak markets. Backed by a large AMC. Newest; track record yet to build.",
+              "Pure rules-based multi-factor quant L/S from Franklin Templeton, run by a factor specialist. Sector-agnostic, emotion-free, repeatable. For investors preferring systematic over discretionary.",
+              "Quant's systematic-active L/S via VLRT, MARCOV & HFA — flexi-cap, derivative-driven, predictive. Longest live record of Batch 2 with early positive returns. For investors comfortable with high-conviction systematic strategies."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hybrid-long-short",
+      "chip": "Hybrid · Long-Short",
+      "chipColor": "var(--magnum)",
+      "title": "Hybrid Long-Short SIF",
+      "desc": "Equity + debt blend with limited short via derivatives (interval structure). Seven funds. Benchmarks differ (CRISIL Hybrid 50+50 / 85+15 / NIFTY 50 Hybrid Composite Debt 50:50) — compare each fund to its own benchmark only.",
+      "cols": [
+        {
+          "short": "iSIF",
+          "amc": "ICICI Pru",
+          "color": "var(--isif)"
+        },
+        {
+          "short": "Altiva",
+          "amc": "Edelweiss",
+          "color": "var(--altiva)"
+        },
+        {
+          "short": "Arudha",
+          "amc": "Bandhan",
+          "color": "var(--arudha)"
+        },
+        {
+          "short": "QSIF",
+          "amc": "Quant",
+          "color": "var(--qsif)"
+        },
+        {
+          "short": "Titanium",
+          "amc": "Tata",
+          "color": "var(--titanium)"
+        },
+        {
+          "short": "Apex",
+          "amc": "ABSL",
+          "color": "var(--apex)"
+        },
+        {
+          "short": "Magnum",
+          "amc": "SBI",
+          "color": "var(--magnum)"
+        }
+      ],
+      "cards": [
+        {
+          "ac": "var(--isif)",
+          "amc": "ICICI Prudential MF",
+          "name": "iSIF Hybrid Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹9.90"
+            ],
+            [
+              "Inception",
+              "16 Jan 2026"
+            ],
+            [
+              "Expense (Reg)",
+              "2.37%"
+            ],
+            [
+              "Net equity",
+              "-7.5% to 75%"
+            ]
+          ],
+          "tags": [
+            [
+              "Most equity-like",
+              "tg"
+            ],
+            [
+              "Directional long",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--altiva)",
+          "amc": "Edelweiss MF",
+          "name": "Altiva Hybrid Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.55"
+            ],
+            [
+              "Inception",
+              "1 Oct 2025"
+            ],
+            [
+              "AUM",
+              "₹3,783 Cr"
+            ],
+            [
+              "Expense (Reg)",
+              "2.51%"
+            ]
+          ],
+          "tags": [
+            [
+              "Income-oriented",
+              "tg"
+            ],
+            [
+              "6M ~+10% ann*",
+              "tg live"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--arudha)",
+          "amc": "Bandhan MF",
+          "name": "Arudha Hybrid Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.09"
+            ],
+            [
+              "Inception",
+              "9 Jan 2026"
+            ],
+            [
+              "Expense (Reg)",
+              "0.73%"
+            ],
+            [
+              "Exit Load",
+              "Nil"
+            ]
+          ],
+          "tags": [
+            [
+              "Cheapest",
+              "tg"
+            ],
+            [
+              "Market-neutral",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--qsif)",
+          "amc": "Quant MF",
+          "name": "QSIF Hybrid Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.26"
+            ],
+            [
+              "Inception",
+              "25 Sep 2025"
+            ],
+            [
+              "Expense (Reg)",
+              "5.21%"
+            ],
+            [
+              "Exit Load",
+              "1% &lt;15d"
+            ]
+          ],
+          "tags": [
+            [
+              "India's 1st SIF",
+              "tg"
+            ],
+            [
+              "Quant L/S",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--titanium)",
+          "amc": "Tata MF",
+          "name": "Titanium Hybrid Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹9.90"
+            ],
+            [
+              "Inception",
+              "~17 Dec 2025"
+            ],
+            [
+              "AUM",
+              "₹466 Cr"
+            ],
+            [
+              "Expense (Reg)",
+              "2.51%"
+            ]
+          ],
+          "tags": [
+            [
+              "Net eq -25% to 75%",
+              "tg"
+            ],
+            [
+              "MONTHLY redeem",
+              "tg nfo"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--apex)",
+          "amc": "Aditya Birla SL MF",
+          "name": "Apex Hybrid Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.03"
+            ],
+            [
+              "Inception",
+              "~30 Mar 2026"
+            ],
+            [
+              "Expense (Reg)",
+              "N/A"
+            ],
+            [
+              "Net equity",
+              "0–40%"
+            ]
+          ],
+          "tags": [
+            [
+              "Newest",
+              "tg nfo"
+            ],
+            [
+              "Lowest net-eq",
+              "tg"
+            ]
+          ]
+        },
+        {
+          "ac": "var(--magnum)",
+          "amc": "SBI MF",
+          "name": "Magnum Hybrid Long-Short",
+          "facts": [
+            [
+              "NAV (Reg)",
+              "₹10.22"
+            ],
+            [
+              "Inception",
+              "~22 Oct 2025"
+            ],
+            [
+              "AUM",
+              "≈₹3,462 Cr"
+            ],
+            [
+              "Expense (Reg)",
+              "2.02%"
+            ]
+          ],
+          "tags": [
+            [
+              "Largest AUM",
+              "tg live"
+            ],
+            [
+              "Equity-taxed",
+              "tg"
+            ]
+          ]
+        }
+      ],
+      "single": null,
+      "sections": [
+        {
+          "id": "KEY",
+          "title": "Key Facts · At a Glance",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "note": "Live fields from public fund pages, SBI MF and INDmoney; ranges & qualitative data from each NFO deck. Apex expense not published.",
+          "rows": [
+            [
+              "Fund Size (AUM)",
+              "Not disclosed (NFO)",
+              "₹3,783 Cr (30-Apr)",
+              "Not disclosed",
+              "Not disclosed",
+              "₹466 Cr (May)",
+              "Not disclosed (NFO Mar)",
+              "≈₹3,462 Cr (May)"
+            ],
+            [
+              "Inception",
+              "16-Jan-2026",
+              "01-Oct-25",
+              "09-Jan-2026",
+              "25-Sep-25",
+              "~17-Dec-25",
+              "NFO 6–18-Mar-26",
+              "~22-Oct-25"
+            ],
+            [
+              "Benchmark",
+              "CRISIL Hyb 50+50 Mod",
+              "NIFTY50 Hyb 50:50",
+              "CRISIL Hyb 85+15 Cons",
+              "NIFTY50 Hyb 50:50",
+              "CRISIL Hyb 50+50 Mod",
+              "NIFTY50 Hyb 50:50",
+              "NIFTY50 Hyb 50:50 TRI"
+            ],
+            [
+              "Investment Style",
+              "Active hybrid L/S; conviction picking + derivatives",
+              "Income: arbitrage + FI core, special situations",
+              "Stability-first: ≤65% debt + market-neutral arbitrage",
+              "Conservative; Systematic Active (quant) L/S",
+              "Dynamic net-equity; bottom-up + arbitrage; can go net short",
+              "Multi-engine income: arbitrage + FI + derivatives",
+              "Multi-asset equity-led: covered calls + arbitrage + longs"
+            ],
+            [
+              "Expense (Reg)",
+              "2.37%",
+              "2.51%",
+              "0.73%",
+              "5.21%",
+              "2.51%",
+              "Not available",
+              "2.02%"
+            ]
+          ]
+        },
+        {
+          "id": "A",
+          "title": "Fund Overview & Key Facts",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "note": "Titanium's MONTHLY redemption is the standout liquidity difference — every other fund allows twice-weekly.",
+          "rows": [
+            [
+              "NAV (Reg)",
+              "₹9.90",
+              "₹10.55",
+              "₹10.09",
+              "₹10.26",
+              "₹9.90",
+              "₹10.03 (21-May)",
+              "₹10.22"
+            ],
+            [
+              "Structure / Type",
+              "Interval: equity+debt, ltd short",
+              "Interval: equity+debt, ltd short",
+              "Interval: equity+debt, ltd short",
+              "Interval: equity+debt, ltd short",
+              "Interval: equity+debt, ltd short",
+              "Interval: arbitrage+equity+debt+deriv+L/S+REITs",
+              "Interval: equity+debt, ltd short"
+            ],
+            [
+              "Plans / Options",
+              "Regular Plan · Growth",
+              "Regular Plan · Growth, IDCW",
+              "Regular Plan · Growth, IDCW",
+              "Regular Plan · Growth, IDCW",
+              "Regular Plan · Growth, IDCW",
+              "Regular Plan · Growth, IDCW",
+              "Regular Plan · Growth, IDCW"
+            ],
+            [
+              "Subscription / Redemption",
+              "Daily · Mon & Wed",
+              "Daily · Mon & Wed",
+              "Daily · Mon & Thu",
+              "Daily · Tue & Wed",
+              "<span class='neg'>Daily · ONCE A MONTH</span>",
+              "Daily · Mon & Wed",
+              "Daily · Mon & Wed"
+            ],
+            [
+              "Exit Load",
+              "1% ≤12m",
+              "0.50% ≤90d",
+              "Nil",
+              "1% ≤15d",
+              "1% ≤1yr",
+              "0.50% ≤90d",
+              "0.50% ≤15d · 0.25% 15d–1m"
+            ],
+            [
+              "Min. Investment",
+              "₹10,00,000 (PAN)",
+              "₹10,00,000",
+              "₹10,00,000",
+              "₹10,00,000",
+              "₹10,00,000 (PAN)",
+              "₹10,00,000",
+              "₹10,00,000"
+            ],
+            [
+              "Min. SIP",
+              "Daily ₹5k · Mthly ₹10k · Qtr ₹20k",
+              "₹1,000",
+              "Per ISID",
+              "₹10,000",
+              "₹1,000 (≥6); top-up ₹500",
+              "Monthly (per ISID)",
+              "₹10,000"
+            ]
+          ]
+        },
+        {
+          "id": "B",
+          "title": "Investment Strategy & Core Allocation",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Core Idea",
+              "Actively-managed hybrid; net equity dialled on Nifty valuation (-7.5% to 75%)",
+              "Arbitrage & FI core + special situations & derivatives",
+              "≤65% short/med debt + min 35% equity arbitrage (market-neutral)",
+              "Equity arbitrage + quality debt accrual + unhedged long/short (model-driven)",
+              "Dynamically combine equity, debt & derivatives; long & short across phases",
+              "Income anchor (arbitrage+FI ~65% ea) + derivatives overlay + special-situation alpha",
+              "Equity, FI, derivatives & REITs/InvITs; covered calls + arbitrage + unhedged longs"
+            ],
+            [
+              "Equity Posture",
+              "Directional long; net eq -7.5% to 75%",
+              "Largely hedged (arbitrage/CC); no directional long",
+              "Fully-hedged / market-neutral arbitrage",
+              "Tactical longs + shorts (≤40% long, ≤25% short)",
+              "Net eq -25% to 75% (can go short); cash eq ≤75%",
+              "Net eq 0–40% via model; passive Nifty-50 basket",
+              "Gross equity 65–75%; covered equity 0–75%"
+            ],
+            [
+              "Debt Posture",
+              "Accrual + tactical duration; 25–35% incl margin",
+              "Core FI 40–60%, high-quality, BFSI-tilted",
+              "≤65% short/med, AAA/SOV-led; AA+/AA ~10%",
+              "25–65% IG debt + MM; Macaulay 3m–3yr",
+              "Active debt 25–35%",
+              "35–65%; ≥AA core; duration ≤3yr",
+              "Debt & MM 25–35%"
+            ]
+          ]
+        },
+        {
+          "id": "C",
+          "title": "Methodology & Investment Approach",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Approach",
+              "Eq 65–75% / debt-cash 25–35% / InvITs 0–10%; deriv ≤100%; alloc by Nifty P/B",
+              "Arbitrage+CC 20–40% · FI 40–60% · Spl Sit 0–10% · Deriv 10–20%",
+              "3-pillar: stability-first · low-correlation drivers · tax efficiency",
+              "Systematic Active Investing via MARCOV + HFA",
+              "Eq(incl deriv) 65–75% / REITs 0–10% / debt 25–35%; hedged deriv 0–75%, unhedged 0–25%",
+              "L/S Deriv ≤65% · Directional Eq (passive Nifty-50) 0–40% · FI 35–65% · InvITs 0–20%",
+              "Gross Eq 65–75% · Covered Eq 0–75% · Debt 25–35% · REITs 0–10% · unhedged 0–25%"
+            ],
+            [
+              "Allocation Trigger",
+              "Nifty50 P/B: &lt;3.0 raise eq; 3.0–3.7 range; &gt;3.7 cut",
+              "Dynamic by spread attractiveness & vol regime",
+              "Market conditions within ISID bands; duration 1–4yr",
+              "Regime-aware model; dual machine+manager approval",
+              "Valuation/phase: bull→long; overvalued→shorts; range→tactical",
+              "Defensive pivot via model in sideways/bear (protect 6M rolling)",
+              "Multiple strategies within each asset class"
+            ]
+          ]
+        },
+        {
+          "id": "D",
+          "title": "Stock / Security Selection Criteria",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Equity Selection",
+              "Bottom-up; 23 analysts/655+ cos/24 sectors. Leader, strong B/S, low-cost, earnings, valuation",
+              "Event/arbitrage: IPO≥₹1000Cr, QIP, buyback, mergers; F&O ≤10%, &gt;20 stocks, sector-neutral",
+              "Market-neutral arbitrage pairs; high-quality debt accrual; selective AA+/AA",
+              "Long: top-200 m-cap; Short: F&O basket; HFA + indicators + manager overlay",
+              "Bottom-up. Long: growth, strong financials, leadership; Short: deteriorating, headwinds, rich value",
+              "Net equity via model; Nifty-50 basket; special situations (IPO/buyback/merger/rights/SLB)",
+              "Equity growth + covered-call income; arbitrage market-neutral; unhedged longs"
+            ],
+            [
+              "Debt Selection",
+              "Accrual & tactical duration",
+              "~20% BFSI(≤5y)+~10% non-BFSI; AAA CPSE liquid",
+              "AAA/SOV-led, AA+/AA ~10%; 1–4yr",
+              "IG only: corp/CP/CD/T-bill/G-sec; 3m–3yr",
+              "Active debt management",
+              "Quality bonds/MM; ≥AA; ≤3yr; AAA/Sov core",
+              "Debt & MM for stability"
+            ]
+          ]
+        },
+        {
+          "id": "E",
+          "title": "Long-Short / Derivative Toolkit",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Hedging tools",
+              "Arbitrage, Covered Call",
+              "Cash-future arb, Covered Call",
+              "Equity arbitrage",
+              "Arbitrage, Covered Call, Protective Put, Bear Put Spread",
+              "Arbitrage; hedged deriv 0–75%",
+              "Cash-future & dividend arb; covered calls; protective puts",
+              "Covered calls; arbitrage; collars"
+            ],
+            [
+              "Directional / alpha tools",
+              "Buying Puts; IPO/QIP/buyback; carry debt",
+              "Straddle/Strangle, Pair trade, special situations",
+              "Spread/pricing arbitrage (market-neutral)",
+              "Unhedged long/short, Bear Call Spread, Short Call/Put/Straddle",
+              "Unhedged shorts, long derivatives, paired trades; REITs/InvITs",
+              "Options; straddles/strangles; special situations; pair trades",
+              "Unhedged equity longs; tactical shorts; REITs/InvITs"
+            ],
+            [
+              "Max unhedged short",
+              "≤25% (intended &lt;10%)",
+              "≤25%",
+              "≤25%",
+              "≤25%",
+              "≤25% (net eq floor -25%)",
+              "≤25%",
+              "≤25%"
+            ]
+          ]
+        },
+        {
+          "id": "F",
+          "title": "Investment Framework & Philosophy",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Philosophy",
+              "Multiple strategies for smoother outcomes; risk-adjusted returns",
+              "All-weather income engine: stable core + opportunistic growth, low vol",
+              "Relative stability & low vol; superior post-tax risk-adjusted returns",
+              "&ldquo;Objectivity is religion, data is god&rdquo; — quant/behavioural/cycle analytics",
+              "Uncorrelated return drivers; &ldquo;switch-hit&rdquo; positioning",
+              "Strategic breadth over aggression; resilient 6-month rolling returns",
+              "Turn risk into opportunity; smoother ride & optimal risk-adjusted returns"
+            ],
+            [
+              "Engine / Framework",
+              "In-house equity & FI research desk",
+              "Edelweiss factor-investing & low-risk-trading",
+              "Bandhan AMC research; ISID-bound bands",
+              "quantamine + HFA + MARCOV",
+              "Business · Management · Valuation",
+              "Income Anchor + Derivatives Overlay + Tactical Alpha + Risk Control",
+              "Multi-asset, all-cycle, vol-containment, tax-efficient"
+            ]
+          ]
+        },
+        {
+          "id": "G",
+          "title": "What Makes This SIF Unique",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Edge",
+              "Large research bench; dynamic net-equity by valuation; DAA-style track record",
+              "Documented special-situation track record; back-tested vs arbitrage",
+              "Cheapest (0.73%) & conservatively positioned; tax-efficient; nil exit load",
+              "India's 1st SIF; 30-yr quant heritage; systematic+discretionary fusion",
+              "Net equity can go negative (-25%); Tata research; early holdings disclosed; Expense (Reg) 2.51%",
+              "Newest; largest AMC team (&gt;₹2L cr eq + &gt;₹2L cr FI); overseas reach; lowest net-eq (0–40%)",
+              "Largest AUM in set (~₹3,462 Cr); equity taxation (gross eq &gt;65%); SBI scale"
+            ]
+          ]
+        },
+        {
+          "id": "H",
+          "title": "Track Record & Team Strength",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Fund managers",
+              "Rajat Chandak, Ayush Shah (Eq); Manish Banthia, Akhil Kakkar (Debt)",
+              "Bharat Lahoti, Bhavesh Jain (Eq); Dhawal Dalal, Kedar Karnik (Debt); Amit Vora (Ovs)",
+              "Kapil Kankonkar, Nilesh Saha (Eq); Brijesh Shah, Debraj Lahiri (Debt)",
+              "Sandeep Tandon, Lokesh Garg, Sameer Kate, Ankit Pande, Sanjeev Sharma",
+              "Amit Somani, Suraj Nanda, Hasmukh Vishariya",
+              "Lovelish Solanki (Eq), Mohit Sharma (Debt)",
+              "Gaurav Mehta, CFA (CIO–Alternatives / Head–SIF Equity)"
+            ],
+            [
+              "Team / AUM context",
+              "4 mgrs + 23-analyst bench",
+              "5 mgrs + dealing/research",
+              "4 mgrs",
+              "5 money managers",
+              "Tata MF SIF team",
+              "Eq ~20 (&gt;₹2L cr) + FI 13 (&gt;₹2L cr); ~30 yrs combined",
+              "~19 yrs; with SBI since 2018; leads Magnum SIF eq since Jul-25"
+            ]
+          ]
+        },
+        {
+          "id": "K",
+          "title": "Why Add to Your Portfolio",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Investor fit",
+              "Equity-style upside + active downside mgmt + large research engine",
+              "Conservative: debt-plus / equity-savings-like, low vol, 12.5% LTCG",
+              "Lowest-cost, lowest-risk; tax-efficient arbitrage/debt substitute",
+              "Low-vol diversifier with genuine short-side alpha & quant process",
+              "Wants net-short capability + Tata research; OK with monthly liquidity",
+              "Equity-savings-plus, lowest net-equity (0–40%), slab STCG; newest",
+              "Equity-taxation hybrid with SBI scale; largest AUM = liquidity comfort"
+            ]
+          ]
+        },
+        {
+          "id": "O",
+          "title": "Fund Commentary / AMC Outlook",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "note": "Only Altiva carries a dated monthly fund commentary (Apr-2026). The others are NFO/launch-stage materials.",
+          "rows": [
+            [
+              "Latest commentary",
+              "NFO deck — no live commentary",
+              "Apr-26: YTM ~8.2%; arb+CC ~37%; derivatives ~11% (straddles); 6M fund ~+10% ann vs Nifty ~-14%",
+              "Jan-26 launch deck — positioning only",
+              "Views as of 15-Sep-25 (NFO)",
+              "NFO deck — no commentary",
+              "NFO deck (Mar-26) — positioning only",
+              "SBI NFO landing page — positioning only"
+            ]
+          ]
+        },
+        {
+          "id": "P",
+          "title": "Investment Process",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Process",
+              "Bottom-up research → valuation-based net-equity sizing → derivatives/arbitrage → debt accrual",
+              "Core arbitrage+FI → overlay special situations & derivatives → strict risk controls (5% stop)",
+              "Stability-first debt anchor → equity arbitrage → blended accrual+spread → 1–4y duration",
+              "HFA signal → MARCOV regime model → sizing → smart-order execution → risk/compliance",
+              "Strong business → management → valuation → size net equity by phase → deriv/arb → active debt",
+              "Income anchor → derivatives overlay → tactical alpha → model sizes net equity → option risk control",
+              "Multi-asset alloc → covered-call & arbitrage income → unhedged equity growth → collars/arbitrage risk"
+            ]
+          ]
+        },
+        {
+          "id": "Q",
+          "title": "Fund Management Team",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "Headline",
+              "ICICI Pru: deep equity + FI desk; DAA experience",
+              "Edelweiss factor-investing co-heads + CIO-FI Dhawal Dalal (28y)",
+              "Bandhan AMC equity + debt; full-suite AMC into SIF",
+              "Founder/CIO Sandeep Tandon (33y); ex-Kotak/CS/UBS mgrs",
+              "Tata AMC SIF: Somani (since 2010), Nanda (named FM), Vishariya",
+              "ABSL: Solanki (eq/deriv/arb, CMT-L1) & Sharma (Sr FM, 19y, IIM-C/IIT-M)",
+              "SBI: Gaurav Mehta, CFA — CIO Alternatives (Equity), ~19y"
+            ]
+          ]
+        },
+        {
+          "id": "S",
+          "title": "Conclusion (per-fund snapshot)",
+          "type": "table",
+          "cols": [
+            [
+              "iSIF",
+              "ICICI Pru",
+              "var(--isif)"
+            ],
+            [
+              "Altiva",
+              "Edelweiss",
+              "var(--altiva)"
+            ],
+            [
+              "Arudha",
+              "Bandhan",
+              "var(--arudha)"
+            ],
+            [
+              "QSIF",
+              "Quant",
+              "var(--qsif)"
+            ],
+            [
+              "Titanium",
+              "Tata",
+              "var(--titanium)"
+            ],
+            [
+              "Apex",
+              "ABSL",
+              "var(--apex)"
+            ],
+            [
+              "Magnum",
+              "SBI",
+              "var(--magnum)"
+            ]
+          ],
+          "rows": [
+            [
+              "In one line",
+              "Most equity-like — highest upside with active downside management; 2.37% cost",
+              "Best conservative profile + strong disclosed returns (6M ~+10% Regular) at 2.51%; clearest income-plus",
+              "Cheapest (0.73%) & conservative, nil exit load; tax-efficient arbitrage/debt substitute",
+              "Most differentiated process (quant L/S); highest cost (5.21%)",
+              "Most flexible (net equity can go negative) + early holdings; MONTHLY redemption = lowest liquidity",
+              "Newest & most conservative on equity (0–40%); deepest team & overseas reach; slab STCG",
+              "Largest, equity-taxed, SBI-backed; twice-weekly liquidity; moderate 2.02% cost"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sector-rotation-long-short",
+      "chip": "Equity · Sector Rotation Long-Short",
+      "chipColor": "var(--qsif)",
+      "title": "Sector Rotation Long-Short",
+      "desc": "A focused sectoral long-short strategy: min 80% equity (long + short) restricted to a maximum of four sectors, with up to 25% unhedged short at sector level. Currently a single live offering — qsif Sector Rotation Long-Short Fund (Quant MF). Benchmark: Nifty 500 TRI.",
+      "cols": [],
+      "cards": null,
+      "single": {
+        "ac": "var(--qsif)",
+        "amc": "Quant Mutual Fund",
+        "name": "qsif Sector Rotation Long-Short Fund",
+        "facts": [
+          [
+            "Benchmark",
+            "Nifty 500 TRI"
+          ],
+          [
+            "NAV (Reg)",
+            "₹10.00"
+          ],
+          [
+            "Expense (Reg)",
+            "—"
+          ],
+          [
+            "Investment style",
+            "Focused sectoral portfolio · beta mgmt, 25% short"
+          ],
+          [
+            "Min. Investment",
+            "₹10,00,000 (+ multiples of Re.1)"
+          ],
+          [
+            "Additional / SIP",
+            "₹10,00,000 / ₹10,000"
+          ],
+          [
+            "Exit Load",
+            "1% if redeemed ≤15 days; Nil after"
+          ],
+          [
+            "Fund Managers",
+            "Sandeep Tandon · Sameer Kate · Jignesh Shah · Ankit Pande · Sanjeev Sharma"
+          ],
+          [
+            "Framework",
+            "Systematic Active Investing — MARCOV + HFA · Cycles Analytics"
+          ]
+        ]
+      },
+      "extras": {
+        "alloc": {
+          "title": "Indicative Asset Allocation, Risk & Ranges",
+          "small": "As on Apr 2026",
+          "rows": [
+            [
+              "All-cap cash equity / arbitrage",
+              "High / Low",
+              65,
+              100
+            ],
+            [
+              "Unhedged derivatives (Long)",
+              "High",
+              0,
+              35
+            ],
+            [
+              "Unhedged derivatives (Short)",
+              "High",
+              0,
+              25
+            ],
+            [
+              "Hedging",
+              "Moderate",
+              0,
+              100
+            ],
+            [
+              "Margins (Cash, T-bills, G-secs)",
+              "Minimal",
+              0,
+              15
+            ]
+          ],
+          "note": "Minimum equity exposure (long + short) = 80%. Long-short applies at sector level — all stocks of a sector are either long or short. 0% leverage as per SEBI regulations."
+        },
+        "model": {
+          "title": "Flexible 4-Sector Allocation Model",
+          "desc": "At any time the fund takes exposure to a maximum of 4 sectors (focused, avoiding over-diversification). No same-sector long-short — a sector is either fully long or fully short.",
+          "scenarios": [
+            {
+              "n": "Scenario 1",
+              "l": "4 Longs + 0 Shorts",
+              "longs": 4,
+              "shorts": 0
+            },
+            {
+              "n": "Scenario 2",
+              "l": "3 Longs + 1 Short",
+              "longs": 3,
+              "shorts": 1
+            },
+            {
+              "n": "Scenario 3",
+              "l": "2 Longs + 2 Shorts",
+              "longs": 2,
+              "shorts": 2
+            },
+            {
+              "n": "Scenario 4",
+              "l": "1 Long + 3 Shorts",
+              "longs": 1,
+              "shorts": 3
+            }
+          ]
+        },
+        "dispersion": {
+          "title": "Why this fund — leadership rotates rapidly",
+          "desc": "Best vs worst quarterly sector return across 9 Nifty sectoral indices. The gap frequently exceeds 30% — no single sector dominates consistently. Source: quant Global Research.",
+          "rows": [
+            [
+              "2020 Q1",
+              "FMCG",
+              -9.3,
+              "Metals",
+              -43.4,
+              34.1
+            ],
+            [
+              "2020 Q2",
+              "Auto",
+              42,
+              "FMCG",
+              10,
+              32
+            ],
+            [
+              "2020 Q4",
+              "Realty",
+              48.1,
+              "Media",
+              6.5,
+              41.6
+            ],
+            [
+              "2021 Q3",
+              "Realty",
+              49.4,
+              "Auto",
+              0,
+              49.4
+            ],
+            [
+              "2022 Q2",
+              "Auto",
+              10.9,
+              "Metals",
+              -27.4,
+              38.3
+            ],
+            [
+              "2023 Q2",
+              "Realty",
+              34.3,
+              "Media",
+              2.6,
+              31.7
+            ],
+            [
+              "2024 Q1",
+              "Energy",
+              16.6,
+              "Media",
+              -24.8,
+              41.4
+            ],
+            [
+              "2026 Q1",
+              "Metals",
+              -0.3,
+              "Realty",
+              -25.8,
+              25.5
+            ]
+          ]
+        },
+        "advantages": [
+          {
+            "t": "Capital Efficiency",
+            "d": "Focused exposures give targeted sector insight without over-diversification."
+          },
+          {
+            "t": "Accessible Expertise",
+            "d": "Participate in complex sector rotation without needing deep market-timing skills."
+          },
+          {
+            "t": "Active Money Management",
+            "d": "Expert managers actively run the book for strong risk-adjusted performance."
+          },
+          {
+            "t": "Avoids Sector Traps",
+            "d": "Dynamically realigns long & short exposures to enhance structural resilience."
+          },
+          {
+            "t": "Tax Efficiency",
+            "d": "Adjustments executed without generating taxable events — full compounding."
+          },
+          {
+            "t": "Turnkey Sector Rotation",
+            "d": "Aligns exposures with economic trends — no sector selection needed by investors."
+          }
+        ],
+        "phases": {
+          "title": "Relative performance across market phases",
+          "desc": "How a qsif equity-centric (SIF) strategy is expected to behave vs a long-only quant equity fund. Indicative only.",
+          "rows": [
+            [
+              "Raging Bull Market",
+              "Outperformance",
+              "Underperformance"
+            ],
+            [
+              "Bull Market",
+              "Outperformance",
+              "Moderate"
+            ],
+            [
+              "Correction & Consolidation",
+              "Moderate",
+              "Outperformance"
+            ],
+            [
+              "Rangebound Market",
+              "Moderate",
+              "Outperformance"
+            ],
+            [
+              "Bear Market",
+              "Underperformance",
+              "Outperformance"
+            ],
+            [
+              "Volatile Market",
+              "Moderate",
+              "Outperformance"
+            ]
+          ]
+        },
+        "compare": {
+          "title": "qsif vs quant MF vs AIF",
+          "desc": "How the SIF wrapper compares with quant's own mutual-fund schemes and AIFs (from the deck).",
+          "cols": [
+            "Feature",
+            "quant MF",
+            "qsif (SIF)",
+            "AIFs"
+          ],
+          "rows": [
+            [
+              "Investment Framework",
+              "Discretionary Active (VLRT)",
+              "Systematic Active (MARCOV)",
+              "Traditional Active"
+            ],
+            [
+              "Portfolio Analytics",
+              "Low Frequency",
+              "High Frequency",
+              "Low Frequency"
+            ],
+            [
+              "LFA / HFA Ratio",
+              "70 / 30",
+              "30 / 70",
+              "90 / 10"
+            ],
+            [
+              "FM Horizon",
+              "Medium & Long",
+              "Short & Medium",
+              "Long-term"
+            ],
+            [
+              "Tax Efficiency",
+              "High",
+              "High",
+              "Low"
+            ],
+            [
+              "Max Exposure",
+              "100%",
+              "100%",
+              "200% (Leverage)"
+            ],
+            [
+              "Unhedged (Naked) Shorts",
+              "0%",
+              "25%",
+              "100%"
+            ]
+          ]
+        },
+        "insight": {
+          "h": "The thesis in one line",
+          "p": [
+            "&ldquo;Returns in equities are driven more by where you invest than what you pick.&rdquo; The fund expresses a focused thesis on sectoral cycles rather than overall market direction — letting investors avoid sector-timing, while shorting sectors expected to face headwinds adds a distinct alpha source.",
+            "The engine: Systematic Active Investing via MARCOV + HFA, underpinned by quant's Cycles Analytics (macro, earnings and liquidity cycles) and a top-down filter — Global Macro → India Macro → Domestic Themes → Sector Selection → Stock Selection."
+          ]
+        }
+      }
+    }
+  ],
+  "fundsIndex": [
+    {
+      "name": "iSIF Equity Ex-Top 100 Long-Short",
+      "amc": "ICICI Prudential Mutual Fund",
+      "category": "Equity Ex-Top 100 Long-Short",
+      "categoryId": "ex-top-100-long-short",
+      "accent": "var(--isif)",
+      "facts": [
+        [
+          "Fund Size",
+          "₹1,535.22 Cr"
+        ],
+        [
+          "Inception",
+          "4 Feb 2026"
+        ],
+        [
+          "NAV (Reg)",
+          "₹9.76"
+        ],
+        [
+          "Expense (Reg)",
+          "1.81%"
+        ],
+        [
+          "Investment Style",
+          "SMID Cap · up to 25% Short"
+        ]
+      ],
+      "tags": [
+        [
+          "Nifty 500 TRI",
+          "tg"
+        ],
+        [
+          "Fundamental",
+          "tg"
+        ],
+        [
+          "Bottom-up",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-1",
+      "schemeCode": "SIF-1"
+    },
+    {
+      "name": "qsif Equity Ex-Top 100 Long-Short",
+      "amc": "Quant Mutual Fund",
+      "category": "Equity Ex-Top 100 Long-Short",
+      "categoryId": "ex-top-100-long-short",
+      "accent": "var(--qsif)",
+      "facts": [
+        [
+          "Fund Size",
+          "₹211.68 Cr"
+        ],
+        [
+          "Inception",
+          "12 Nov 2025"
+        ],
+        [
+          "NAV (Reg)",
+          "₹9.65"
+        ],
+        [
+          "Expense (Reg)",
+          "Refer qsif.com"
+        ],
+        [
+          "Investment Style",
+          "SMID · Beta mgmt, 25% Short"
+        ]
+      ],
+      "tags": [
+        [
+          "Nifty 500 TRI",
+          "tg"
+        ],
+        [
+          "Systematic / Quant",
+          "tg"
+        ],
+        [
+          "Beta 0.49",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-9",
+      "schemeCode": "SIF-9"
+    },
+    {
+      "name": "Arudha Equity Long-Short",
+      "amc": "Bandhan MF",
+      "category": "Equity Long-Short SIF",
+      "categoryId": "equity-long-short",
+      "accent": "var(--arudha)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.11"
+        ],
+        [
+          "Inception",
+          "5 Mar 2026"
+        ],
+        [
+          "Benchmark",
+          "Nifty 500 TRI"
+        ],
+        [
+          "Exit Load",
+          "0.50% &lt;30d"
+        ]
+      ],
+      "tags": [
+        [
+          "NFO / New",
+          "tg nfo"
+        ],
+        [
+          "4 Return Engines",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-62",
+      "schemeCode": "SIF-62"
+    },
+    {
+      "name": "Diviniti Equity Long-Short",
+      "amc": "ITI MF",
+      "category": "Equity Long-Short SIF",
+      "categoryId": "equity-long-short",
+      "accent": "var(--diviniti)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹949.15"
+        ],
+        [
+          "Inception",
+          "1 Dec 2025"
+        ],
+        [
+          "AUM",
+          "₹415.67 Cr"
+        ],
+        [
+          "Expense (Reg)",
+          "2.44%"
+        ]
+      ],
+      "tags": [
+        [
+          "LIVE",
+          "tg live"
+        ],
+        [
+          "Nifty 50 TRI",
+          "tg"
+        ],
+        [
+          "Conservative",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-21",
+      "schemeCode": "SIF-21"
+    },
+    {
+      "name": "DynaSIF Equity Long-Short",
+      "amc": "360 ONE Asset",
+      "category": "Equity Long-Short SIF",
+      "categoryId": "equity-long-short",
+      "accent": "var(--dyna)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.31"
+        ],
+        [
+          "Inception",
+          "6 Feb 2026"
+        ],
+        [
+          "Benchmark",
+          "BSE 500 TRI"
+        ],
+        [
+          "Exit Load",
+          "0.50% &lt;3m"
+        ]
+      ],
+      "tags": [
+        [
+          "NFO / New",
+          "tg nfo"
+        ],
+        [
+          "Cap-agnostic",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-58",
+      "schemeCode": "SIF-58"
+    },
+    {
+      "name": "Titanium Equity Long-Short",
+      "amc": "Tata MF",
+      "category": "Equity Long-Short SIF",
+      "categoryId": "equity-long-short",
+      "accent": "var(--titanium)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.08"
+        ],
+        [
+          "Inception",
+          "27 Apr 2026"
+        ],
+        [
+          "Benchmark",
+          "Nifty 500 TRI"
+        ],
+        [
+          "Exit Load",
+          "1% &lt;1m"
+        ]
+      ],
+      "tags": [
+        [
+          "Newest",
+          "tg nfo"
+        ],
+        [
+          "Valuation tool",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-35",
+      "schemeCode": "SIF-35"
+    },
+    {
+      "name": "Sapphire Equity Long-Short",
+      "amc": "Franklin Templeton",
+      "category": "Equity Long-Short SIF",
+      "categoryId": "equity-long-short",
+      "accent": "var(--sapphire)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹1,004.25"
+        ],
+        [
+          "Inception",
+          "29 Apr 2026"
+        ],
+        [
+          "Expense (Reg)",
+          "~4.81%*"
+        ],
+        [
+          "Exit Load",
+          "1% &lt;1yr"
+        ]
+      ],
+      "tags": [
+        [
+          "New",
+          "tg nfo"
+        ],
+        [
+          "Multi-factor quant",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-37",
+      "schemeCode": "SIF-37"
+    },
+    {
+      "name": "qsif Equity Long-Short",
+      "amc": "Quant MF",
+      "category": "Equity Long-Short SIF",
+      "categoryId": "equity-long-short",
+      "accent": "var(--qsif)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.17"
+        ],
+        [
+          "Inception",
+          "17 Sep 2025"
+        ],
+        [
+          "Expense (Reg)",
+          "~11.34%*"
+        ],
+        [
+          "Exit Load",
+          "1% &lt;15d"
+        ]
+      ],
+      "tags": [
+        [
+          "LIVE — longest",
+          "tg live"
+        ],
+        [
+          "VLRT+MARCOV+HFA",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-11",
+      "schemeCode": "SIF-11"
+    },
+    {
+      "name": "iSIF Hybrid Long-Short",
+      "amc": "ICICI Prudential MF",
+      "category": "Hybrid Long-Short SIF",
+      "categoryId": "hybrid-long-short",
+      "accent": "var(--isif)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹9.90"
+        ],
+        [
+          "Inception",
+          "16 Jan 2026"
+        ],
+        [
+          "Expense (Reg)",
+          "2.37%"
+        ],
+        [
+          "Net equity",
+          "-7.5% to 75%"
+        ]
+      ],
+      "tags": [
+        [
+          "Most equity-like",
+          "tg"
+        ],
+        [
+          "Directional long",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-5",
+      "schemeCode": "SIF-5"
+    },
+    {
+      "name": "Altiva Hybrid Long-Short",
+      "amc": "Edelweiss MF",
+      "category": "Hybrid Long-Short SIF",
+      "categoryId": "hybrid-long-short",
+      "accent": "var(--altiva)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.55"
+        ],
+        [
+          "Inception",
+          "1 Oct 2025"
+        ],
+        [
+          "AUM",
+          "₹3,783 Cr"
+        ],
+        [
+          "Expense (Reg)",
+          "2.51%"
+        ]
+      ],
+      "tags": [
+        [
+          "Income-oriented",
+          "tg"
+        ],
+        [
+          "6M ~+10% ann*",
+          "tg live"
+        ]
+      ],
+      "sifCode": "SIF-15",
+      "schemeCode": "SIF-15"
+    },
+    {
+      "name": "Arudha Hybrid Long-Short",
+      "amc": "Bandhan MF",
+      "category": "Hybrid Long-Short SIF",
+      "categoryId": "hybrid-long-short",
+      "accent": "var(--arudha)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.09"
+        ],
+        [
+          "Inception",
+          "9 Jan 2026"
+        ],
+        [
+          "Expense (Reg)",
+          "0.73%"
+        ],
+        [
+          "Exit Load",
+          "Nil"
+        ]
+      ],
+      "tags": [
+        [
+          "Cheapest",
+          "tg"
+        ],
+        [
+          "Market-neutral",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-70",
+      "schemeCode": "SIF-70"
+    },
+    {
+      "name": "QSIF Hybrid Long-Short",
+      "amc": "Quant MF",
+      "category": "Hybrid Long-Short SIF",
+      "categoryId": "hybrid-long-short",
+      "accent": "var(--qsif)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.26"
+        ],
+        [
+          "Inception",
+          "25 Sep 2025"
+        ],
+        [
+          "Expense (Reg)",
+          "5.21%"
+        ],
+        [
+          "Exit Load",
+          "1% &lt;15d"
+        ]
+      ],
+      "tags": [
+        [
+          "India's 1st SIF",
+          "tg"
+        ],
+        [
+          "Quant L/S",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-13",
+      "schemeCode": "SIF-13"
+    },
+    {
+      "name": "Titanium Hybrid Long-Short",
+      "amc": "Tata MF",
+      "category": "Hybrid Long-Short SIF",
+      "categoryId": "hybrid-long-short",
+      "accent": "var(--titanium)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹9.90"
+        ],
+        [
+          "Inception",
+          "~17 Dec 2025"
+        ],
+        [
+          "AUM",
+          "₹466 Cr"
+        ],
+        [
+          "Expense (Reg)",
+          "2.51%"
+        ]
+      ],
+      "tags": [
+        [
+          "Net eq -25% to 75%",
+          "tg"
+        ],
+        [
+          "MONTHLY redeem",
+          "tg nfo"
+        ]
+      ],
+      "sifCode": "SIF-39",
+      "schemeCode": "SIF-39"
+    },
+    {
+      "name": "Apex Hybrid Long-Short",
+      "amc": "Aditya Birla SL MF",
+      "category": "Hybrid Long-Short SIF",
+      "categoryId": "hybrid-long-short",
+      "accent": "var(--apex)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.03"
+        ],
+        [
+          "Inception",
+          "~30 Mar 2026"
+        ],
+        [
+          "Expense (Reg)",
+          "N/A"
+        ],
+        [
+          "Net equity",
+          "0–40%"
+        ]
+      ],
+      "tags": [
+        [
+          "Newest",
+          "tg nfo"
+        ],
+        [
+          "Lowest net-eq",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-41",
+      "schemeCode": "SIF-41"
+    },
+    {
+      "name": "Magnum Hybrid Long-Short",
+      "amc": "SBI MF",
+      "category": "Hybrid Long-Short SIF",
+      "categoryId": "hybrid-long-short",
+      "accent": "var(--magnum)",
+      "facts": [
+        [
+          "NAV (Reg)",
+          "₹10.22"
+        ],
+        [
+          "Inception",
+          "~22 Oct 2025"
+        ],
+        [
+          "AUM",
+          "≈₹3,462 Cr"
+        ],
+        [
+          "Expense (Reg)",
+          "2.02%"
+        ]
+      ],
+      "tags": [
+        [
+          "Largest AUM",
+          "tg live"
+        ],
+        [
+          "Equity-taxed",
+          "tg"
+        ]
+      ],
+      "sifCode": "SIF-43",
+      "schemeCode": "SIF-43"
+    },
+    {
+      "name": "qsif Sector Rotation Long-Short Fund",
+      "amc": "Quant Mutual Fund",
+      "category": "Sector Rotation Long-Short",
+      "categoryId": "sector-rotation-long-short",
+      "accent": "var(--qsif)",
+      "facts": [
+        [
+          "Benchmark",
+          "Nifty 500 TRI"
+        ],
+        [
+          "NAV (Reg)",
+          "₹10.00"
+        ],
+        [
+          "Expense (Reg)",
+          "—"
+        ],
+        [
+          "Investment style",
+          "Focused sectoral portfolio · beta mgmt, 25% short"
+        ],
+        [
+          "Min. Investment",
+          "₹10,00,000 (+ multiples of Re.1)"
+        ],
+        [
+          "Additional / SIP",
+          "₹10,00,000 / ₹10,000"
+        ],
+        [
+          "Exit Load",
+          "1% if redeemed ≤15 days; Nil after"
+        ],
+        [
+          "Fund Managers",
+          "Sandeep Tandon · Sameer Kate · Jignesh Shah · Ankit Pande · Sanjeev Sharma"
+        ],
+        [
+          "Framework",
+          "Systematic Active Investing — MARCOV + HFA · Cycles Analytics"
+        ]
+      ],
+      "tags": [],
+      "sifCode": "SIF-123",
+      "schemeCode": "SIF-123"
+    }
+  ]
+}

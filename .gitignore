@@ -1,0 +1,33 @@
+# ===== Secrets / environment =====
+# Never commit credentials (e.g. Azure connection strings, API keys)
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env*.local
+
+# ===== Python =====
+backend/.venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ===== Node / Next.js =====
+frontend/node_modules/
+node_modules/
+frontend/.next/
+.next/
+frontend/out/
+out/
+next-env.d.ts
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Editor =====
+.vscode/
+.idea/
+*.swp

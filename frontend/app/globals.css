@@ -7,11 +7,11 @@
   --ink-soft: #3c4248;
   --muted: #6c757a;
   --faint: #9aa2a8;
-  --paper: #f4f1ea;
-  --paper-2: #ece7dc;
-  --card: #fbf9f4;
-  --line: #ddd6c8;
-  --line-strong: #c3b9a4;
+  --paper: #ffffff;
+  --paper-2: #f5f5f5;
+  --card: #fafafa;
+  --line: #e5e7eb;
+  --line-strong: #d1d5db;
   --gold: #9a7b2e;
   --accent: #1b4332;
 }
@@ -345,6 +345,23 @@ a.fund-card:hover {
 
 .facts__row:last-child {
   border-bottom: 0;
+}
+
+.facts__paired {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.facts__col .facts__row:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 360px) {
+  .facts__paired {
+    grid-template-columns: 1fr;
+  }
 }
 
 .facts__k {
@@ -1048,19 +1065,48 @@ table.cmp thead th.col--emph {
 }
 
 .detail-head__facts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0 28px;
+  margin-top: 4px;
 }
 
-.peer-note {
-  font-size: 13px;
-  color: var(--ink-soft);
-  background: color-mix(in srgb, var(--gold) 8%, var(--card));
+.detail-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.detail-tabs__btn {
   border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 10px 14px;
-  margin: 18px 0 6px;
+  background: var(--paper-2);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.detail-tabs__btn:hover {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+
+.detail-tabs__btn.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.detail-tab-panel {
+  margin: 16px 0 18px;
+}
+
+.detail-tab-panel--empty {
+  min-height: 120px;
 }
 
 /* ---------- compare multiselect ---------- */
@@ -1131,7 +1177,7 @@ table.cmp thead th.col--emph {
   border-radius: 10px;
   background: var(--card);
   padding: 16px 18px 14px;
-  margin: 18px 0;
+  margin: 0;
 }
 
 .nav-chart__head {

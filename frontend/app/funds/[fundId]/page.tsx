@@ -8,6 +8,15 @@ import { SectionRenderer } from "@/components/SectionRenderer";
 import { ExtrasRenderer } from "@/components/ExtrasRenderer";
 import { NavMovementChart } from "@/components/NavMovementChart";
 import { FundCompareSelect } from "@/components/FundCompareSelect";
+import { FactsList } from "@/components/FactsList";
+
+type DetailTab = "return" | "portfolio" | "peer";
+
+const DETAIL_TABS: { id: DetailTab; label: string }[] = [
+  { id: "return", label: "Return" },
+  { id: "portfolio", label: "Portfolio" },
+  { id: "peer", label: "Peer Comparison" },
+];
 
 export default function FundDetailPage({
   params,
@@ -18,6 +27,7 @@ export default function FundDetailPage({
   const [fund, setFund] = useState<FundDetailResponse | null>(null);
   const [category, setCategory] = useState<Category | null>(null);
   const [status, setStatus] = useState<"loading" | "ok" | "error">("loading");
+  const [activeTab, setActiveTab] = useState<DetailTab>("return");
   // Column `short`s currently shown in the comparison tables. null until the
   // category loads (then defaults to all columns selected).
   const [selectedShorts, setSelectedShorts] = useState<Set<string> | null>(null);
@@ -89,53 +99,65 @@ export default function FundDetailPage({
             {fund.category}
           </Link>
         </div>
-        <div className="detail-head__facts">
-          {fund.facts
-            .filter(([k]) => k !== "NAV (Reg)")
-            .map(([k, v], i) => (
-            <div className="facts__row" key={`${k}-${i}`}>
-              <span className="facts__k">{k}</span>
-              <span className="facts__v">{v || <span className="dash">—</span>}</span>
-            </div>
-          ))}
-        </div>
+        <FactsList
+          className="detail-head__facts facts"
+          facts={fund.facts.filter(([k]) => k !== "NAV (Reg)")}
+        />
       </header>
 
-      <NavMovementChart fundId={fundId} accent={fund.accent} />
+      <nav className="detail-tabs" role="tablist" aria-label="Fund views">
+        {DETAIL_TABS.map(({ id, label }) => (
+          <button
+            key={id}
+            type="button"
+            role="tab"
+            className={`detail-tabs__btn${activeTab === id ? " is-active" : ""}`}
+            aria-selected={activeTab === id}
+            onClick={() => setActiveTab(id)}
+          >
+            {label}
+          </button>
+        ))}
+      </nav>
 
-      {category && peerCount > 1 ? (
-        <>
-          <p className="peer-note">
-            Compared below against {peerCount - 1} peer
-            {peerCount - 1 === 1 ? "" : "s"} in{" "}
-            <strong>{category.title}</strong>. This fund&rsquo;s column is
-            highlighted.
-          </p>
-          <FundCompareSelect
-            cols={category.cols.map((c) => [c.short, c.amc, c.color])}
-            ownColor={emphColor}
-            selected={selectedShorts ?? new Set()}
-            onToggle={toggleShort}
-          />
-        </>
+      {activeTab === "return" ? (
+        <div className="detail-tab-panel" role="tabpanel">
+          <NavMovementChart fundId={fundId} accent={fund.accent} />
+        </div>
       ) : null}
 
-      {/* Comparison sections with this fund's column emphasized */}
-      {category?.sections.map((s) => (
-        <SectionRenderer
-          key={s.id}
-          section={s}
-          emphColor={emphColor}
-          visibleCols={visibleCols}
+      {activeTab === "portfolio" ? (
+        <div
+          className="detail-tab-panel detail-tab-panel--empty"
+          role="tabpanel"
         />
-      ))}
+      ) : null}
 
-      {/* Sector Rotation extras (single-fund category) */}
-      {category?.extras ? (
-        <>
-          <h2 className="subhead">Strategy deep-dive</h2>
-          <ExtrasRenderer extras={category.extras} />
-        </>
+      {activeTab === "peer" ? (
+        <div className="detail-tab-panel" role="tabpanel">
+          {category && peerCount > 1 ? (
+            <FundCompareSelect
+              cols={category.cols.map((c) => [c.short, c.amc, c.color])}
+              ownColor={emphColor}
+              selected={selectedShorts ?? new Set()}
+              onToggle={toggleShort}
+            />
+          ) : null}
+          {category?.sections.map((s) => (
+            <SectionRenderer
+              key={s.id}
+              section={s}
+              emphColor={emphColor}
+              visibleCols={visibleCols}
+            />
+          ))}
+          {category?.extras ? (
+            <>
+              <h2 className="subhead">Strategy deep-dive</h2>
+              <ExtrasRenderer extras={category.extras} />
+            </>
+          ) : null}
+        </div>
       ) : null}
     </>
   );

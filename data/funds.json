@@ -9,11 +9,11 @@
       "--ink-soft": "#3c4248",
       "--muted": "#6c757a",
       "--faint": "#9aa2a8",
-      "--paper": "#f4f1ea",
-      "--paper-2": "#ece7dc",
-      "--card": "#fbf9f4",
-      "--line": "#ddd6c8",
-      "--line-strong": "#c3b9a4",
+      "--paper": "#ffffff",
+      "--paper-2": "#f5f5f5",
+      "--card": "#fafafa",
+      "--line": "#e5e7eb",
+      "--line-strong": "#d1d5db",
       "--gold": "#9a7b2e",
       "--accent": "#1b4332",
       "--pos": "#1f7a4d",
@@ -73,10 +73,6 @@
               "₹9.76"
             ],
             [
-              "Investment Style",
-              "SMID Cap · up to 25% Short"
-            ],
-            [
               "Fund Managers",
               "Sankaran Naren · Manan Tijoriwala · Divya Jain"
             ]
@@ -102,10 +98,6 @@
             [
               "NAV (Reg)",
               "₹9.65"
-            ],
-            [
-              "Investment Style",
-              "SMID · Beta mgmt, 25% Short"
             ],
             [
               "Fund Managers",
@@ -2720,10 +2712,6 @@
             "Nifty 500 TRI"
           ],
           [
-            "Investment style",
-            "Focused sectoral portfolio · beta mgmt, 25% short"
-          ],
-          [
             "Min. Investment",
             "₹10,00,000 (+ multiples of Re.1)"
           ],
@@ -3035,10 +3023,6 @@
           "₹9.76"
         ],
         [
-          "Investment Style",
-          "SMID Cap · up to 25% Short"
-        ],
-        [
           "Fund Managers",
           "Sankaran Naren · Manan Tijoriwala · Divya Jain"
         ]
@@ -3068,10 +3052,6 @@
         [
           "NAV (Reg)",
           "₹9.65"
-        ],
-        [
-          "Investment Style",
-          "SMID · Beta mgmt, 25% Short"
         ],
         [
           "Fund Managers",
@@ -3534,10 +3514,6 @@
         [
           "Benchmark",
           "Nifty 500 TRI"
-        ],
-        [
-          "Investment style",
-          "Focused sectoral portfolio · beta mgmt, 25% short"
         ],
         [
           "Min. Investment",

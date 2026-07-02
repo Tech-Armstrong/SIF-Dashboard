@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { Fact } from "@/lib/types";
 import { getFundNavHistory } from "@/lib/api";
+import { FactsList } from "@/components/FactsList";
 
 interface FundCardWithNavProps {
   name: string;
@@ -118,20 +119,7 @@ export function FundCardWithNav({
           <span className="chip chip--soft">{category}</span>
         </div>
       ) : null}
-      <div className="facts">
-        {allFacts.map(([k, v], i) => (
-          <div className="facts__row" key={`${k}-${i}`}>
-            <span className="facts__k">{k}</span>
-            <span
-              className={`facts__v ${
-                k === "1Y Change" && v?.includes("-") ? "is-neg" : ""
-              }${k === "1Y Change" && v?.includes("+") ? "is-pos" : ""}`}
-            >
-              {v || <span className="dash">—</span>}
-            </span>
-          </div>
-        ))}
-      </div>
+      <FactsList facts={allFacts} />
     </>
   );
 

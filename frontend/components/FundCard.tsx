@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import type { Fact, Tag } from "@/lib/types";
+import type { Fact } from "@/lib/types";
 
 interface FundCardProps {
   name: string;
@@ -9,7 +9,6 @@ interface FundCardProps {
   /** ColorRef ("var(--isif)") used as the accent top-border. */
   accent: string;
   facts: Fact[];
-  tags?: Tag[];
   /** Optional category label shown as a soft chip. */
   category?: string;
   /** When false, renders a static (non-link) card — used on the detail header. */
@@ -22,7 +21,6 @@ export function FundCard({
   amc,
   accent,
   facts,
-  tags,
   category,
   href,
 }: FundCardProps) {
@@ -46,15 +44,6 @@ export function FundCard({
           </div>
         ))}
       </div>
-      {tags && tags.length > 0 ? (
-        <div className="tag-row">
-          {tags.map(([label, cls], i) => (
-            <span className={cls} key={`${label}-${i}`}>
-              {label}
-            </span>
-          ))}
-        </div>
-      ) : null}
     </>
   );
 

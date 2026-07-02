@@ -29,13 +29,10 @@ export type WhereFitsKey = "ex" | "aif" | "hybrid";
 
 export type WhereFitsMap = Record<WhereFitsKey, WhereFitsTable>;
 
-// ---------- shared: facts / tags / cards ----------
+// ---------- shared: facts / cards ----------
 
 /** [key, value] */
 export type Fact = [string, string];
-
-/** [label, cssClass] e.g. ["LIVE", "tg live"] */
-export type Tag = [string, string];
 
 export interface Card {
   ac: ColorRef;
@@ -43,10 +40,9 @@ export interface Card {
   name: string;
   fundId?: string;
   facts: Fact[];
-  tags: Tag[];
 }
 
-/** Sector Rotation single-fund block (no tags). */
+/** Sector Rotation single-fund block. */
 export interface SingleFund {
   ac: ColorRef;
   amc: string;
@@ -253,7 +249,6 @@ export interface FundIndexEntry {
   schemeCode?: string;
   accent: ColorRef;
   facts: Fact[];
-  tags: Tag[];
 }
 
 /** Same as FundIndexEntry but augmented by the backend with a stable slug. */
@@ -301,6 +296,19 @@ export interface FundNavHistoryResponse {
   hasNav: boolean;
   asOf: string | null;
   points: NavPoint[];
+  message: string | null;
+}
+
+// ---------- /api/funds/{fundId}/returns ----------
+
+export type ReturnPeriod = "1M" | "3M" | "6M" | "1Y";
+
+export interface FundReturnsResponse {
+  fundId: string;
+  schemeCode: string | null;
+  asOf: string | null;
+  /** Percent return per period; null when there isn't enough history. */
+  returns: Record<ReturnPeriod, number | null>;
   message: string | null;
 }
 

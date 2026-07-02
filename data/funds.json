@@ -57,38 +57,28 @@
           "name": "iSIF Equity Ex-Top 100 Long-Short",
           "facts": [
             [
-              "Fund Size",
-              "₹1,535.22 Cr"
-            ],
-            [
               "Inception",
               "4 Feb 2026"
+            ],
+            [
+              "Benchmark",
+              "Nifty 500 TRI"
+            ],
+            [
+              "AUM",
+              "Closing ₹1,535.22 Cr · AAUM ₹1,408.98 Cr (30-Apr-26)"
             ],
             [
               "NAV (Reg)",
               "₹9.76"
             ],
             [
-              "Expense (Reg)",
-              "1.81%"
-            ],
-            [
               "Investment Style",
               "SMID Cap · up to 25% Short"
-            ]
-          ],
-          "tags": [
-            [
-              "Nifty 500 TRI",
-              "tg"
             ],
             [
-              "Fundamental",
-              "tg"
-            ],
-            [
-              "Bottom-up",
-              "tg"
+              "Fund Managers",
+              "Sankaran Naren · Manan Tijoriwala · Divya Jain"
             ]
           ]
         },
@@ -98,38 +88,28 @@
           "name": "qsif Equity Ex-Top 100 Long-Short",
           "facts": [
             [
-              "Fund Size",
-              "₹211.68 Cr"
-            ],
-            [
               "Inception",
               "12 Nov 2025"
+            ],
+            [
+              "Benchmark",
+              "Nifty 500 Total Return Index (TRI)"
+            ],
+            [
+              "AUM",
+              "₹211.68 Cr ($0.02 Bn) (30-Apr-26)"
             ],
             [
               "NAV (Reg)",
               "₹9.65"
             ],
             [
-              "Expense (Reg)",
-              "Refer qsif.com"
-            ],
-            [
               "Investment Style",
               "SMID · Beta mgmt, 25% Short"
-            ]
-          ],
-          "tags": [
-            [
-              "Nifty 500 TRI",
-              "tg"
             ],
             [
-              "Systematic / Quant",
-              "tg"
-            ],
-            [
-              "Beta 0.49",
-              "tg"
+              "Fund Managers",
+              "Sandeep Tandon · Lokesh Garg · Sameer Kate · Ankit Pande · Sanjeev Sharma"
             ]
           ]
         }
@@ -202,11 +182,6 @@
               "SIP",
               "Daily ₹5,000 · Wk/FN/Mthly ₹10,000 · Qtrly ₹20,000",
               "₹10,000 and in multiples of Re.1"
-            ],
-            [
-              "Expense (Reg)",
-              "1.81% (30-Apr-26)",
-              "Refer qsif.com (not stated in factsheet)"
             ],
             [
               "Taxation",
@@ -501,55 +476,6 @@
           ]
         },
         {
-          "id": "H",
-          "title": "Track Record & Experience",
-          "type": "table",
-          "cols": [
-            [
-              "iSIF",
-              "ICICI Pru",
-              "var(--isif)"
-            ],
-            [
-              "qsif",
-              "Quant",
-              "var(--qsif)"
-            ]
-          ],
-          "rows": [
-            [
-              "Metric 1",
-              "<b>Experience managing investments:</b> 30+ years",
-              "<b>Heritage:</b> 30 years (quantamine since 1995)"
-            ],
-            [
-              "Metric 2",
-              "<b>Fund managers & analysts:</b> 70",
-              "<b>Founder & CIO experience:</b> 33+ years"
-            ],
-            [
-              "Metric 3",
-              "<b>Research coverage:</b> 655+ companies · 24+ sectors",
-              "<b>AUM growth:</b> ₹35 Cr (2020) → ₹96,000+ Cr"
-            ],
-            [
-              "Metric 4",
-              "<b>Ex-Top 100 exposure (IPRU schemes):</b> ₹1,49,530 Cr",
-              "<b>Investor folios:</b> 9.6 million (96 lakh)"
-            ],
-            [
-              "Metric 5",
-              "<b>Derivatives managed (MF schemes):</b> ₹59,107 Cr",
-              "<b>Proprietary frameworks:</b> VLRT & MARCOV; HFA desk"
-            ],
-            [
-              "Metric 6",
-              "<b>SMID coverage:</b> Mid 113 cos · Small 326 cos",
-              "<b>Prop-desk track:</b> 2008–2018 absolute returns"
-            ]
-          ]
-        },
-        {
           "id": "K",
           "title": "Why Add This Fund to Your Portfolio",
           "type": "table",
@@ -594,46 +520,6 @@
           ]
         },
         {
-          "id": "O",
-          "title": "AMC Market Outlook (Apr 2026)",
-          "type": "table",
-          "cols": [
-            [
-              "iSIF",
-              "ICICI Pru",
-              "var(--isif)"
-            ],
-            [
-              "qsif",
-              "Quant",
-              "var(--qsif)"
-            ]
-          ],
-          "note": "Respective AMCs' house views as on Apr-2026 — time-sensitive opinions, not advice or a forecast.",
-          "rows": [
-            [
-              "View 1",
-              "India saw a 4th straight monthly index dip on FPI outflows (~₹60,847 Cr in Apr); Sensex/Nifty rose +6.9%/+7.5% on DII buying; West-Asia conflict, rupee ~95.2/USD, crude ~$108.",
-              "Views Apr-2026 as a turning point — global markets recovering; US Fed on hold (historic 8-4 dissent); Fed leadership transition underway."
-            ],
-            [
-              "View 2",
-              "Macros resilient — controlled fiscal deficit, robust demand; IMF projects India FY26 real GDP +6.5%; valuations in the &ldquo;neutral zone&rdquo;.",
-              "India seen as the premier global growth story — structural bull run, nominal GDP growth &gt;2x China; small caps favoured."
-            ],
-            [
-              "View 3",
-              "Equity: invest in a staggered manner via SIP/STP; prefer Hybrid / Asset-Allocation given near-term volatility.",
-              "RBI signalling low rates for an extended period — quant calls this &ldquo;the most significant buying opportunity since the pandemic&rdquo;."
-            ],
-            [
-              "View 4",
-              "Debt: rate hikes unlikely near-term; prefers 1–3yr corporate bonds plus SDLs & long-end G-secs.",
-              "Positioning: rebalance actively, prioritise liquid value over growth; separate short-term noise from durable trends."
-            ]
-          ]
-        },
-        {
           "id": "P",
           "title": "Investment Process",
           "type": "table",
@@ -669,50 +555,6 @@
               "Step 4",
               "Dynamic asset focus by scenario: Positive → SMID up to 100%; Negative → min 65% SMID, ≤35% large cap, more call-writing.",
               "Smart Order Routing → risk & compliance → daily monitoring, stress tests → attribution & model updates."
-            ]
-          ]
-        },
-        {
-          "id": "Q",
-          "title": "Fund Management Team",
-          "type": "table",
-          "cols": [
-            [
-              "iSIF",
-              "ICICI Pru",
-              "var(--isif)"
-            ],
-            [
-              "qsif",
-              "Quant",
-              "var(--qsif)"
-            ]
-          ],
-          "rows": [
-            [
-              "Member 1",
-              "<b>Sankaran Naren</b> — managing since Feb-2026 · 36 years experience",
-              "<b>Sandeep Tandon</b> — Founder & CIO · 33+ yrs · architect of VLRT & MARCOV; grew quant to ~₹96,000+ Cr"
-            ],
-            [
-              "Member 2",
-              "<b>Manan Tijoriwala</b> — managing since Feb-2026 · 13 years",
-              "<b>Lokesh Garg</b> — Money Manager · 20 yrs (Kotak, CS/UBS) · IIM-A, IIT Roorkee, CFA L3"
-            ],
-            [
-              "Member 3",
-              "<b>Divya Jain</b> — managing since Feb-2026 · 10 years",
-              "<b>Sameer Kate</b> — Money Manager · 20+ yrs Indian equities & derivatives dealing"
-            ],
-            [
-              "Member 4",
-              "—",
-              "<b>Ankit Pande</b> — Money Manager · 13+ yrs · CFA; StarMine Award 2014 (IT)"
-            ],
-            [
-              "Member 5",
-              "—",
-              "<b>Sanjeev Sharma</b> — Money Manager · 18+ yrs · credit-risk specialist; M.Com"
             ]
           ]
         },
@@ -799,18 +641,16 @@
               "Nifty 500 TRI"
             ],
             [
-              "Exit Load",
-              "0.50% &lt;30d"
-            ]
-          ],
-          "tags": [
-            [
-              "NFO / New",
-              "tg nfo"
+              "AUM",
+              "Not yet disclosed"
             ],
             [
-              "4 Return Engines",
-              "tg"
+              "Exit Load",
+              "0.50% &lt;30d"
+            ],
+            [
+              "Fund Managers",
+              "Nilesh Saha (Eq), Brijesh Shah (Debt)"
             ]
           ]
         },
@@ -828,26 +668,16 @@
               "1 Dec 2025"
             ],
             [
+              "Benchmark",
+              "Nifty 50 (TRI)"
+            ],
+            [
               "AUM",
-              "₹415.67 Cr"
+              "₹415.67 Cr · AAUM ₹397.01 Cr"
             ],
             [
-              "Expense (Reg)",
-              "2.44%"
-            ]
-          ],
-          "tags": [
-            [
-              "LIVE",
-              "tg live"
-            ],
-            [
-              "Nifty 50 TRI",
-              "tg"
-            ],
-            [
-              "Conservative",
-              "tg"
+              "Fund Managers",
+              "Vasav Sahgal (FM); Rajesh Bhatia (CIO); Laukik Bagwe"
             ]
           ]
         },
@@ -869,18 +699,16 @@
               "BSE 500 TRI"
             ],
             [
-              "Exit Load",
-              "0.50% &lt;3m"
-            ]
-          ],
-          "tags": [
-            [
-              "NFO / New",
-              "tg nfo"
+              "AUM",
+              "Not yet disclosed"
             ],
             [
-              "Cap-agnostic",
-              "tg"
+              "Exit Load",
+              "0.50% &lt;3m"
+            ],
+            [
+              "Fund Managers",
+              "Harsh Agarwal"
             ]
           ]
         },
@@ -899,21 +727,19 @@
             ],
             [
               "Benchmark",
-              "Nifty 500 TRI"
+              "Nifty 500 (TRI)"
+            ],
+            [
+              "AUM",
+              "Not yet disclosed"
             ],
             [
               "Exit Load",
               "1% &lt;1m"
-            ]
-          ],
-          "tags": [
-            [
-              "Newest",
-              "tg nfo"
             ],
             [
-              "Valuation tool",
-              "tg"
+              "Fund Managers",
+              "Tata AMC SIF team (not named)"
             ]
           ]
         },
@@ -931,22 +757,20 @@
               "29 Apr 2026"
             ],
             [
-              "Expense (Reg)",
-              "~4.81%*"
+              "Benchmark",
+              "Nifty 500 TRI"
+            ],
+            [
+              "AUM",
+              "Not yet disclosed"
             ],
             [
               "Exit Load",
               "1% &lt;1yr"
-            ]
-          ],
-          "tags": [
-            [
-              "New",
-              "tg nfo"
             ],
             [
-              "Multi-factor quant",
-              "tg"
+              "Fund Managers",
+              "Arihant Jain (CFA)"
             ]
           ]
         },
@@ -964,22 +788,20 @@
               "17 Sep 2025"
             ],
             [
-              "Expense (Reg)",
-              "~11.34%*"
+              "Benchmark",
+              "Nifty 500 TRI"
+            ],
+            [
+              "AUM",
+              "Not yet disclosed"
             ],
             [
               "Exit Load",
               "1% &lt;15d"
-            ]
-          ],
-          "tags": [
-            [
-              "LIVE — longest",
-              "tg live"
             ],
             [
-              "VLRT+MARCOV+HFA",
-              "tg"
+              "Fund Managers",
+              "Tandon, Garg, Kate, Pande, Sharma"
             ]
           ]
         }
@@ -1104,15 +926,6 @@
               "₹1,000 (min 6); top-up ₹500",
               "Refer leaflet / ISID",
               "₹10,000"
-            ],
-            [
-              "Expense (Reg)",
-              "Not yet published",
-              "2.44%",
-              "Not yet published",
-              "Not yet published",
-              "4.81%*",
-              "11.34%*"
             ],
             [
               "Taxation",
@@ -1612,81 +1425,6 @@
           ]
         },
         {
-          "id": "H",
-          "title": "Track Record & Experience",
-          "type": "table",
-          "cols": [
-            [
-              "Arudha",
-              "Bandhan",
-              "var(--arudha)"
-            ],
-            [
-              "Diviniti",
-              "ITI",
-              "var(--diviniti)"
-            ],
-            [
-              "DynaSIF",
-              "360 ONE",
-              "var(--dyna)"
-            ],
-            [
-              "Titanium",
-              "Tata",
-              "var(--titanium)"
-            ],
-            [
-              "Sapphire",
-              "Franklin",
-              "var(--sapphire)"
-            ],
-            [
-              "qsif",
-              "Quant",
-              "var(--qsif)"
-            ]
-          ],
-          "rows": [
-            [
-              "AMC AUM",
-              "Bandhan MF (full-suite)",
-              "ITI MF ~₹11,545 Cr",
-              "360 ONE ~₹51,574 Cr; listed eq ~₹47,185 Cr",
-              "Tata MF (large, established)",
-              "Franklin Templeton (global)",
-              "Quant MF (fast-growing)"
-            ],
-            [
-              "Backtest (illustrative)",
-              "10-yr CAGR 14.1% vs Nifty500 13.3%; vol 8% vs 16%",
-              "Since Apr-18: L/S 160.25% vs Nifty 130.70%; Sharpe 1.53",
-              "Not published (NFO)",
-              "Not published (NFO)",
-              "Not published (leaflet)",
-              "Live: 1M +2.59% / 3M +5.39% / 6M +1.60%"
-            ],
-            [
-              "Key People Experience",
-              "Saha 11 yrs; Shah 15 yrs",
-              "CIO Bhatia 30+ yrs (decade in L/S)",
-              "CIO Maheshwari 30 yrs; FM Agarwal ~2 decades",
-              "Tata AMC team (FM not named)",
-              "Jain ~8 yrs factor investing",
-              "Tandon 30+ yrs; deep quant bench"
-            ],
-            [
-              "Research Depth",
-              "~650-stock coverage",
-              "Fundamentals-driven desk",
-              "10 analysts, ~90 yrs combined",
-              "Tata AMC research platform",
-              "Global factor lineage (Franklin/MSCI)",
-              "Quantamine; VLRT + AI/ML"
-            ]
-          ]
-        },
-        {
           "id": "K",
           "title": "Why Add This Fund to Your Portfolio",
           "type": "table",
@@ -1762,55 +1500,6 @@
           ]
         },
         {
-          "id": "O",
-          "title": "AMC Market Outlook",
-          "type": "table",
-          "cols": [
-            [
-              "Arudha",
-              "Bandhan",
-              "var(--arudha)"
-            ],
-            [
-              "Diviniti",
-              "ITI",
-              "var(--diviniti)"
-            ],
-            [
-              "DynaSIF",
-              "360 ONE",
-              "var(--dyna)"
-            ],
-            [
-              "Titanium",
-              "Tata",
-              "var(--titanium)"
-            ],
-            [
-              "Sapphire",
-              "Franklin",
-              "var(--sapphire)"
-            ],
-            [
-              "qsif",
-              "Quant",
-              "var(--qsif)"
-            ]
-          ],
-          "note": "AMCs' opinions as on their stated dates, time-sensitive. Not advice or a forecast.",
-          "rows": [
-            [
-              "House View",
-              "Indian equities show elevated earnings expectations — actual EPS trailing consensus by ~9.9% (among widest globally), a tailwind for the short book; valuations elevated → active downside management.",
-              "&ldquo;Tale of two markets&rdquo; (Apr-26): Nifty +7.3% MoM to 23,997; FII outflows &gt;₹60,000 Cr; crude ~$115; RBI cautious into FY27. Bear case largely played out; building in banks/financials/healthcare/consumption; large-cap tilt.",
-              "No static view — dynamic, regime-aware; adjusts long/short & beta using qual macro + quant regime signals.",
-              "No static view — dynamic net-equity (65–100%) via valuation tool; defensive in expensive markets, higher equity when favourable.",
-              "No view in leaflet — rules-based multi-factor model drives positioning; sector-agnostic, emotion-free.",
-              "No static view — VLRT + MARCOV/HFA detect money-flow & risk-appetite shifts early; position predictively."
-            ]
-          ]
-        },
-        {
           "id": "P",
           "title": "Investment Process",
           "type": "table",
@@ -1882,54 +1571,6 @@
               "Add hedges/shorts scaled to phase",
               "Rebalance per model signals",
               "HFA execution + continuous monitoring"
-            ]
-          ]
-        },
-        {
-          "id": "Q",
-          "title": "Fund Management Team",
-          "type": "table",
-          "cols": [
-            [
-              "Arudha",
-              "Bandhan",
-              "var(--arudha)"
-            ],
-            [
-              "Diviniti",
-              "ITI",
-              "var(--diviniti)"
-            ],
-            [
-              "DynaSIF",
-              "360 ONE",
-              "var(--dyna)"
-            ],
-            [
-              "Titanium",
-              "Tata",
-              "var(--titanium)"
-            ],
-            [
-              "Sapphire",
-              "Franklin",
-              "var(--sapphire)"
-            ],
-            [
-              "qsif",
-              "Quant",
-              "var(--qsif)"
-            ]
-          ],
-          "rows": [
-            [
-              "Key People",
-              "<b>Nilesh Saha</b> (Eq): 11 yrs, ex-Julius Baer, 9 yrs Edelweiss L/S AIFs; IIM-B, CFA. <b>Brijesh Shah</b> (Debt): 15 yrs FI; ex-IDBI AMC.",
-              "<b>Vasav Sahgal</b> (FM): CFA, 7+ yrs. <b>Rajesh Bhatia</b> (CIO): 30+ yrs, ex-Heritage India, ex-Reliance PMS; ACMA, CFA. <b>Laukik Bagwe</b>: 25+ yrs FI. <b>Jatinder Pal Singh</b> (CEO): 25+ yrs.",
-              "<b>Harsh Agarwal</b> (FM): ~2 decades L/S, ex-Head Alt Strategies Tata AMC (CAT III AIFs &gt;₹3,000 Cr). <b>Anup Maheshwari</b> (CIO): 30 yrs, ex-DSP BlackRock CIO. Research: 10 analysts, ~90 yrs.",
-              "Fund Manager not named in the NFO deck — managed by Tata AMC's SIF investment team; deep equity research platform.",
-              "<b>Arihant Jain</b> (FM): CFA, BITS Pilani; ~8 yrs quant/multi-factor. Ex-Franklin (2022–), MSCI (2020–22), Morgan Stanley, Quant One. Manages Franklin India Multi-Factor Fund.",
-              "<b>Sandeep Tandon</b> (Founder & CIO): 33+ yrs; architect of VLRT & MARCOV. Garg, Kate, Pande, Sharma — money managers across equities, derivatives & credit."
             ]
           ]
         },
@@ -2190,22 +1831,20 @@
               "16 Jan 2026"
             ],
             [
-              "Expense (Reg)",
-              "2.37%"
+              "Benchmark",
+              "CRISIL Hyb 50+50 Mod"
+            ],
+            [
+              "AUM",
+              "Not disclosed (NFO)"
             ],
             [
               "Net equity",
               "-7.5% to 75%"
-            ]
-          ],
-          "tags": [
-            [
-              "Most equity-like",
-              "tg"
             ],
             [
-              "Directional long",
-              "tg"
+              "Fund Managers",
+              "Rajat Chandak, Ayush Shah (Eq); Manish Banthia, Akhil Kakkar (Debt)"
             ]
           ]
         },
@@ -2223,22 +1862,16 @@
               "1 Oct 2025"
             ],
             [
+              "Benchmark",
+              "NIFTY50 Hyb 50:50"
+            ],
+            [
               "AUM",
-              "₹3,783 Cr"
+              "₹3,783 Cr (30-Apr)"
             ],
             [
-              "Expense (Reg)",
-              "2.51%"
-            ]
-          ],
-          "tags": [
-            [
-              "Income-oriented",
-              "tg"
-            ],
-            [
-              "6M ~+10% ann*",
-              "tg live"
+              "Fund Managers",
+              "Bharat Lahoti, Bhavesh Jain (Eq); Dhawal Dalal, Kedar Karnik (Debt); Amit Vora (Ovs)"
             ]
           ]
         },
@@ -2256,22 +1889,20 @@
               "9 Jan 2026"
             ],
             [
-              "Expense (Reg)",
-              "0.73%"
+              "Benchmark",
+              "CRISIL Hyb 85+15 Cons"
+            ],
+            [
+              "AUM",
+              "Not disclosed"
             ],
             [
               "Exit Load",
               "Nil"
-            ]
-          ],
-          "tags": [
-            [
-              "Cheapest",
-              "tg"
             ],
             [
-              "Market-neutral",
-              "tg"
+              "Fund Managers",
+              "Kapil Kankonkar, Nilesh Saha (Eq); Brijesh Shah, Debraj Lahiri (Debt)"
             ]
           ]
         },
@@ -2289,22 +1920,20 @@
               "25 Sep 2025"
             ],
             [
-              "Expense (Reg)",
-              "5.21%"
+              "Benchmark",
+              "NIFTY50 Hyb 50:50"
+            ],
+            [
+              "AUM",
+              "Not disclosed"
             ],
             [
               "Exit Load",
               "1% &lt;15d"
-            ]
-          ],
-          "tags": [
-            [
-              "India's 1st SIF",
-              "tg"
             ],
             [
-              "Quant L/S",
-              "tg"
+              "Fund Managers",
+              "Sandeep Tandon, Lokesh Garg, Sameer Kate, Ankit Pande, Sanjeev Sharma"
             ]
           ]
         },
@@ -2322,22 +1951,16 @@
               "~17 Dec 2025"
             ],
             [
+              "Benchmark",
+              "CRISIL Hyb 50+50 Mod"
+            ],
+            [
               "AUM",
-              "₹466 Cr"
+              "₹466 Cr (May)"
             ],
             [
-              "Expense (Reg)",
-              "2.51%"
-            ]
-          ],
-          "tags": [
-            [
-              "Net eq -25% to 75%",
-              "tg"
-            ],
-            [
-              "MONTHLY redeem",
-              "tg nfo"
+              "Fund Managers",
+              "Amit Somani, Suraj Nanda, Hasmukh Vishariya"
             ]
           ]
         },
@@ -2355,22 +1978,20 @@
               "~30 Mar 2026"
             ],
             [
-              "Expense (Reg)",
-              "N/A"
+              "Benchmark",
+              "NIFTY50 Hyb 50:50"
+            ],
+            [
+              "AUM",
+              "Not disclosed (NFO Mar)"
             ],
             [
               "Net equity",
               "0–40%"
-            ]
-          ],
-          "tags": [
-            [
-              "Newest",
-              "tg nfo"
             ],
             [
-              "Lowest net-eq",
-              "tg"
+              "Fund Managers",
+              "Lovelish Solanki (Eq), Mohit Sharma (Debt)"
             ]
           ]
         },
@@ -2388,123 +2009,22 @@
               "~22 Oct 2025"
             ],
             [
+              "Benchmark",
+              "NIFTY50 Hyb 50:50 TRI"
+            ],
+            [
               "AUM",
-              "≈₹3,462 Cr"
+              "≈₹3,462 Cr (May)"
             ],
             [
-              "Expense (Reg)",
-              "2.02%"
-            ]
-          ],
-          "tags": [
-            [
-              "Largest AUM",
-              "tg live"
-            ],
-            [
-              "Equity-taxed",
-              "tg"
+              "Fund Managers",
+              "Gaurav Mehta, CFA (CIO–Alternatives / Head–SIF Equity)"
             ]
           ]
         }
       ],
       "single": null,
       "sections": [
-        {
-          "id": "KEY",
-          "title": "Key Facts · At a Glance",
-          "type": "table",
-          "cols": [
-            [
-              "iSIF",
-              "ICICI Pru",
-              "var(--isif)"
-            ],
-            [
-              "Altiva",
-              "Edelweiss",
-              "var(--altiva)"
-            ],
-            [
-              "Arudha",
-              "Bandhan",
-              "var(--arudha)"
-            ],
-            [
-              "QSIF",
-              "Quant",
-              "var(--qsif)"
-            ],
-            [
-              "Titanium",
-              "Tata",
-              "var(--titanium)"
-            ],
-            [
-              "Apex",
-              "ABSL",
-              "var(--apex)"
-            ],
-            [
-              "Magnum",
-              "SBI",
-              "var(--magnum)"
-            ]
-          ],
-          "note": "Live fields from public fund pages, SBI MF and INDmoney; ranges & qualitative data from each NFO deck. Apex expense not published.",
-          "rows": [
-            [
-              "Fund Size (AUM)",
-              "Not disclosed (NFO)",
-              "₹3,783 Cr (30-Apr)",
-              "Not disclosed",
-              "Not disclosed",
-              "₹466 Cr (May)",
-              "Not disclosed (NFO Mar)",
-              "≈₹3,462 Cr (May)"
-            ],
-            [
-              "Inception",
-              "16-Jan-2026",
-              "01-Oct-25",
-              "09-Jan-2026",
-              "25-Sep-25",
-              "~17-Dec-25",
-              "NFO 6–18-Mar-26",
-              "~22-Oct-25"
-            ],
-            [
-              "Benchmark",
-              "CRISIL Hyb 50+50 Mod",
-              "NIFTY50 Hyb 50:50",
-              "CRISIL Hyb 85+15 Cons",
-              "NIFTY50 Hyb 50:50",
-              "CRISIL Hyb 50+50 Mod",
-              "NIFTY50 Hyb 50:50",
-              "NIFTY50 Hyb 50:50 TRI"
-            ],
-            [
-              "Investment Style",
-              "Active hybrid L/S; conviction picking + derivatives",
-              "Income: arbitrage + FI core, special situations",
-              "Stability-first: ≤65% debt + market-neutral arbitrage",
-              "Conservative; Systematic Active (quant) L/S",
-              "Dynamic net-equity; bottom-up + arbitrage; can go net short",
-              "Multi-engine income: arbitrage + FI + derivatives",
-              "Multi-asset equity-led: covered calls + arbitrage + longs"
-            ],
-            [
-              "Expense (Reg)",
-              "2.37%",
-              "2.51%",
-              "0.73%",
-              "5.21%",
-              "2.51%",
-              "Not available",
-              "2.02%"
-            ]
-          ]
-        },
         {
           "id": "A",
           "title": "Fund Overview & Key Facts",
@@ -3015,70 +2535,6 @@
           ]
         },
         {
-          "id": "H",
-          "title": "Track Record & Team Strength",
-          "type": "table",
-          "cols": [
-            [
-              "iSIF",
-              "ICICI Pru",
-              "var(--isif)"
-            ],
-            [
-              "Altiva",
-              "Edelweiss",
-              "var(--altiva)"
-            ],
-            [
-              "Arudha",
-              "Bandhan",
-              "var(--arudha)"
-            ],
-            [
-              "QSIF",
-              "Quant",
-              "var(--qsif)"
-            ],
-            [
-              "Titanium",
-              "Tata",
-              "var(--titanium)"
-            ],
-            [
-              "Apex",
-              "ABSL",
-              "var(--apex)"
-            ],
-            [
-              "Magnum",
-              "SBI",
-              "var(--magnum)"
-            ]
-          ],
-          "rows": [
-            [
-              "Fund managers",
-              "Rajat Chandak, Ayush Shah (Eq); Manish Banthia, Akhil Kakkar (Debt)",
-              "Bharat Lahoti, Bhavesh Jain (Eq); Dhawal Dalal, Kedar Karnik (Debt); Amit Vora (Ovs)",
-              "Kapil Kankonkar, Nilesh Saha (Eq); Brijesh Shah, Debraj Lahiri (Debt)",
-              "Sandeep Tandon, Lokesh Garg, Sameer Kate, Ankit Pande, Sanjeev Sharma",
-              "Amit Somani, Suraj Nanda, Hasmukh Vishariya",
-              "Lovelish Solanki (Eq), Mohit Sharma (Debt)",
-              "Gaurav Mehta, CFA (CIO–Alternatives / Head–SIF Equity)"
-            ],
-            [
-              "Team / AUM context",
-              "4 mgrs + 23-analyst bench",
-              "5 mgrs + dealing/research",
-              "4 mgrs",
-              "5 money managers",
-              "Tata MF SIF team",
-              "Eq ~20 (&gt;₹2L cr) + FI 13 (&gt;₹2L cr); ~30 yrs combined",
-              "~19 yrs; with SBI since 2018; leads Magnum SIF eq since Jul-25"
-            ]
-          ]
-        },
-        {
           "id": "K",
           "title": "Why Add to Your Portfolio",
           "type": "table",
@@ -3133,61 +2589,6 @@
           ]
         },
         {
-          "id": "O",
-          "title": "Fund Commentary / AMC Outlook",
-          "type": "table",
-          "cols": [
-            [
-              "iSIF",
-              "ICICI Pru",
-              "var(--isif)"
-            ],
-            [
-              "Altiva",
-              "Edelweiss",
-              "var(--altiva)"
-            ],
-            [
-              "Arudha",
-              "Bandhan",
-              "var(--arudha)"
-            ],
-            [
-              "QSIF",
-              "Quant",
-              "var(--qsif)"
-            ],
-            [
-              "Titanium",
-              "Tata",
-              "var(--titanium)"
-            ],
-            [
-              "Apex",
-              "ABSL",
-              "var(--apex)"
-            ],
-            [
-              "Magnum",
-              "SBI",
-              "var(--magnum)"
-            ]
-          ],
-          "note": "Only Altiva carries a dated monthly fund commentary (Apr-2026). The others are NFO/launch-stage materials.",
-          "rows": [
-            [
-              "Latest commentary",
-              "NFO deck — no live commentary",
-              "Apr-26: YTM ~8.2%; arb+CC ~37%; derivatives ~11% (straddles); 6M fund ~+10% ann vs Nifty ~-14%",
-              "Jan-26 launch deck — positioning only",
-              "Views as of 15-Sep-25 (NFO)",
-              "NFO deck — no commentary",
-              "NFO deck (Mar-26) — positioning only",
-              "SBI NFO landing page — positioning only"
-            ]
-          ]
-        },
-        {
           "id": "P",
           "title": "Investment Process",
           "type": "table",
@@ -3238,60 +2639,6 @@
               "Strong business → management → valuation → size net equity by phase → deriv/arb → active debt",
               "Income anchor → derivatives overlay → tactical alpha → model sizes net equity → option risk control",
               "Multi-asset alloc → covered-call & arbitrage income → unhedged equity growth → collars/arbitrage risk"
-            ]
-          ]
-        },
-        {
-          "id": "Q",
-          "title": "Fund Management Team",
-          "type": "table",
-          "cols": [
-            [
-              "iSIF",
-              "ICICI Pru",
-              "var(--isif)"
-            ],
-            [
-              "Altiva",
-              "Edelweiss",
-              "var(--altiva)"
-            ],
-            [
-              "Arudha",
-              "Bandhan",
-              "var(--arudha)"
-            ],
-            [
-              "QSIF",
-              "Quant",
-              "var(--qsif)"
-            ],
-            [
-              "Titanium",
-              "Tata",
-              "var(--titanium)"
-            ],
-            [
-              "Apex",
-              "ABSL",
-              "var(--apex)"
-            ],
-            [
-              "Magnum",
-              "SBI",
-              "var(--magnum)"
-            ]
-          ],
-          "rows": [
-            [
-              "Headline",
-              "ICICI Pru: deep equity + FI desk; DAA experience",
-              "Edelweiss factor-investing co-heads + CIO-FI Dhawal Dalal (28y)",
-              "Bandhan AMC equity + debt; full-suite AMC into SIF",
-              "Founder/CIO Sandeep Tandon (33y); ex-Kotak/CS/UBS mgrs",
-              "Tata AMC SIF: Somani (since 2010), Nanda (named FM), Vishariya",
-              "ABSL: Solanki (eq/deriv/arb, CMT-L1) & Sharma (Sr FM, 19y, IIM-C/IIT-M)",
-              "SBI: Gaurav Mehta, CFA — CIO Alternatives (Equity), ~19y"
             ]
           ]
         },
@@ -3365,16 +2712,12 @@
         "name": "qsif Sector Rotation Long-Short Fund",
         "facts": [
           [
-            "Benchmark",
-            "Nifty 500 TRI"
-          ],
-          [
             "NAV (Reg)",
             "₹10.00"
           ],
           [
-            "Expense (Reg)",
-            "—"
+            "Benchmark",
+            "Nifty 500 TRI"
           ],
           [
             "Investment style",
@@ -3663,7 +3006,8 @@
             "The engine: Systematic Active Investing via MARCOV + HFA, underpinned by quant's Cycles Analytics (macro, earnings and liquidity cycles) and a top-down filter — Global Macro → India Macro → Domestic Themes → Sector Selection → Stock Selection."
           ]
         }
-      }
+      },
+      "sections": []
     }
   ],
   "fundsIndex": [
@@ -3675,42 +3019,32 @@
       "accent": "var(--isif)",
       "facts": [
         [
-          "Fund Size",
-          "₹1,535.22 Cr"
-        ],
-        [
           "Inception",
           "4 Feb 2026"
+        ],
+        [
+          "Benchmark",
+          "Nifty 500 TRI"
+        ],
+        [
+          "AUM",
+          "Closing ₹1,535.22 Cr · AAUM ₹1,408.98 Cr (30-Apr-26)"
         ],
         [
           "NAV (Reg)",
           "₹9.76"
         ],
         [
-          "Expense (Reg)",
-          "1.81%"
-        ],
-        [
           "Investment Style",
           "SMID Cap · up to 25% Short"
-        ]
-      ],
-      "tags": [
-        [
-          "Nifty 500 TRI",
-          "tg"
         ],
         [
-          "Fundamental",
-          "tg"
-        ],
-        [
-          "Bottom-up",
-          "tg"
+          "Fund Managers",
+          "Sankaran Naren · Manan Tijoriwala · Divya Jain"
         ]
       ],
-      "sifCode": "SIF-1",
-      "schemeCode": "SIF-1"
+      "sifCode": "SIF-33",
+      "schemeCode": "SIF-33"
     },
     {
       "name": "qsif Equity Ex-Top 100 Long-Short",
@@ -3720,42 +3054,32 @@
       "accent": "var(--qsif)",
       "facts": [
         [
-          "Fund Size",
-          "₹211.68 Cr"
-        ],
-        [
           "Inception",
           "12 Nov 2025"
+        ],
+        [
+          "Benchmark",
+          "Nifty 500 Total Return Index (TRI)"
+        ],
+        [
+          "AUM",
+          "₹211.68 Cr ($0.02 Bn) (30-Apr-26)"
         ],
         [
           "NAV (Reg)",
           "₹9.65"
         ],
         [
-          "Expense (Reg)",
-          "Refer qsif.com"
-        ],
-        [
           "Investment Style",
           "SMID · Beta mgmt, 25% Short"
-        ]
-      ],
-      "tags": [
-        [
-          "Nifty 500 TRI",
-          "tg"
         ],
         [
-          "Systematic / Quant",
-          "tg"
-        ],
-        [
-          "Beta 0.49",
-          "tg"
+          "Fund Managers",
+          "Sandeep Tandon · Lokesh Garg · Sameer Kate · Ankit Pande · Sanjeev Sharma"
         ]
       ],
-      "sifCode": "SIF-9",
-      "schemeCode": "SIF-9"
+      "sifCode": "SIF-25",
+      "schemeCode": "SIF-25"
     },
     {
       "name": "Arudha Equity Long-Short",
@@ -3777,18 +3101,16 @@
           "Nifty 500 TRI"
         ],
         [
-          "Exit Load",
-          "0.50% &lt;30d"
-        ]
-      ],
-      "tags": [
-        [
-          "NFO / New",
-          "tg nfo"
+          "AUM",
+          "Not yet disclosed"
         ],
         [
-          "4 Return Engines",
-          "tg"
+          "Exit Load",
+          "0.50% &lt;30d"
+        ],
+        [
+          "Fund Managers",
+          "Nilesh Saha (Eq), Brijesh Shah (Debt)"
         ]
       ],
       "sifCode": "SIF-62",
@@ -3810,26 +3132,16 @@
           "1 Dec 2025"
         ],
         [
+          "Benchmark",
+          "Nifty 50 (TRI)"
+        ],
+        [
           "AUM",
-          "₹415.67 Cr"
+          "₹415.67 Cr · AAUM ₹397.01 Cr"
         ],
         [
-          "Expense (Reg)",
-          "2.44%"
-        ]
-      ],
-      "tags": [
-        [
-          "LIVE",
-          "tg live"
-        ],
-        [
-          "Nifty 50 TRI",
-          "tg"
-        ],
-        [
-          "Conservative",
-          "tg"
+          "Fund Managers",
+          "Vasav Sahgal (FM); Rajesh Bhatia (CIO); Laukik Bagwe"
         ]
       ],
       "sifCode": "SIF-21",
@@ -3855,22 +3167,20 @@
           "BSE 500 TRI"
         ],
         [
-          "Exit Load",
-          "0.50% &lt;3m"
-        ]
-      ],
-      "tags": [
-        [
-          "NFO / New",
-          "tg nfo"
+          "AUM",
+          "Not yet disclosed"
         ],
         [
-          "Cap-agnostic",
-          "tg"
+          "Exit Load",
+          "0.50% &lt;3m"
+        ],
+        [
+          "Fund Managers",
+          "Harsh Agarwal"
         ]
       ],
-      "sifCode": "SIF-58",
-      "schemeCode": "SIF-58"
+      "sifCode": "SIF-55",
+      "schemeCode": "SIF-55"
     },
     {
       "name": "Titanium Equity Long-Short",
@@ -3889,25 +3199,23 @@
         ],
         [
           "Benchmark",
-          "Nifty 500 TRI"
+          "Nifty 500 (TRI)"
+        ],
+        [
+          "AUM",
+          "Not yet disclosed"
         ],
         [
           "Exit Load",
           "1% &lt;1m"
-        ]
-      ],
-      "tags": [
-        [
-          "Newest",
-          "tg nfo"
         ],
         [
-          "Valuation tool",
-          "tg"
+          "Fund Managers",
+          "Tata AMC SIF team (not named)"
         ]
       ],
-      "sifCode": "SIF-35",
-      "schemeCode": "SIF-35"
+      "sifCode": "SIF-102",
+      "schemeCode": "SIF-102"
     },
     {
       "name": "Sapphire Equity Long-Short",
@@ -3925,26 +3233,24 @@
           "29 Apr 2026"
         ],
         [
-          "Expense (Reg)",
-          "~4.81%*"
+          "Benchmark",
+          "Nifty 500 TRI"
+        ],
+        [
+          "AUM",
+          "Not yet disclosed"
         ],
         [
           "Exit Load",
           "1% &lt;1yr"
-        ]
-      ],
-      "tags": [
-        [
-          "New",
-          "tg nfo"
         ],
         [
-          "Multi-factor quant",
-          "tg"
+          "Fund Managers",
+          "Arihant Jain (CFA)"
         ]
       ],
-      "sifCode": "SIF-37",
-      "schemeCode": "SIF-37"
+      "sifCode": "SIF-95",
+      "schemeCode": "SIF-95"
     },
     {
       "name": "qsif Equity Long-Short",
@@ -3962,26 +3268,24 @@
           "17 Sep 2025"
         ],
         [
-          "Expense (Reg)",
-          "~11.34%*"
+          "Benchmark",
+          "Nifty 500 TRI"
+        ],
+        [
+          "AUM",
+          "Not yet disclosed"
         ],
         [
           "Exit Load",
           "1% &lt;15d"
-        ]
-      ],
-      "tags": [
-        [
-          "LIVE — longest",
-          "tg live"
         ],
         [
-          "VLRT+MARCOV+HFA",
-          "tg"
+          "Fund Managers",
+          "Tandon, Garg, Kate, Pande, Sharma"
         ]
       ],
-      "sifCode": "SIF-11",
-      "schemeCode": "SIF-11"
+      "sifCode": "SIF-3",
+      "schemeCode": "SIF-3"
     },
     {
       "name": "iSIF Hybrid Long-Short",
@@ -3999,26 +3303,24 @@
           "16 Jan 2026"
         ],
         [
-          "Expense (Reg)",
-          "2.37%"
+          "Benchmark",
+          "CRISIL Hyb 50+50 Mod"
+        ],
+        [
+          "AUM",
+          "Not disclosed (NFO)"
         ],
         [
           "Net equity",
           "-7.5% to 75%"
-        ]
-      ],
-      "tags": [
-        [
-          "Most equity-like",
-          "tg"
         ],
         [
-          "Directional long",
-          "tg"
+          "Fund Managers",
+          "Rajat Chandak, Ayush Shah (Eq); Manish Banthia, Akhil Kakkar (Debt)"
         ]
       ],
-      "sifCode": "SIF-5",
-      "schemeCode": "SIF-5"
+      "sifCode": "SIF-35",
+      "schemeCode": "SIF-35"
     },
     {
       "name": "Altiva Hybrid Long-Short",
@@ -4036,26 +3338,20 @@
           "1 Oct 2025"
         ],
         [
+          "Benchmark",
+          "NIFTY50 Hyb 50:50"
+        ],
+        [
           "AUM",
-          "₹3,783 Cr"
+          "₹3,783 Cr (30-Apr)"
         ],
         [
-          "Expense (Reg)",
-          "2.51%"
+          "Fund Managers",
+          "Bharat Lahoti, Bhavesh Jain (Eq); Dhawal Dalal, Kedar Karnik (Debt); Amit Vora (Ovs)"
         ]
       ],
-      "tags": [
-        [
-          "Income-oriented",
-          "tg"
-        ],
-        [
-          "6M ~+10% ann*",
-          "tg live"
-        ]
-      ],
-      "sifCode": "SIF-15",
-      "schemeCode": "SIF-15"
+      "sifCode": "SIF-11",
+      "schemeCode": "SIF-11"
     },
     {
       "name": "Arudha Hybrid Long-Short",
@@ -4073,26 +3369,24 @@
           "9 Jan 2026"
         ],
         [
-          "Expense (Reg)",
-          "0.73%"
+          "Benchmark",
+          "CRISIL Hyb 85+15 Cons"
+        ],
+        [
+          "AUM",
+          "Not disclosed"
         ],
         [
           "Exit Load",
           "Nil"
-        ]
-      ],
-      "tags": [
-        [
-          "Cheapest",
-          "tg"
         ],
         [
-          "Market-neutral",
-          "tg"
+          "Fund Managers",
+          "Kapil Kankonkar, Nilesh Saha (Eq); Brijesh Shah, Debraj Lahiri (Debt)"
         ]
       ],
-      "sifCode": "SIF-70",
-      "schemeCode": "SIF-70"
+      "sifCode": "SIF-40",
+      "schemeCode": "SIF-40"
     },
     {
       "name": "QSIF Hybrid Long-Short",
@@ -4110,26 +3404,24 @@
           "25 Sep 2025"
         ],
         [
-          "Expense (Reg)",
-          "5.21%"
+          "Benchmark",
+          "NIFTY50 Hyb 50:50"
+        ],
+        [
+          "AUM",
+          "Not disclosed"
         ],
         [
           "Exit Load",
           "1% &lt;15d"
-        ]
-      ],
-      "tags": [
-        [
-          "India's 1st SIF",
-          "tg"
         ],
         [
-          "Quant L/S",
-          "tg"
+          "Fund Managers",
+          "Sandeep Tandon, Lokesh Garg, Sameer Kate, Ankit Pande, Sanjeev Sharma"
         ]
       ],
-      "sifCode": "SIF-13",
-      "schemeCode": "SIF-13"
+      "sifCode": "SIF-7",
+      "schemeCode": "SIF-7"
     },
     {
       "name": "Titanium Hybrid Long-Short",
@@ -4147,26 +3439,20 @@
           "~17 Dec 2025"
         ],
         [
+          "Benchmark",
+          "CRISIL Hyb 50+50 Mod"
+        ],
+        [
           "AUM",
-          "₹466 Cr"
+          "₹466 Cr (May)"
         ],
         [
-          "Expense (Reg)",
-          "2.51%"
+          "Fund Managers",
+          "Amit Somani, Suraj Nanda, Hasmukh Vishariya"
         ]
       ],
-      "tags": [
-        [
-          "Net eq -25% to 75%",
-          "tg"
-        ],
-        [
-          "MONTHLY redeem",
-          "tg nfo"
-        ]
-      ],
-      "sifCode": "SIF-39",
-      "schemeCode": "SIF-39"
+      "sifCode": "SIF-29",
+      "schemeCode": "SIF-29"
     },
     {
       "name": "Apex Hybrid Long-Short",
@@ -4184,26 +3470,24 @@
           "~30 Mar 2026"
         ],
         [
-          "Expense (Reg)",
-          "N/A"
+          "Benchmark",
+          "NIFTY50 Hyb 50:50"
+        ],
+        [
+          "AUM",
+          "Not disclosed (NFO Mar)"
         ],
         [
           "Net equity",
           "0–40%"
-        ]
-      ],
-      "tags": [
-        [
-          "Newest",
-          "tg nfo"
         ],
         [
-          "Lowest net-eq",
-          "tg"
+          "Fund Managers",
+          "Lovelish Solanki (Eq), Mohit Sharma (Debt)"
         ]
       ],
-      "sifCode": "SIF-41",
-      "schemeCode": "SIF-41"
+      "sifCode": "SIF-80",
+      "schemeCode": "SIF-80"
     },
     {
       "name": "Magnum Hybrid Long-Short",
@@ -4221,26 +3505,20 @@
           "~22 Oct 2025"
         ],
         [
+          "Benchmark",
+          "NIFTY50 Hyb 50:50 TRI"
+        ],
+        [
           "AUM",
-          "≈₹3,462 Cr"
+          "≈₹3,462 Cr (May)"
         ],
         [
-          "Expense (Reg)",
-          "2.02%"
+          "Fund Managers",
+          "Gaurav Mehta, CFA (CIO–Alternatives / Head–SIF Equity)"
         ]
       ],
-      "tags": [
-        [
-          "Largest AUM",
-          "tg live"
-        ],
-        [
-          "Equity-taxed",
-          "tg"
-        ]
-      ],
-      "sifCode": "SIF-43",
-      "schemeCode": "SIF-43"
+      "sifCode": "SIF-13",
+      "schemeCode": "SIF-13"
     },
     {
       "name": "qsif Sector Rotation Long-Short Fund",
@@ -4250,16 +3528,12 @@
       "accent": "var(--qsif)",
       "facts": [
         [
-          "Benchmark",
-          "Nifty 500 TRI"
-        ],
-        [
           "NAV (Reg)",
           "₹10.00"
         ],
         [
-          "Expense (Reg)",
-          "—"
+          "Benchmark",
+          "Nifty 500 TRI"
         ],
         [
           "Investment style",
@@ -4286,9 +3560,8 @@
           "Systematic Active Investing — MARCOV + HFA · Cycles Analytics"
         ]
       ],
-      "tags": [],
-      "sifCode": "SIF-123",
-      "schemeCode": "SIF-123"
+      "sifCode": "SIF-117",
+      "schemeCode": "SIF-117"
     }
   ]
 }

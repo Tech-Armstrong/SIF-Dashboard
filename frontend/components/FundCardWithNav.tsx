@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import type { Fact, Tag } from "@/lib/types";
+import type { Fact } from "@/lib/types";
 import { getFundNavHistory } from "@/lib/api";
 
 interface FundCardWithNavProps {
@@ -12,7 +12,6 @@ interface FundCardWithNavProps {
   amc: string;
   accent: string;
   facts: Fact[];
-  tags?: Tag[];
   category?: string;
   href?: string | false;
 }
@@ -34,7 +33,6 @@ export function FundCardWithNav({
   amc,
   accent,
   facts,
-  tags,
   category,
   href,
 }: FundCardWithNavProps) {
@@ -82,11 +80,18 @@ export function FundCardWithNav({
 
   const style = { borderTopColor: accent } as CSSProperties;
 
+  // Drop the static "NAV (Reg)" — the live "Latest NAV" below supersedes it.
+  // (Kept only if the live NAV failed to load, so a card never shows no NAV.)
+  const staticFacts =
+    navData.nav !== undefined
+      ? facts.filter(([k]) => k !== "NAV (Reg)")
+      : facts;
+
   // Combine static facts with dynamic NAV data
   const allFacts: Fact[] = [
-    ...facts,
+    ...staticFacts,
     ...(navData.nav !== undefined
-      ? [
+      ? ([
           ["Latest NAV", fmtNav.format(navData.nav)],
           [
             "1Y Change",
@@ -100,7 +105,7 @@ export function FundCardWithNav({
               ? fmtDate.format(new Date(`${navData.date}T00:00:00`))
               : "-",
           ],
-        ]
+        ] as Fact[])
       : []),
   ];
 
@@ -127,15 +132,6 @@ export function FundCardWithNav({
           </div>
         ))}
       </div>
-      {tags && tags.length > 0 ? (
-        <div className="tag-row">
-          {tags.map(([label, cls], i) => (
-            <span className={cls} key={`${label}-${i}`}>
-              {label}
-            </span>
-          ))}
-        </div>
-      ) : null}
     </>
   );
 

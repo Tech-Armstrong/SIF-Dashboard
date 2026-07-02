@@ -23,6 +23,19 @@ from fastapi.middleware.cors import CORSMiddleware
 import search
 from config.nav_history import PERIODS, nav_history_for_fund
 
+# Periods shown in the fund-detail returns table, in display order.
+RETURN_PERIODS: list[str] = ["1M", "3M", "6M", "1Y"]
+
+# Minimum history span (days) required to report each period's return. A fund
+# younger than the window snaps its "start" to its earliest NAV, which would
+# overstate (e.g.) a 1Y return for a 1-month-old fund — so we show "-" instead.
+_RETURN_MIN_DAYS: dict[str, int] = {
+    "1M": 25,
+    "3M": 80,
+    "6M": 170,
+    "1Y": 350,
+}
+
 # data/funds.json lives one level up from backend/.
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "funds.json"
 
@@ -126,6 +139,88 @@ def get_fund_nav_history(
             detail=f"Invalid period. Use one of: {', '.join(sorted(PERIODS))}",
         )
     return nav_history_for_fund(fund, period)
+
+
+@app.get("/api/funds/{fund_id}/returns")
+def get_fund_returns(fund_id: str) -> dict[str, Any]:
+    """Trailing returns (1M/3M/6M/1Y) for a fund's detail-page summary table.
+
+    A period is reported only when the fund has enough history to cover it;
+    otherwise its value is null (rendered as "-" in the UI).
+    """
+    fund = search.find_fund(FUNDS_INDEX, fund_id)
+    if fund is None:
+        raise HTTPException(status_code=404, detail="Fund not found")
+
+    scheme_code = (
+        fund.get("sifCode") or fund.get("schemeCode") or fund.get("scheme_code")
+    )
+    empty = {p: None for p in RETURN_PERIODS}
+    if not scheme_code:
+        return {
+            "fundId": fund.get("fundId"),
+            "schemeCode": None,
+            "asOf": None,
+            "returns": empty,
+            "message": "SIF code is not configured for this fund yet.",
+        }
+    scheme_code = str(scheme_code)
+
+    try:
+        from config.duckdb_session import get_connection
+        from config.returns import returns_for_codes
+    except Exception as exc:  # noqa: BLE001
+        return {
+            "fundId": fund.get("fundId"),
+            "schemeCode": scheme_code,
+            "asOf": None,
+            "returns": empty,
+            "message": f"Returns layer is unavailable: {exc}",
+        }
+
+    try:
+        with get_connection() as con:
+            span = con.execute(
+                "SELECT MIN(nav_date), MAX(nav_date) "
+                "FROM nav_history WHERE scheme_code = ?",
+                [scheme_code],
+            ).fetchone()
+            data = returns_for_codes(con, [scheme_code], RETURN_PERIODS)
+    except Exception as exc:  # noqa: BLE001
+        return {
+            "fundId": fund.get("fundId"),
+            "schemeCode": scheme_code,
+            "asOf": None,
+            "returns": empty,
+            "message": f"Returns could not be loaded: {exc}",
+        }
+
+    entry = data.get(scheme_code)
+    if not entry or not span or span[0] is None:
+        return {
+            "fundId": fund.get("fundId"),
+            "schemeCode": scheme_code,
+            "asOf": None,
+            "returns": empty,
+            "message": "No NAV history is available for this fund yet.",
+        }
+
+    min_date, max_date = span[0], span[1]
+    available_days = (max_date - min_date).days
+    raw = entry.get("returns", {})
+
+    # Gate each period on having enough history to make it meaningful.
+    returns = {
+        p: (raw.get(p) if available_days >= _RETURN_MIN_DAYS[p] else None)
+        for p in RETURN_PERIODS
+    }
+    return {
+        "fundId": fund.get("fundId"),
+        "schemeCode": scheme_code,
+        "asOf": entry.get("nav_date"),
+        "returns": returns,
+        "message": None,
+    }
 
 
 @app.get("/api/meta")

@@ -1063,6 +1063,67 @@ table.cmp thead th.col--emph {
   margin: 18px 0 6px;
 }
 
+/* ---------- compare multiselect ---------- */
+
+.cmp-select {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin: 8px 0 18px;
+}
+
+.cmp-select__label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.cmp-select__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cmp-chip {
+  --chip-color: var(--line-strong);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--card);
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s, opacity 0.12s;
+}
+
+.cmp-chip:hover:not(:disabled) {
+  border-color: var(--chip-color);
+  color: var(--ink);
+}
+
+.cmp-chip.is-on {
+  border-color: var(--chip-color);
+  background: color-mix(in srgb, var(--chip-color) 14%, var(--card));
+  color: var(--ink);
+}
+
+.cmp-chip.is-own {
+  cursor: default;
+  border-color: var(--chip-color);
+  background: color-mix(in srgb, var(--chip-color) 22%, var(--card));
+  color: var(--ink);
+}
+
+.cmp-chip:not(.is-on):not(.is-own) {
+  opacity: 0.78;
+}
+
 /* ---------- NAV movement chart ---------- */
 
 .nav-chart {
@@ -1119,7 +1180,7 @@ table.cmp thead th.col--emph {
 
 .nav-chart__stats {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -1152,6 +1213,53 @@ table.cmp thead th.col--emph {
 }
 
 .nav-chart__stats .is-neg {
+  color: var(--neg, #b5341f);
+}
+
+/* Trailing-returns summary table above the chart. */
+.returns-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.returns-table th,
+.returns-table td {
+  padding: 9px 10px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+  font-variant-numeric: tabular-nums;
+}
+
+.returns-table th:last-child,
+.returns-table td:last-child {
+  border-right: none;
+}
+
+.returns-table th {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--paper-2) 38%, var(--card));
+  border-bottom: 1px solid var(--line);
+}
+
+.returns-table td {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.returns-table td.is-pos {
+  color: var(--pos, #1f7a4d);
+}
+
+.returns-table td.is-neg {
   color: var(--neg, #b5341f);
 }
 

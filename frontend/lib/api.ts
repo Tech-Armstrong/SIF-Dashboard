@@ -5,6 +5,7 @@ import type {
   CategorySummary,
   FundDetailResponse,
   FundNavHistoryResponse,
+  FundReturnsResponse,
   FundIndexEntryWithId,
   MetaResponse,
   NavPeriod,
@@ -61,6 +62,12 @@ export function getFundNavHistory(
 ): Promise<FundNavHistoryResponse> {
   return getJSON<FundNavHistoryResponse>(
     `/api/funds/${encodeURIComponent(fundId)}/nav-history?period=${encodeURIComponent(period)}`,
+  );
+}
+
+export function getFundReturns(fundId: string): Promise<FundReturnsResponse> {
+  return getJSON<FundReturnsResponse>(
+    `/api/funds/${encodeURIComponent(fundId)}/returns`,
   );
 }
 

@@ -57,7 +57,6 @@ export default function CategoryPage({
                 amc={c.amc}
                 accent={c.ac}
                 facts={c.facts}
-                tags={c.tags}
               />
             ))}
           </div>

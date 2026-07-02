@@ -1,44 +1,37 @@
 #!/usr/bin/env python3
 """
-Map SIF codes from AMFI portal data to funds.json fundsIndex.
-Uses AMFI REGULAR PLAN (not Direct) codes as ground truth.
+Map SIF codes from the blob scheme_master to funds.json fundsIndex.
 
-AMFI Data Source:
-  https://portal.amfiindia.com/SIF_DownloadNAVHistoryReport.aspx?frmdt=11-Feb-2026&todt=12-Jun-2026
-  
-SIF Code Mapping (Regular Plan - Growth Option):
-  - Arthaya: SIF-114
-  - Arudha: SIF-62
-  - Diviniti: SIF-21
+Ground truth is the Azure Blob scheme_master table (see
+backend/config/duckdb_session.py). Each UI fund is mapped to its Regular
+Plan - Growth Option scheme code. Two funds (iSIF Equity Ex-Top 100 and
+Sapphire) have no Regular-Growth variant in the blob, so they map to the
+Direct - Growth code instead (noted inline). Every code below was verified
+to have NAV history present.
 """
 
 import json
 from pathlib import Path
 
-# Ground truth: SIF codes from AMFI portal (Regular Plan only)
-# Extracted from NAV history report - these are the official scheme codes
+# Codes verified against blob scheme_master + nav_history (Regular Plan - Growth
+# unless noted). Keys match the UI fund names in data/funds.json fundsIndex.
 SIF_CODE_MAPPING = {
-    # Confirmed from AMFI portal data
-    "Arthaya Equity Long-Short Fund": "SIF-114",     # Arthaya (Reg Plan Growth)
-    "Arudha Equity Long-Short Fund": "SIF-62",       # Arudha (Reg Plan Growth)
-    "Arudha Hybrid Long-Short": "SIF-70",            # Arudha Hybrid (Reg Plan) - estimated
-    "Diviniti Equity Long Short Fund": "SIF-21",     # Diviniti (Reg Plan Growth) - EXACT AMFI NAME
-    "DynaSIF Equity Long - Short Fund": "SIF-58",    # DynaSIF (Reg Plan) - EXACT AMFI NAME WITH SPACES
-    
-    # Placeholders - need to verify from AMFI portal or scheme documents
-    "iSIF Equity Ex-Top 100 Long-Short": "SIF-1",
-    "iSIF Equity Long-Short": "SIF-3",
-    "iSIF Hybrid Long-Short": "SIF-5",
-    "qsif Equity Ex-Top 100 Long-Short": "SIF-9",
-    "qsif Equity Long-Short": "SIF-11",
-    "QSIF Hybrid Long-Short": "SIF-13",
-    "Sapphire Equity Long-Short": "SIF-37",
-    "Altiva Hybrid Long-Short": "SIF-15",
-    "Titanium Equity Long-Short": "SIF-35",
-    "Titanium Hybrid Long-Short": "SIF-39",
-    "Apex Hybrid Long-Short": "SIF-41",
-    "Magnum Hybrid Long-Short": "SIF-43",
-    "qsif Sector Rotation Long-Short Fund": "SIF-123",
+    "iSIF Equity Ex-Top 100 Long-Short": "SIF-33",   # Direct Growth (no Regular variant in blob)
+    "qsif Equity Ex-Top 100 Long-Short": "SIF-25",
+    "Arudha Equity Long-Short": "SIF-62",
+    "Diviniti Equity Long-Short": "SIF-21",
+    "DynaSIF Equity Long-Short": "SIF-55",
+    "Titanium Equity Long-Short": "SIF-102",
+    "Sapphire Equity Long-Short": "SIF-95",          # Direct Growth (no Regular variant in blob)
+    "qsif Equity Long-Short": "SIF-3",
+    "iSIF Hybrid Long-Short": "SIF-35",
+    "Altiva Hybrid Long-Short": "SIF-11",
+    "Arudha Hybrid Long-Short": "SIF-40",
+    "QSIF Hybrid Long-Short": "SIF-7",
+    "Titanium Hybrid Long-Short": "SIF-29",
+    "Apex Hybrid Long-Short": "SIF-80",
+    "Magnum Hybrid Long-Short": "SIF-13",
+    "qsif Sector Rotation Long-Short Fund": "SIF-117",
 }
 
 def find_sif_code(fund_name: str) -> str | None:
@@ -72,34 +65,44 @@ def main():
     print("=" * 70)
     print()
     
-    updates = 0
-    already_mapped = 0
+    added = 0
+    corrected = 0
+    unchanged = 0
     not_found = 0
-    
+
     for i, fund in enumerate(funds_index, 1):
         name = fund.get("name", "").strip()
         amc = fund.get("amc", "").strip()
-        
+
         sif_code = find_sif_code(name)
-        
+
         if sif_code:
-            if "sifCode" in fund:
-                print(f"  [{i:2d}] ~ {name:40} → {sif_code:8} (ALREADY SET)")
-                already_mapped += 1
-            else:
+            current = fund.get("sifCode")
+            if current == sif_code:
+                print(f"  [{i:2d}] ~ {name:40} → {sif_code:8} (unchanged)")
+                unchanged += 1
+            elif current is None:
                 fund["sifCode"] = sif_code
                 fund["schemeCode"] = sif_code  # Legacy alias
-                updates += 1
-                print(f"  [{i:2d}] ✓ {name:40} → {sif_code:8}")
+                added += 1
+                print(f"  [{i:2d}] ✓ {name:40} → {sif_code:8} (added)")
+            else:
+                # Existing code drifted from ground truth — correct it.
+                fund["sifCode"] = sif_code
+                if "schemeCode" in fund:
+                    fund["schemeCode"] = sif_code  # keep legacy alias in sync
+                corrected += 1
+                print(f"  [{i:2d}] ! {name:40} → {current:8} ⇒ {sif_code:8} (corrected)")
         else:
             not_found += 1
             print(f"  [{i:2d}] ✗ {name:40} → NOT FOUND")
-    
+
     print()
     print("=" * 70)
     print(f"RESULTS:")
-    print(f"  Added:        {updates}")
-    print(f"  Already set:  {already_mapped}")
+    print(f"  Added:        {added}")
+    print(f"  Corrected:    {corrected}")
+    print(f"  Unchanged:    {unchanged}")
     print(f"  Not found:    {not_found}")
     print(f"  Total:        {len(funds_index)}")
     print("=" * 70)

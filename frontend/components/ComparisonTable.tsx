@@ -8,16 +8,33 @@ interface ComparisonTableProps {
   rows: string[][];
   /** 0-based index into cols of the column to emphasize (selected fund), or null. */
   emphCol?: number | null;
+  /**
+   * Set of column `short` names to show. When provided, columns whose short is
+   * not in the set are hidden (along with their cells). Null/undefined = all.
+   */
+  visibleCols?: Set<string> | null;
 }
 
-export function ComparisonTable({ cols, rows, emphCol = null }: ComparisonTableProps) {
+export function ComparisonTable({
+  cols,
+  rows,
+  emphCol = null,
+  visibleCols = null,
+}: ComparisonTableProps) {
+  // Indices of the columns to render (preserving original order). When no
+  // filter is given, every column is shown.
+  const keptIdx = cols
+    .map((_, i) => i)
+    .filter((i) => visibleCols == null || visibleCols.has(cols[i][0]));
+
   return (
     <div className="cmp-wrap">
       <table className="cmp">
         <thead>
           <tr>
             <th />
-            {cols.map(([short, amc, color], i) => {
+            {keptIdx.map((i) => {
+              const [short, amc, color] = cols[i];
               const emph = i === emphCol;
               const style = emph
                 ? ({ ["--emph-color" as string]: color } as CSSProperties)
@@ -42,7 +59,7 @@ export function ComparisonTable({ cols, rows, emphCol = null }: ComparisonTableP
                 <th scope="row">
                   <Html html={label} />
                 </th>
-                {cols.map((_, ci) => {
+                {keptIdx.map((ci) => {
                   const emph = ci === emphCol;
                   const cell = cells[ci];
                   const color = cols[ci]?.[2];

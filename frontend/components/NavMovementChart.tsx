@@ -1,8 +1,14 @@
 "use client";
 
 import { useEffect, useState, type CSSProperties } from "react";
-import type { FundNavHistoryResponse, NavPeriod, NavPoint } from "@/lib/types";
-import { getFundNavHistory } from "@/lib/api";
+import type {
+  FundNavHistoryResponse,
+  FundReturnsResponse,
+  NavPeriod,
+  NavPoint,
+  ReturnPeriod,
+} from "@/lib/types";
+import { getFundNavHistory, getFundReturns } from "@/lib/api";
 import {
   LineChart,
   Line,
@@ -14,6 +20,13 @@ import {
 } from "recharts";
 
 const PERIODS: NavPeriod[] = ["1M", "3M", "6M", "YTD", "1Y", "3Y", "5Y", "ALL"];
+
+const RETURN_PERIODS: ReturnPeriod[] = ["1M", "3M", "6M", "1Y"];
+
+function formatReturn(value: number | null): string {
+  if (value == null) return "-";
+  return `${value >= 0 ? "+" : ""}${value.toFixed(2)}%`;
+}
 
 const fmtNav = new Intl.NumberFormat("en-IN", {
   minimumFractionDigits: 2,
@@ -82,6 +95,23 @@ export function NavMovementChart({
   const [period, setPeriod] = useState<NavPeriod>("1Y");
   const [data, setData] = useState<FundNavHistoryResponse | null>(null);
   const [status, setStatus] = useState<"loading" | "ok" | "error">("loading");
+  const [returns, setReturns] = useState<FundReturnsResponse | null>(null);
+
+  // Trailing returns are independent of the chart's selected period, so they
+  // are fetched once per fund.
+  useEffect(() => {
+    let active = true;
+    getFundReturns(fundId)
+      .then((response) => {
+        if (active) setReturns(response);
+      })
+      .catch(() => {
+        if (active) setReturns(null);
+      });
+    return () => {
+      active = false;
+    };
+  }, [fundId]);
 
   useEffect(() => {
     let active = true;
@@ -108,8 +138,6 @@ export function NavMovementChart({
 
   const latest = points.at(-1);
   const first = points.at(0);
-  const changePct =
-    first && latest && first.nav > 0 ? (latest.nav / first.nav - 1) * 100 : null;
 
   return (
     <section
@@ -139,6 +167,32 @@ export function NavMovementChart({
         </div>
       </div>
 
+      {returns ? (
+        <table className="returns-table">
+          <thead>
+            <tr>
+              {RETURN_PERIODS.map((p) => (
+                <th key={p}>{p}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {RETURN_PERIODS.map((p) => {
+                const v = returns.returns[p];
+                const cls =
+                  v == null ? "" : v < 0 ? "is-neg" : "is-pos";
+                return (
+                  <td key={p} className={cls}>
+                    {formatReturn(v)}
+                  </td>
+                );
+              })}
+            </tr>
+          </tbody>
+        </table>
+      ) : null}
+
       {status === "loading" ? (
         <div className="nav-chart__state">Loading NAV history...</div>
       ) : status === "error" ? (
@@ -153,14 +207,6 @@ export function NavMovementChart({
             <div>
               <span>Latest NAV</span>
               <strong>{latest ? fmtNav.format(latest.nav) : "-"}</strong>
-            </div>
-            <div>
-              <span>Period change</span>
-              <strong className={changePct != null && changePct < 0 ? "is-neg" : "is-pos"}>
-                {changePct == null
-                  ? "-"
-                  : `${changePct >= 0 ? "+" : ""}${changePct.toFixed(2)}%`}
-              </strong>
             </div>
             <div>
               <span>As of</span>

@@ -18,9 +18,12 @@ import { Html } from "./Html";
 export function SectionRenderer({
   section,
   emphColor = null,
+  visibleCols = null,
 }: {
   section: Section;
   emphColor?: string | null;
+  /** Set of column `short` names to show in table sections (null = all). */
+  visibleCols?: Set<string> | null;
 }) {
   return (
     <section>
@@ -28,7 +31,11 @@ export function SectionRenderer({
         <span className="section-label__id">{section.id}</span>
         {section.title}
       </h2>
-      <SectionBody section={section} emphColor={emphColor} />
+      <SectionBody
+        section={section}
+        emphColor={emphColor}
+        visibleCols={visibleCols}
+      />
     </section>
   );
 }
@@ -36,9 +43,11 @@ export function SectionRenderer({
 function SectionBody({
   section,
   emphColor,
+  visibleCols,
 }: {
   section: Section;
   emphColor: string | null;
+  visibleCols: Set<string> | null;
 }) {
   switch (section.type) {
     case "table": {
@@ -50,8 +59,9 @@ function SectionBody({
           {section.note ? <p className="section-note">{section.note}</p> : null}
           <ComparisonTable
             cols={section.cols}
-            rows={section.rows}
+            rows={section.rows.filter((row) => row[0] !== "NAV (Reg)")}
             emphCol={emphCol >= 0 ? emphCol : null}
+            visibleCols={visibleCols}
           />
         </>
       );

@@ -1,0 +1,9 @@
+{
+  "name": "sif-dashboard",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "cd backend && .\\.venv\\Scripts\\python.exe -m uvicorn main:app --reload --port 8010",
+    "dev:all": "start /B cmd /c \"npm run dev:backend\" && npm run dev:frontend"
+  }
+}

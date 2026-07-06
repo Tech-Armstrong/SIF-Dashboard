@@ -12,8 +12,14 @@ import type {
   SearchResult,
 } from "./types";
 
-export const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:8000";
+function resolveApiBase(): string {
+  if (typeof window === "undefined" && process.env.API_INTERNAL_BASE) {
+    return process.env.API_INTERNAL_BASE;
+  }
+  return process.env.NEXT_PUBLIC_API_BASE ?? "http://localhost:8000";
+}
+
+export const API_BASE = resolveApiBase();
 
 async function getJSON<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {

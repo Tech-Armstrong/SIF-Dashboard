@@ -11,6 +11,7 @@ and config/duckdb_session.py).
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -53,13 +54,20 @@ FUND_ID_BY_NAME: dict[str, str] = {
 
 app = FastAPI(title="SIF Research Dashboard API", version="1.0.0")
 
-# CORS for the Next.js dev origin.
+# CORS: localhost defaults plus comma-separated CORS_ORIGINS (production web URL).
+_cors_origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+_cors_origins.extend(
+    origin.strip()
+    for origin in os.environ.get("CORS_ORIGINS", "").split(",")
+    if origin.strip()
+)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ],
+    allow_origins=_cors_origins,
     allow_methods=["GET"],
     allow_headers=["*"],
 )

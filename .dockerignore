@@ -1,0 +1,14 @@
+**/.venv
+**/node_modules
+**/.next
+**/__pycache__
+**/*.pyc
+**/.env
+**/.env.*
+!**/.env.example
+.git
+.gitignore
+*.md
+cursor-prompt-sif-dashboard.md
+deploy-api.zip
+deploy-web.zip

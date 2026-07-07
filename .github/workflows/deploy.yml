@@ -1,0 +1,85 @@
+name: Deploy to Azure Container Apps
+
+# Push to main triggers a build+deploy. Path filters below (in each job)
+# ensure only the app whose code changed gets rebuilt — or both, if both changed.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}   # allows manual "Run workflow" from the Actions tab
+
+env:
+  RESOURCE_GROUP: sif_dashboard
+  # Backend
+  ACR_API: sifdashbaordbackend            # note: "dashbaord" spelling matches the real ACR
+  APP_API: sif-api
+  # Frontend
+  ACR_WEB: sifdashboardfrontend
+  APP_WEB: sif-web
+  # Frontend build-time API base (backend's stable public URL)
+  API_BASE: https://sif-api.icyfield-2af9b5f5.centralindia.azurecontainerapps.io
+
+jobs:
+  # ── Detect which parts of the repo changed ──────────────────────────────
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      backend: ${{ steps.filter.outputs.backend }}
+      frontend: ${{ steps.filter.outputs.frontend }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            backend:
+              - 'backend/**'
+              - 'data/**'
+            frontend:
+              - 'frontend/**'
+
+  # ── Backend: only runs if backend/ or data/ changed ─────────────────────
+  deploy-backend:
+    needs: changes
+    if: ${{ needs.changes.outputs.backend == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Build & push backend image (in ACR)
+        run: |
+          az acr build -r "$ACR_API" -t "${APP_API}:${{ github.sha }}" -t "${APP_API}:latest" \
+            -f backend/Dockerfile .
+
+      - name: Deploy backend to Container App
+        run: |
+          az containerapp update -n "$APP_API" -g "$RESOURCE_GROUP" \
+            --image "${ACR_API}.azurecr.io/${APP_API}:${{ github.sha }}"
+
+  # ── Frontend: only runs if frontend/ changed ────────────────────────────
+  deploy-frontend:
+    needs: changes
+    if: ${{ needs.changes.outputs.frontend == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Build & push frontend image (in ACR)
+        run: |
+          az acr build -r "$ACR_WEB" -t "${APP_WEB}:${{ github.sha }}" -t "${APP_WEB}:latest" \
+            -f frontend/Dockerfile \
+            --build-arg NEXT_PUBLIC_API_BASE="$API_BASE" .
+
+      - name: Deploy frontend to Container App
+        run: |
+          az containerapp update -n "$APP_WEB" -g "$RESOURCE_GROUP" \
+            --image "${ACR_WEB}.azurecr.io/${APP_WEB}:${{ github.sha }}"

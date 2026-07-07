@@ -1,13 +1,7 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import { SearchBar } from "./SearchBar";
-import { SifPrimerModal } from "./SifPrimerModal";
 
 export function Header() {
-  const [primerOpen, setPrimerOpen] = useState(false);
-
   return (
     <header className="site-header">
       <div className="site-header__inner">
@@ -18,11 +12,7 @@ export function Header() {
         <div className="site-header__search">
           <SearchBar />
         </div>
-        <button className="btn btn--ghost" onClick={() => setPrimerOpen(true)}>
-          What is a SIF?
-        </button>
       </div>
-      <SifPrimerModal open={primerOpen} onClose={() => setPrimerOpen(false)} />
     </header>
   );
 }

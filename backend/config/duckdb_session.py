@@ -19,6 +19,8 @@ Usage:
         con.execute("SELECT * FROM latest_nav").fetchall()
 """
 
+import os
+
 import duckdb
 
 from config.constants import (
@@ -119,6 +121,13 @@ def _connect_azure() -> duckdb.DuckDBPyConnection:
     con = duckdb.connect(database=":memory:")
     con.execute("INSTALL azure;")
     con.execute("LOAD azure;")
+    # In slim containers DuckDB's native Azure transport can't verify the Blob
+    # TLS cert ("Problem with the SSL CA cert"). Force libcurl and point it at
+    # the system CA bundle installed by the ca-certificates package.
+    con.execute("SET azure_transport_option_type = 'curl';")
+    _ca_bundle = os.environ.get("CA_CERT_FILE", "/etc/ssl/certs/ca-certificates.crt")
+    if os.path.exists(_ca_bundle):
+        con.execute(f"SET ca_cert_file = '{_ca_bundle}';")
     # CREATE SECRET does not accept bound '?' parameters, so the connection
     # string is inlined. Single-quotes inside it are escaped by doubling.
     escaped = AZURE_CONNECTION_STRING.replace("'", "''")

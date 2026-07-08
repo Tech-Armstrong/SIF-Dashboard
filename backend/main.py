@@ -55,6 +55,7 @@ FUND_ID_BY_NAME: dict[str, str] = {
 app = FastAPI(title="SIF Research Dashboard API", version="1.0.0")
 
 # CORS: localhost defaults plus comma-separated CORS_ORIGINS (production web URL).
+# Also allow any localhost port — Next.js often uses 3001/3002 when 3000 is busy.
 _cors_origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
@@ -68,6 +69,7 @@ _cors_origins.extend(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins,
+    allow_origin_regex=r"http://(localhost|127\.0\.0\.1)(:\d+)?",
     allow_methods=["GET"],
     allow_headers=["*"],
 )

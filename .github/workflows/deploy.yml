@@ -17,6 +17,7 @@ env:
   APP_WEB: sif-web
   # Frontend build-time API base (backend's stable public URL)
   API_BASE: https://sif-api.icyfield-2af9b5f5.centralindia.azurecontainerapps.io
+  WEB_BASE: https://sif-web.icyfield-2af9b5f5.centralindia.azurecontainerapps.io
 
 jobs:
   # ── Detect which parts of the repo changed ──────────────────────────────
@@ -56,9 +57,20 @@ jobs:
             -f backend/Dockerfile .
 
       - name: Deploy backend to Container App
+        env:
+          NEO4J_URI: ${{ secrets.NEO4J_URI }}
+          NEO4J_USERNAME: ${{ secrets.NEO4J_USERNAME }}
+          NEO4J_PASSWORD: ${{ secrets.NEO4J_PASSWORD }}
+          NEO4J_DATABASE: ${{ secrets.NEO4J_DATABASE }}
         run: |
           az containerapp update -n "$APP_API" -g "$RESOURCE_GROUP" \
-            --image "${ACR_API}.azurecr.io/${APP_API}:${{ github.sha }}"
+            --image "${ACR_API}.azurecr.io/${APP_API}:${{ github.sha }}" \
+            --set-env-vars \
+              "NEO4J_URI=${NEO4J_URI}" \
+              "NEO4J_USERNAME=${NEO4J_USERNAME}" \
+              "NEO4J_PASSWORD=${NEO4J_PASSWORD}" \
+              "NEO4J_DATABASE=${NEO4J_DATABASE}" \
+              "CORS_ORIGINS=${WEB_BASE}"
 
   # ── Frontend: only runs if frontend/ changed ────────────────────────────
   deploy-frontend:

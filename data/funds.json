@@ -2996,6 +2996,18 @@
         }
       },
       "sections": []
+    },
+    {
+      "id": "active-asset-allocator-long-short",
+      "chip": "Multi-Asset · Active Asset Allocator",
+      "chipColor": "var(--accent)",
+      "title": "Active Asset Allocator Long-Short SIF",
+      "desc": "Interval structure. Dynamic allocation across equity, debt and derivatives with up to 25% unhedged short. Three funds — DynaSIF, iSIF and qsif — each benchmarked to its own composite index.",
+      "cols": [],
+      "cards": [],
+      "single": null,
+      "sections": [],
+      "wherefits": null
     }
   ],
   "fundsIndex": [

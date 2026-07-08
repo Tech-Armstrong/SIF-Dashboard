@@ -253,7 +253,7 @@ def _synthesize_category(
 ) -> dict[str, Any]:
     slug = CATEGORY_SLUG_BY_ID[category_id]
     title = str(category_props.get("name") or slug.replace("-", " ").title())
-    chip = f"Hybrid · {title}" if category_id == 5 else title
+    chip = title
     cols = [
         {"short": _brand_short(f["name"]), "amc": f["amc"].split()[0], "color": f["accent"]}
         for f in funds_in_category
@@ -323,6 +323,18 @@ def _enrich_json_category(
         current_cards = list(out.get("cards") or [])
         out["cards"] = current_cards + extra_cards
 
+    # Neo4j-only categories (e.g. Active Asset Allocator) may ship with empty cols/cards
+    # in funds.json; populate presentation columns from the graph fund list.
+    if graph_funds and not out.get("cols"):
+        out["cols"] = [
+            {
+                "short": _brand_short(f["name"]),
+                "amc": f["amc"].split()[0],
+                "color": f["accent"],
+            }
+            for f in graph_funds
+        ]
+
     return out
 
 
@@ -382,13 +394,16 @@ def build_merged_data(
             )
         )
 
-    if "active-asset-allocator-long-short" not in json_category_ids:
-        props = category_props_by_id.get(5, {"name": "Active Asset Allocator Long-Short"})
+    # Synthesize any Neo4j category missing from funds.json (future-proof).
+    for category_id, slug in CATEGORY_SLUG_BY_ID.items():
+        if slug in json_category_ids:
+            continue
+        props = category_props_by_id.get(category_id, {"name": slug.replace("-", " ").title()})
         merged_categories.append(
             _synthesize_category(
-                5,
+                category_id,
                 props,
-                funds_by_category.get("active-asset-allocator-long-short", []),
+                funds_by_category.get(slug, []),
             )
         )
 

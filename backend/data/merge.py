@@ -166,6 +166,7 @@ def _load_graph_funds(driver: Any) -> list[dict[str, Any]]:
                     "category_name": record["category_name"],
                     "category_props": dict(record["category_props"]),
                     "managers": list(record["managers"] or []),
+                    "scheme_code": fund_props.get("scheme_code"),
                     "inception_date": fund_props.get("inception_date"),
                     "benchmark": fund_props.get("benchmark"),
                     "exit_load": fund_props.get("exit_load"),
@@ -195,11 +196,14 @@ def _merge_fund_entry(
         "facts": _merge_facts(graph, json_facts),
     }
 
-    if json_entry:
-        if json_entry.get("sifCode"):
-            merged["sifCode"] = json_entry["sifCode"]
-        if json_entry.get("schemeCode"):
-            merged["schemeCode"] = json_entry["schemeCode"]
+    # scheme_code (the NAV/returns lookup key) is now graph-primary; JSON is a
+    # transitional fallback for any fund not yet stamped in Neo4j.
+    scheme_code = graph.get("scheme_code")
+    if not scheme_code and json_entry:
+        scheme_code = json_entry.get("sifCode") or json_entry.get("schemeCode")
+    if scheme_code:
+        merged["sifCode"] = scheme_code
+        merged["schemeCode"] = scheme_code
 
     merged["fundId"] = str(
         merged.get("sifCode") or merged.get("schemeCode") or graph_fund_id

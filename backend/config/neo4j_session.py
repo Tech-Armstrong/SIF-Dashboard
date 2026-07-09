@@ -1,8 +1,9 @@
 """Neo4j Aura connection for the SIF graph layer.
 
-Loads credentials from backend/.env (via config.constants). If Neo4j is
-unreachable or env vars are missing, callers receive None and fall back to
-funds.json only.
+Loads NEO4J_URI, NEO4J_USERNAME, and NEO4J_PASSWORD from the environment
+(local: backend/.env via config.constants; production: Container App env vars).
+If Neo4j is unreachable or env vars are missing, callers receive None and fall
+back to funds.json only.
 """
 
 from __future__ import annotations

@@ -11,7 +11,7 @@ interface SearchBarProps {
 }
 
 export function SearchBar({
-  placeholder = "Search funds by name, AMC, or category…",
+  placeholder = "Search funds by name or AMC…",
   autoFocus = false,
 }: SearchBarProps) {
   const router = useRouter();
@@ -57,11 +57,7 @@ export function SearchBar({
   function go(r: SearchResult) {
     setOpen(false);
     setQ("");
-    if (r.type === "category") {
-      router.push(`/category/${r.id}`);
-    } else {
-      router.push(`/funds/${r.fundId}`);
-    }
+    router.push(`/funds/${r.fundId}`);
   }
 
   function onKeyDown(e: React.KeyboardEvent) {
@@ -81,8 +77,6 @@ export function SearchBar({
     }
   }
 
-  const funds = results.filter((r) => r.type === "fund");
-  const cats = results.filter((r) => r.type === "category");
   const showPanel = open && q.trim().length > 0;
 
   return (
@@ -108,57 +102,27 @@ export function SearchBar({
           ) : results.length === 0 ? (
             <div className="search__empty">No matches for “{q.trim()}”.</div>
           ) : (
-            <>
-              {funds.length > 0 ? <div className="search__group">Funds</div> : null}
-              {funds.map((r) => {
-                if (r.type !== "fund") return null;
-                const idx = results.indexOf(r);
-                return (
-                  <button
-                    type="button"
-                    key={r.fundId}
-                    className={`search__item${
-                      idx === active ? " search__item--active" : ""
-                    }`}
-                    onMouseEnter={() => setActive(idx)}
-                    onClick={() => go(r)}
-                  >
-                    <span
-                      className="search__accent"
-                      style={{ background: r.accent }}
-                    />
-                    <span className="search__item-main">
-                      <span className="search__item-name">{r.name}</span>
-                      <span className="search__item-sub">{r.amc}</span>
-                    </span>
-                    <span className="chip chip--soft">{r.category}</span>
-                  </button>
-                );
-              })}
-              {cats.length > 0 ? (
-                <div className="search__group">Categories</div>
-              ) : null}
-              {cats.map((r) => {
-                if (r.type !== "category") return null;
-                const idx = results.indexOf(r);
-                return (
-                  <button
-                    type="button"
-                    key={r.id}
-                    className={`search__item${
-                      idx === active ? " search__item--active" : ""
-                    }`}
-                    onMouseEnter={() => setActive(idx)}
-                    onClick={() => go(r)}
-                  >
-                    <span className="search__item-main">
-                      <span className="search__item-name">View category · {r.title}</span>
-                      <span className="search__item-sub">Compare peers in this category</span>
-                    </span>
-                  </button>
-                );
-              })}
-            </>
+            results.map((r, idx) => (
+              <button
+                type="button"
+                key={r.fundId}
+                className={`search__item${
+                  idx === active ? " search__item--active" : ""
+                }`}
+                onMouseEnter={() => setActive(idx)}
+                onClick={() => go(r)}
+              >
+                <span
+                  className="search__accent"
+                  style={{ background: r.accent }}
+                />
+                <span className="search__item-main">
+                  <span className="search__item-name">{r.name}</span>
+                  <span className="search__item-sub">{r.amc}</span>
+                </span>
+                <span className="chip chip--soft">{r.category}</span>
+              </button>
+            ))
           )}
         </div>
       ) : null}

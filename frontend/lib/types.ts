@@ -258,17 +258,11 @@ export interface FundIndexEntryWithId extends FundIndexEntry {
 
 // ---------- search results ----------
 
-export interface CategorySearchResult {
-  type: "category";
-  id: string;
-  title: string;
-}
-
 export interface FundSearchResult extends FundIndexEntryWithId {
   type: "fund";
 }
 
-export type SearchResult = FundSearchResult | CategorySearchResult;
+export type SearchResult = FundSearchResult;
 
 // ---------- /api/funds/{fundId} ----------
 

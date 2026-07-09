@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { Fact } from "@/lib/types";
+import { FactsList } from "@/components/FactsList";
 
 interface FundCardProps {
   name: string;
@@ -36,14 +37,7 @@ export function FundCard({
           <span className="chip chip--soft">{category}</span>
         </div>
       ) : null}
-      <div className="facts">
-        {facts.map(([k, v], i) => (
-          <div className="facts__row" key={`${k}-${i}`}>
-            <span className="facts__k">{k}</span>
-            <span className="facts__v">{v || <span className="dash">—</span>}</span>
-          </div>
-        ))}
-      </div>
+      <FactsList facts={facts} />
     </>
   );
 

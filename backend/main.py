@@ -83,8 +83,8 @@ def get_funds() -> list[dict[str, Any]]:
 
 @app.get("/api/search")
 def get_search(q: str = Query(default="")) -> list[dict[str, Any]]:
-    """Ranked fund matches (name/amc/category) plus any matched categories."""
-    return search.search(FUNDS_INDEX, CATEGORIES, q)
+    """Ranked fund matches by name, AMC, or category field."""
+    return search.search(FUNDS_INDEX, q)
 
 
 @app.get("/api/categories")

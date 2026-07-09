@@ -49,8 +49,6 @@ _FACT_ORDER = (
     "Fund Managers",
     "Exit Load",
     "Taxation",
-    "Plans",
-    "Options",
 )
 
 _GRAPH_QUERY = """
@@ -127,12 +125,6 @@ def _merge_facts(
         merged["Exit Load"] = str(graph["exit_load"])
     if graph.get("taxation"):
         merged["Taxation"] = str(graph["taxation"])
-    plans = graph.get("plans") or []
-    if plans:
-        merged["Plans"] = ", ".join(str(p) for p in plans)
-    options = graph.get("options") or []
-    if options:
-        merged["Options"] = ", ".join(str(o) for o in options)
 
     if json_facts:
         for key, value in json_facts:
@@ -171,8 +163,6 @@ def _load_graph_funds(driver: Any) -> list[dict[str, Any]]:
                     "benchmark": fund_props.get("benchmark"),
                     "exit_load": fund_props.get("exit_load"),
                     "taxation": fund_props.get("taxation"),
-                    "plans": fund_props.get("plans"),
-                    "options": fund_props.get("options"),
                 }
             )
     return rows
@@ -213,10 +203,6 @@ def _merge_fund_entry(
         merged["exitLoad"] = graph["exit_load"]
     if graph.get("taxation"):
         merged["taxation"] = graph["taxation"]
-    if graph.get("plans"):
-        merged["plans"] = graph["plans"]
-    if graph.get("options"):
-        merged["options"] = graph["options"]
 
     return merged
 

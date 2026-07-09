@@ -325,55 +325,44 @@ a.fund-card:hover {
 }
 
 .facts {
-  display: grid;
-  gap: 0;
   margin: 4px 0 12px;
 }
 
-.facts__row {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 6px 0;
-  border-bottom: 1px dashed var(--line);
+.facts-table {
+  width: 100%;
+  border-collapse: collapse;
   font-size: 13px;
 }
 
-.facts__row:last-child {
-  border-bottom: 0;
-}
-
-.facts__paired {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 16px;
+.facts-table th,
+.facts-table td {
+  padding: 8px 0;
   border-bottom: 1px dashed var(--line);
+  vertical-align: top;
+  text-align: left;
 }
 
-.facts__col .facts__row:last-child {
+.facts-table tr:last-child th,
+.facts-table tr:last-child td {
   border-bottom: 0;
 }
 
-@media (max-width: 360px) {
-  .facts__paired {
-    grid-template-columns: 1fr;
-  }
-}
-
-.facts__k {
+.facts-table th {
+  width: 36%;
+  padding-right: 12px;
   color: var(--muted);
+  font-weight: 500;
 }
 
-.facts__v {
+.facts-table td {
   font-weight: 600;
-  text-align: right;
 }
 
-.facts__v.is-pos {
+.facts-table td.is-pos {
   color: var(--pos, #1f7a4d);
 }
 
-.facts__v.is-neg {
+.facts-table td.is-neg {
   color: var(--neg, #b5341f);
 }
 

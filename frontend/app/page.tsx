@@ -34,6 +34,15 @@ export default function LandingPage() {
         </div>
       ) : null}
 
+      <h2 className="subhead">Create portfolio</h2>
+      <Link href="/portfolio/create" className="portfolio-cta">
+        <div className="portfolio-cta__title">Build client portfolio</div>
+        <p className="portfolio-cta__desc">
+          Select multiple funds, allocate by amount or percentage, and preview
+          allocation breakdown with returns.
+        </p>
+      </Link>
+
       <h2 className="subhead">Browse by category</h2>
       <div className="tile-grid">
         {categories.map((c) => (

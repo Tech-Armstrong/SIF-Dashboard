@@ -107,6 +107,33 @@ a {
   max-width: 560px;
 }
 
+.site-header__nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-header__nav-link {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  transition: border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.site-header__nav-link:hover {
+  color: var(--ink);
+  border-color: var(--line-strong);
+  box-shadow: 0 4px 14px -12px rgba(26, 29, 33, 0.35);
+}
+
 .site-header__cta {
   flex: 0 0 auto;
   display: inline-flex;
@@ -496,7 +523,8 @@ a.fund-card:hover {
   color: var(--muted);
 }
 
-.portfolio-field input {
+.portfolio-field input,
+.portfolio-field select {
   text-transform: none;
   letter-spacing: normal;
   font: inherit;
@@ -509,7 +537,8 @@ a.fund-card:hover {
   outline: none;
 }
 
-.portfolio-field input:focus {
+.portfolio-field input:focus,
+.portfolio-field select:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 18%, transparent);
 }
@@ -799,6 +828,178 @@ a.fund-card:hover {
 
 .portfolio-empty--error {
   color: var(--neg, #b5341f);
+}
+
+/* ---------- screener ---------- */
+
+.screener {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.screener__head h1 {
+  margin-bottom: 6px;
+}
+
+.screener__head p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.screener__filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.4fr) minmax(180px, 1fr) minmax(180px, 1fr);
+  gap: 14px;
+}
+
+.screener__search {
+  min-width: 0;
+}
+
+.screener__meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.screener__table-wrap {
+  margin-bottom: 0;
+}
+
+.screener-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.screener-col--fund {
+  width: 26%;
+}
+
+.screener-col--amc {
+  width: 18%;
+}
+
+.screener-col--category {
+  width: 20%;
+}
+
+.screener-col--inception {
+  width: 10%;
+}
+
+.screener-col--return {
+  width: 6.5%;
+}
+
+.screener-table__head,
+.screener-table td {
+  padding: 10px 12px;
+  vertical-align: top;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  font-variant-numeric: tabular-nums;
+}
+
+.screener-table__head {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--paper-2) 38%, var(--card));
+}
+
+.screener-table__head--metric,
+.screener-table__inception,
+.screener-table__return {
+  text-align: center;
+}
+
+.screener-table th:last-child,
+.screener-table td:last-child {
+  border-right: none;
+}
+
+.screener-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.screener-table__fund {
+  min-width: 220px;
+  line-height: 1.35;
+}
+
+.screener-table__amc,
+.screener-table__category {
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  word-break: break-word;
+}
+
+.screener-table__category {
+  color: var(--muted);
+}
+
+.screener-table__inception {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.screener-table__return {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.screener-table__return.is-pos {
+  color: var(--pos, #1f7a4d);
+}
+
+.screener-table__return.is-neg {
+  color: var(--neg, #b5341f);
+}
+
+.screener-sort {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.screener-sort:hover {
+  color: var(--ink);
+}
+
+.screener-fund-link {
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  text-underline-offset: 2px;
+}
+
+.screener-fund-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .screener__filters {
+    grid-template-columns: 1fr;
+  }
 }
 
 .portfolio-returns-table th:nth-child(-n + 4),

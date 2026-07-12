@@ -15,3 +15,8 @@ export function isHiddenFactKey(key: string): boolean {
 export function visibleFacts(facts: [string, string][]): [string, string][] {
   return facts.filter(([key]) => !isHiddenFactKey(key));
 }
+
+export function factValue(facts: [string, string][], key: string): string | null {
+  const row = facts.find(([factKey]) => factKey === key);
+  return row?.[1] ?? null;
+}

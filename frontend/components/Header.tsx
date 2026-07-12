@@ -12,6 +12,11 @@ export function Header() {
         <div className="site-header__search">
           <SearchBar />
         </div>
+        <nav className="site-header__nav" aria-label="Primary">
+          <Link href="/screener" className="site-header__nav-link">
+            Screener
+          </Link>
+        </nav>
         <Link href="/portfolio/create" className="site-header__cta">
           Build portfolio
         </Link>

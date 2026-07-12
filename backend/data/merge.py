@@ -1,7 +1,7 @@
 """Merge Neo4j graph data with funds.json presentation content.
 
 Neo4j is primary for structured fund/category fields; JSON fills gaps
-(accent, sifCode, AUM/NAV facts, comparison sections).
+(accent, sifCode, NAV facts, comparison sections).
 """
 
 from __future__ import annotations
@@ -40,11 +40,11 @@ PREFIX_COLORS: dict[str, str] = {
     "arthaya": "var(--accent)",
 }
 
-_JSON_ONLY_FACT_KEYS = frozenset({"AUM", "NAV (Reg)"})
+_JSON_ONLY_FACT_KEYS = frozenset({"NAV (Reg)"})
+_AUM_FACT_KEYS = frozenset({"AUM", "Fund Size (AUM)"})
 _FACT_ORDER = (
     "Inception",
     "Benchmark",
-    "AUM",
     "NAV (Reg)",
     "Fund Managers",
     "Exit Load",
@@ -105,11 +105,13 @@ def _merge_facts(
     graph: dict[str, Any],
     json_facts: list[list[str]] | None,
 ) -> list[list[str]]:
-    """Build facts: Neo4j wins on overlap; JSON keeps AUM/NAV-only keys."""
+    """Build facts: Neo4j wins on overlap; JSON keeps NAV-only keys."""
     merged: dict[str, str] = {}
 
     if json_facts:
         for key, value in json_facts:
+            if key in _AUM_FACT_KEYS:
+                continue
             if key in _JSON_ONLY_FACT_KEYS and value:
                 merged[key] = value
 
@@ -128,6 +130,8 @@ def _merge_facts(
 
     if json_facts:
         for key, value in json_facts:
+            if key in _AUM_FACT_KEYS:
+                continue
             if key not in merged and value:
                 merged[key] = value
 

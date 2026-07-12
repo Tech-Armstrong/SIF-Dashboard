@@ -9,6 +9,7 @@ import type {
   FundIndexEntryWithId,
   MetaResponse,
   NavPeriod,
+  PortfolioExportRequest,
   SearchResult,
 } from "./types";
 
@@ -79,4 +80,19 @@ export function getFundReturns(fundId: string): Promise<FundReturnsResponse> {
 
 export function getMeta(): Promise<MetaResponse> {
   return getJSON<MetaResponse>("/api/meta");
+}
+
+export async function downloadPortfolioPdf(
+  payload: PortfolioExportRequest,
+): Promise<Blob> {
+  const res = await fetch(`${API_BASE}/api/portfolio/export-pdf`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error(`Portfolio PDF export failed (${res.status})`);
+  }
+  return res.blob();
 }

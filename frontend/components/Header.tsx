@@ -12,6 +12,9 @@ export function Header() {
         <div className="site-header__search">
           <SearchBar />
         </div>
+        <Link href="/portfolio/create" className="site-header__cta">
+          Build portfolio
+        </Link>
       </div>
     </header>
   );

@@ -306,6 +306,42 @@ export interface FundReturnsResponse {
   message: string | null;
 }
 
+// ---------- /api/portfolio/export-pdf ----------
+
+export interface PortfolioExportFund {
+  fundId: string;
+  name: string;
+  amc: string;
+  category: string;
+  amount: number;
+  percent: number;
+  returns: Record<ReturnPeriod, number | null>;
+  facts?: [string, string][];
+  accentColor?: string | null;
+}
+
+export interface PortfolioExportNavPoint {
+  date: string;
+  index: number;
+  value: number;
+}
+
+export interface PortfolioExportSeries {
+  baseDate: string | null;
+  totalReturnPct: number | null;
+  currentValue: number;
+  excludedFundCount: number;
+  points: PortfolioExportNavPoint[];
+}
+
+export interface PortfolioExportRequest {
+  clientName: string;
+  totalAmount: number;
+  funds: PortfolioExportFund[];
+  portfolioSeries?: PortfolioExportSeries | null;
+  portfolioBase?: number;
+}
+
 // ---------- /api/meta ----------
 
 export interface MetaResponse {

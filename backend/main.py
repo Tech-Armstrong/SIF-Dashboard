@@ -17,11 +17,14 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import Response
 
 import search
 from config.nav_history import PERIODS, nav_history_for_fund
 from config.neo4j_session import init_driver
 from data.merge import build_merged_data
+from reports.portfolio_pdf import PortfolioReportPdf, portfolio_pdf_filename
+from schemas.portfolio import PortfolioExportRequest
 
 # Periods shown in the fund-detail returns table, in display order.
 RETURN_PERIODS: list[str] = ["1M", "3M", "6M", "1Y"]
@@ -70,7 +73,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins,
     allow_origin_regex=r"http://(localhost|127\.0\.0\.1)(:\d+)?",
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
@@ -244,3 +247,26 @@ def get_meta() -> dict[str, Any]:
         "primerHtml": DATA.get("primerHtml", ""),
         "wherefits": DATA.get("wherefits", {}),
     }
+
+
+@app.post("/api/portfolio/export-pdf")
+def export_portfolio_pdf(body: PortfolioExportRequest) -> Response:
+    """Generate a portfolio PDF report from preview payload data."""
+    if not body.funds:
+        raise HTTPException(status_code=400, detail="At least one fund is required.")
+
+    payload = body.model_dump(by_alias=False)
+    try:
+        pdf_bytes = PortfolioReportPdf(payload).build()
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(
+            status_code=500,
+            detail=f"PDF generation failed: {exc}",
+        ) from exc
+
+    filename = portfolio_pdf_filename(body.client_name)
+    return Response(
+        content=pdf_bytes,
+        media_type="application/pdf",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )

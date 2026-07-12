@@ -8,6 +8,7 @@ import type {
 } from "@/lib/types";
 import { ComparisonTable } from "./ComparisonTable";
 import { Html } from "./Html";
+import { isHiddenFactKey } from "@/lib/facts";
 
 /**
  * Renders one comparison section by its `type`.
@@ -59,7 +60,7 @@ function SectionBody({
           {section.note ? <p className="section-note">{section.note}</p> : null}
           <ComparisonTable
             cols={section.cols}
-            rows={section.rows.filter((row) => row[0] !== "NAV (Reg)")}
+            rows={section.rows.filter((row) => !isHiddenFactKey(row[0]))}
             emphCol={emphCol >= 0 ? emphCol : null}
             visibleCols={visibleCols}
           />

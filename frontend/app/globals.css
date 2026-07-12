@@ -107,6 +107,31 @@ a {
   max-width: 560px;
 }
 
+.site-header__cta {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 9px 18px;
+  background: var(--accent);
+  color: #fbf9f4;
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.site-header__cta:hover {
+  box-shadow: 0 6px 18px -10px rgba(27, 67, 50, 0.6);
+}
+
+.site-header__cta:active {
+  transform: translateY(1px);
+}
+
 .site-footer {
   max-width: 1120px;
   margin: 0 auto;
@@ -653,6 +678,19 @@ a.fund-card:hover {
   gap: 16px;
 }
 
+.portfolio-summary__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.portfolio-summary__export-error {
+  margin: 0;
+  color: var(--neg, #b5341f);
+  font-size: 0.9rem;
+}
+
 .portfolio-summary__snapshot h2,
 .portfolio-summary h3 {
   font-size: 19px;
@@ -667,31 +705,49 @@ a.fund-card:hover {
 .portfolio-summary__fund-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  align-items: start;
+  gap: 14px;
+  align-items: stretch;
 }
 
+/* Each item is a full-height column so cards of different fact counts still
+   line up, and the allocation footer pins to the bottom of every card. */
 .portfolio-summary__fund-item {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-summary__fund-item .fund-card {
-  height: auto;
+  flex: 1 1 auto;
   margin: 0;
 }
 
+/* Allocation footer: a labelled bar, not two bare numbers. mt-auto pushes it to
+   the card bottom so all three align. */
 .portfolio-summary__alloc {
-  margin-top: 8px;
+  margin-top: 10px;
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--wash, rgba(0, 0, 0, 0.03));
+  border: 1px solid var(--line);
   font-size: 12.5px;
-  color: var(--ink-soft);
+  color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 
-.portfolio-summary__alloc span:last-child {
+.portfolio-summary__alloc-amt {
+  font-size: 15px;
   font-weight: 700;
+  color: var(--ink, #1a1d21);
+}
+
+.portfolio-summary__alloc-pct {
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .portfolio-summary__charts {
@@ -711,6 +767,28 @@ a.fund-card:hover {
 
 .portfolio-chart__box {
   height: 280px;
+}
+
+.portfolio-chart--wide {
+  margin-top: 14px;
+}
+
+.portfolio-chart--wide .portfolio-chart__box {
+  height: 320px;
+}
+
+.portfolio-chart__meta {
+  margin: 4px 0 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.portfolio-chart__note {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-style: italic;
 }
 
 .portfolio-empty {

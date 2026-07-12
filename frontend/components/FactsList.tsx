@@ -1,6 +1,5 @@
 import type { Fact } from "@/lib/types";
-
-const HIDDEN_FACT_KEYS = new Set(["Plans", "Options"]);
+import { HIDDEN_FACT_KEYS } from "@/lib/facts";
 
 function valueClass(label: string, value: string): string {
   if (label !== "1Y Change") return "";

@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev:frontend": "npm --prefix frontend run dev",
-    "dev:backend": "cd backend && .venv/bin/python -m uvicorn main:app --reload --port 8000",
+    "dev:backend": "node scripts/dev-backend.mjs",
     "dev:all": "concurrently -n backend,frontend -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\""
   },
   "devDependencies": {

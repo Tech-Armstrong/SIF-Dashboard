@@ -94,7 +94,7 @@ jobs:
           az acr build -r "$ACR_WEB" -t "${APP_WEB}:${{ github.sha }}" -t "${APP_WEB}:latest" \
             -f frontend/Dockerfile \
             --build-arg NEXT_PUBLIC_API_BASE="$API_BASE" \
-            --build-arg NEXT_PUBLIC_INTERNAL_TOOLS_ENABLED=false \
+            --build-arg NEXT_PUBLIC_INTERNAL_TOOLS_ENABLED=true \
             --build-arg NEXT_PUBLIC_INTERNAL_AUTH_ENABLED=true .
 
       - name: Deploy frontend to Container App

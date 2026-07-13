@@ -4,8 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
+  clearInternalSession,
   fetchInternalSession,
   hasInternalSession,
+  internalAuthRequired,
   internalToolsEnabledInUi,
   onInternalSessionChange,
 } from "@/lib/internalAuth";
@@ -20,7 +22,17 @@ export function InternalNavLinks() {
 
     async function refresh() {
       const authenticated = await fetchInternalSession();
-      setShowLinks(internalToolsEnabledInUi() && (authenticated || hasInternalSession()));
+
+      if (internalAuthRequired()) {
+        // Trust the HttpOnly cookie check only — not stale sessionStorage.
+        if (!authenticated && hasInternalSession()) {
+          clearInternalSession();
+        }
+        setShowLinks(authenticated);
+        return;
+      }
+
+      setShowLinks(internalToolsEnabledInUi());
     }
 
     void refresh();

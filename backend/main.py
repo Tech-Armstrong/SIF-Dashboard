@@ -15,15 +15,22 @@ import os
 from pathlib import Path
 from typing import Any
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import Depends, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 
 import search
+from config.internal_auth import (
+    INTERNAL_API_KEY,
+    INTERNAL_PASSWORD,
+    internal_auth_enabled,
+    verify_internal_access,
+)
 from config.nav_history import PERIODS, nav_history_for_fund
 from config.neo4j_session import init_driver
 from data.merge import build_merged_data
 from reports.portfolio_pdf import PortfolioReportPdf, portfolio_pdf_filename
+from schemas.internal import InternalLoginRequest
 from schemas.portfolio import PortfolioExportRequest
 
 # Periods shown in the fund-detail returns table, in display order.
@@ -78,8 +85,20 @@ app.add_middleware(
 )
 
 
+@app.post("/api/internal/login")
+def internal_login(body: InternalLoginRequest) -> dict[str, bool | str]:
+    """Exchange the team password for a bearer token used on internal APIs."""
+    if not internal_auth_enabled():
+        return {"ok": True, "token": "dev", "authDisabled": True}
+
+    if body.password != INTERNAL_PASSWORD:
+        raise HTTPException(status_code=401, detail="Invalid password.")
+
+    return {"ok": True, "token": INTERNAL_API_KEY}
+
+
 @app.get("/api/funds")
-def get_funds() -> list[dict[str, Any]]:
+def get_funds(_: None = Depends(verify_internal_access)) -> list[dict[str, Any]]:
     """The full fundsIndex (with a stable fundId added to each entry)."""
     return search.with_ids(FUNDS_INDEX)
 
@@ -250,7 +269,10 @@ def get_meta() -> dict[str, Any]:
 
 
 @app.post("/api/portfolio/export-pdf")
-def export_portfolio_pdf(body: PortfolioExportRequest) -> Response:
+def export_portfolio_pdf(
+    body: PortfolioExportRequest,
+    _: None = Depends(verify_internal_access),
+) -> Response:
     """Generate a portfolio PDF report from preview payload data."""
     if not body.funds:
         raise HTTPException(status_code=400, detail="At least one fund is required.")

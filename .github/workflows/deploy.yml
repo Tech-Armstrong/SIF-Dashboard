@@ -62,6 +62,8 @@ jobs:
           NEO4J_USERNAME: ${{ secrets.NEO4J_USERNAME }}
           NEO4J_PASSWORD: ${{ secrets.NEO4J_PASSWORD }}
           NEO4J_DATABASE: ${{ secrets.NEO4J_DATABASE }}
+          INTERNAL_PASSWORD: ${{ secrets.INTERNAL_PASSWORD }}
+          INTERNAL_API_KEY: ${{ secrets.INTERNAL_API_KEY }}
         run: |
           az containerapp update -n "$APP_API" -g "$RESOURCE_GROUP" \
             --image "${ACR_API}.azurecr.io/${APP_API}:${{ github.sha }}" \
@@ -70,7 +72,9 @@ jobs:
               "NEO4J_USERNAME=${NEO4J_USERNAME}" \
               "NEO4J_PASSWORD=${NEO4J_PASSWORD}" \
               "NEO4J_DATABASE=${NEO4J_DATABASE}" \
-              "CORS_ORIGINS=${WEB_BASE}"
+              "CORS_ORIGINS=${WEB_BASE}" \
+              "INTERNAL_PASSWORD=${INTERNAL_PASSWORD}" \
+              "INTERNAL_API_KEY=${INTERNAL_API_KEY}"
 
   # ── Frontend: only runs if frontend/ changed ────────────────────────────
   deploy-frontend:
@@ -89,9 +93,14 @@ jobs:
         run: |
           az acr build -r "$ACR_WEB" -t "${APP_WEB}:${{ github.sha }}" -t "${APP_WEB}:latest" \
             -f frontend/Dockerfile \
-            --build-arg NEXT_PUBLIC_API_BASE="$API_BASE" .
+            --build-arg NEXT_PUBLIC_API_BASE="$API_BASE" \
+            --build-arg NEXT_PUBLIC_INTERNAL_TOOLS_ENABLED=false \
+            --build-arg NEXT_PUBLIC_INTERNAL_AUTH_ENABLED=true .
 
       - name: Deploy frontend to Container App
+        env:
+          INTERNAL_API_KEY: ${{ secrets.INTERNAL_API_KEY }}
         run: |
           az containerapp update -n "$APP_WEB" -g "$RESOURCE_GROUP" \
-            --image "${ACR_WEB}.azurecr.io/${APP_WEB}:${{ github.sha }}"
+            --image "${ACR_WEB}.azurecr.io/${APP_WEB}:${{ github.sha }}" \
+            --set-env-vars "INTERNAL_API_KEY=${INTERNAL_API_KEY}"

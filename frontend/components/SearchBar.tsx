@@ -94,6 +94,7 @@ export function SearchBar({
         onKeyDown={onKeyDown}
         aria-label="Search SIF funds"
         autoComplete="off"
+        suppressHydrationWarning
       />
       {showPanel ? (
         <div className="search__panel" role="listbox">

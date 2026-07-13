@@ -12,6 +12,7 @@ import type {
   PortfolioExportRequest,
   SearchResult,
 } from "./types";
+import { internalAuthHeaders } from "./internalAuth";
 
 function resolveApiBase(): string {
   if (typeof window === "undefined" && process.env.API_INTERNAL_BASE) {
@@ -44,7 +45,9 @@ export function slugify(value: string): string {
 }
 
 export function getFunds(): Promise<FundIndexEntryWithId[]> {
-  return getJSON<FundIndexEntryWithId[]>("/api/funds");
+  return getJSON<FundIndexEntryWithId[]>("/api/funds", {
+    headers: internalAuthHeaders(),
+  });
 }
 
 export function searchFunds(q: string): Promise<SearchResult[]> {
@@ -87,7 +90,10 @@ export async function downloadPortfolioPdf(
 ): Promise<Blob> {
   const res = await fetch(`${API_BASE}/api/portfolio/export-pdf`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      ...internalAuthHeaders(),
+    },
     body: JSON.stringify(payload),
     cache: "no-store",
   });

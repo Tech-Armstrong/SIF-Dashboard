@@ -1002,6 +1002,52 @@ a.fund-card:hover {
   }
 }
 
+/* ---------- internal login ---------- */
+
+.internal-login {
+  max-width: 420px;
+  margin-top: 8px;
+}
+
+.internal-login h1 {
+  margin-bottom: 6px;
+}
+
+.internal-login p {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.internal-login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.internal-login__error {
+  margin: 0;
+  color: var(--neg, #b5341f);
+  font-size: 0.92rem;
+}
+
+.internal-login__submit {
+  align-self: flex-start;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fbf9f4;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.internal-login__submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
 .portfolio-returns-table th:nth-child(-n + 4),
 .portfolio-returns-table td:nth-child(-n + 4) {
   text-align: left;

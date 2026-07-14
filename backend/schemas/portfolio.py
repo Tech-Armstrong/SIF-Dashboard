@@ -21,6 +21,20 @@ class PortfolioSeriesPayload(BaseModel):
     model_config = {"populate_by_name": True}
 
 
+class MarketIndexHistoryPoint(BaseModel):
+    date: str
+    close: float
+
+
+class MarketIndexSeriesPayload(BaseModel):
+    symbol: str
+    label: str
+    points: list[MarketIndexHistoryPoint] = Field(default_factory=list)
+    color: str | None = None
+
+    model_config = {"populate_by_name": True}
+
+
 class PortfolioFundPayload(BaseModel):
     fund_id: str = Field(alias="fundId")
     name: str
@@ -44,5 +58,9 @@ class PortfolioExportRequest(BaseModel):
         alias="portfolioSeries",
     )
     portfolio_base: float = Field(default=100, alias="portfolioBase")
+    market_indexes: list[MarketIndexSeriesPayload] = Field(
+        default_factory=list,
+        alias="marketIndexes",
+    )
 
     model_config = {"populate_by_name": True}

@@ -5,3 +5,4 @@ duckdb==1.5.3
 python-dotenv==1.0.1
 neo4j>=5.0.0
 reportlab==4.2.5
+nsepython>=2.0

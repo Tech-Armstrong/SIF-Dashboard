@@ -85,6 +85,32 @@ export function getMeta(): Promise<MetaResponse> {
   return getJSON<MetaResponse>("/api/meta");
 }
 
+export type MarketIndexInfo = { symbol: string; label: string };
+
+export type MarketIndexHistoryPoint = { date: string; close: number };
+
+export type MarketIndexHistorySeries = {
+  symbol: string;
+  label: string;
+  points: MarketIndexHistoryPoint[];
+  error?: string;
+};
+
+export function getMarketIndexes(): Promise<{ indexes: MarketIndexInfo[] }> {
+  return getJSON<{ indexes: MarketIndexInfo[] }>("/api/market/indexes");
+}
+
+export function getMarketIndexesHistory(
+  start: string,
+  symbols?: string[],
+  end?: string,
+): Promise<{ start: string; end: string | null; series: MarketIndexHistorySeries[] }> {
+  const params = new URLSearchParams({ start });
+  if (end) params.set("end", end);
+  if (symbols && symbols.length > 0) params.set("symbols", symbols.join(","));
+  return getJSON(`/api/market/indexes/history?${params.toString()}`);
+}
+
 export async function downloadPortfolioPdf(
   payload: PortfolioExportRequest,
 ): Promise<Blob> {

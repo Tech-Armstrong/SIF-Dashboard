@@ -14,7 +14,16 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { downloadPortfolioPdf, getFundNavHistory, getFundReturns, getFunds } from "@/lib/api";
+import {
+  downloadPortfolioPdf,
+  getFundNavHistory,
+  getFundReturns,
+  getFunds,
+  getMarketIndexes,
+  getMarketIndexesHistory,
+  type MarketIndexHistorySeries,
+  type MarketIndexInfo,
+} from "@/lib/api";
 import { resolveColor } from "@/lib/colors";
 import { visibleFacts } from "@/lib/facts";
 import { FundCard } from "@/components/FundCard";
@@ -36,6 +45,44 @@ const SUM_TOLERANCE = 0.01;
 // at this value on the base (least-common) date. Change to 1000 for a base-1000
 // series.
 const PORTFOLIO_BASE = 100;
+
+const MARKET_INDEX_COLORS: Record<string, string> = {
+  "NIFTY 50": "#e34948",
+  "NIFTY 100": "#eda100",
+  "NIFTY 500": "#008300",
+  "NIFTY MIDCAP 150": "#4a3aa7",
+  "NIFTY SMLCAP 250": "#eb6834",
+};
+
+function marketIndexDataKey(symbol: string): string {
+  return `idx_${symbol.replace(/\s+/g, "_")}`;
+}
+
+/** Forward-fill closes onto portfolio dates; rebase to PORTFOLIO_BASE at first available close. */
+function rebasedIndexValues(
+  points: { date: string; close: number }[],
+  portfolioDates: string[],
+  base: number,
+): Record<string, number | null> {
+  if (points.length === 0 || portfolioDates.length === 0) return {};
+
+  const byDate = new Map(points.map((p) => [p.date, p.close]));
+  let lastClose: number | null = null;
+  let baseClose: number | null = null;
+  const out: Record<string, number | null> = {};
+
+  for (const d of portfolioDates) {
+    const exact = byDate.get(d);
+    if (exact != null) lastClose = exact;
+    if (lastClose == null) {
+      out[d] = null;
+      continue;
+    }
+    if (baseClose == null || baseClose === 0) baseClose = lastClose;
+    out[d] = (lastClose / baseClose) * base;
+  }
+  return out;
+}
 
 const fmtIndex = new Intl.NumberFormat("en-IN", {
   minimumFractionDigits: 2,
@@ -130,6 +177,12 @@ export function PortfolioBuilder() {
   const [exportingPdf, setExportingPdf] = useState(false);
   const [exportError, setExportError] = useState("");
 
+  const [marketIndexes, setMarketIndexes] = useState<MarketIndexInfo[]>([]);
+  const [selectedMarketSymbols, setSelectedMarketSymbols] = useState<string[]>([]);
+  const [marketSeries, setMarketSeries] = useState<MarketIndexHistorySeries[]>([]);
+  const [marketLoading, setMarketLoading] = useState(false);
+  const [marketMenuOpen, setMarketMenuOpen] = useState(false);
+
   useEffect(() => {
     getFunds()
       .then((rows) => {
@@ -138,7 +191,37 @@ export function PortfolioBuilder() {
       })
       .catch(() => setFundsError(true))
       .finally(() => setLoadingFunds(false));
+
+    getMarketIndexes()
+      .then((res) => setMarketIndexes(res.indexes))
+      .catch(() => setMarketIndexes([]));
   }, []);
+
+  useEffect(() => {
+    const baseDate = portfolioSeries?.baseDate;
+    if (!baseDate || selectedMarketSymbols.length === 0) {
+      setMarketSeries([]);
+      setMarketLoading(false);
+      return;
+    }
+
+    let cancelled = false;
+    setMarketLoading(true);
+    getMarketIndexesHistory(baseDate, selectedMarketSymbols)
+      .then((res) => {
+        if (!cancelled) setMarketSeries(res.series);
+      })
+      .catch(() => {
+        if (!cancelled) setMarketSeries([]);
+      })
+      .finally(() => {
+        if (!cancelled) setMarketLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [portfolioSeries?.baseDate, selectedMarketSymbols]);
 
   const fundsById = useMemo(
     () => new Map(funds.map((f) => [f.fundId, f])),
@@ -208,16 +291,40 @@ export function PortfolioBuilder() {
 
   const isValid = validationError.length === 0;
 
-  const portfolioChartData = useMemo(
-    () =>
-      (portfolioSeries?.points ?? []).map((p) => ({
-        ...p,
-        // Rebased growth index: starts at PORTFOLIO_BASE on the base date.
-        base: p.index * PORTFOLIO_BASE,
-        displayDate: formatChartDate(p.date),
-      })),
-    [portfolioSeries],
-  );
+  const portfolioChartData = useMemo(() => {
+    const portfolioPoints = (portfolioSeries?.points ?? []).map((p) => ({
+      ...p,
+      base: p.index * PORTFOLIO_BASE,
+      displayDate: formatChartDate(p.date),
+    }));
+    if (portfolioPoints.length === 0 || marketSeries.length === 0) {
+      return portfolioPoints;
+    }
+
+    const dates = portfolioPoints.map((p) => p.date);
+    const bySymbol = new Map<string, Record<string, number | null>>();
+    for (const series of marketSeries) {
+      bySymbol.set(
+        series.symbol,
+        rebasedIndexValues(series.points, dates, PORTFOLIO_BASE),
+      );
+    }
+
+    return portfolioPoints.map((point) => {
+      const row: Record<string, string | number | null> = { ...point };
+      for (const series of marketSeries) {
+        const values = bySymbol.get(series.symbol);
+        row[marketIndexDataKey(series.symbol)] = values?.[point.date] ?? null;
+      }
+      return row;
+    });
+  }, [portfolioSeries, marketSeries]);
+
+  function toggleMarketSymbol(symbol: string): void {
+    setSelectedMarketSymbols((prev) =>
+      prev.includes(symbol) ? prev.filter((s) => s !== symbol) : [...prev, symbol],
+    );
+  }
 
   const fundDonutData = allocationRows
     .filter((r) => r.amount > 0)
@@ -413,11 +520,21 @@ export function PortfolioBuilder() {
           ? {
               baseDate: portfolioSeries.baseDate,
               totalReturnPct: portfolioSeries.totalReturnPct,
-              currentValue: portfolioChartData[portfolioChartData.length - 1].value,
+              currentValue: Number(
+                portfolioChartData[portfolioChartData.length - 1].value ?? 0,
+              ),
               excludedFundCount: portfolioSeries.excludedFundIds.length,
               points: portfolioSeries.points,
             }
           : null,
+      marketIndexes: marketSeries
+        .filter((series) => series.points.length > 0)
+        .map((series) => ({
+          symbol: series.symbol,
+          label: series.label,
+          color: MARKET_INDEX_COLORS[series.symbol] ?? null,
+          points: series.points,
+        })),
     };
 
     try {
@@ -737,7 +854,56 @@ export function PortfolioBuilder() {
           </div>
 
           <div className="portfolio-chart portfolio-chart--wide">
-            <h3>Portfolio Growth</h3>
+            <div className="portfolio-chart__head">
+              <h3>Portfolio Growth</h3>
+              {portfolioSeries && portfolioChartData.length > 0 ? (
+                <div className="portfolio-index-select">
+                  <button
+                    type="button"
+                    className="portfolio-index-select__btn"
+                    aria-expanded={marketMenuOpen}
+                    aria-haspopup="listbox"
+                    onClick={() => setMarketMenuOpen((open) => !open)}
+                  >
+                    {selectedMarketSymbols.length === 0
+                      ? "Compare indexes"
+                      : `${selectedMarketSymbols.length} index${selectedMarketSymbols.length === 1 ? "" : "es"} selected`}
+                  </button>
+                  {marketMenuOpen ? (
+                    <div className="portfolio-index-select__menu" role="listbox" aria-multiselectable="true">
+                      {marketIndexes.map((item) => {
+                        const checked = selectedMarketSymbols.includes(item.symbol);
+                        return (
+                          <label key={item.symbol} className="portfolio-index-select__option">
+                            <input
+                              type="checkbox"
+                              checked={checked}
+                              onChange={() => toggleMarketSymbol(item.symbol)}
+                            />
+                            <span
+                              className="portfolio-index-select__swatch"
+                              style={{
+                                background: MARKET_INDEX_COLORS[item.symbol] ?? "#6c757a",
+                              }}
+                            />
+                            {item.label}
+                          </label>
+                        );
+                      })}
+                      {selectedMarketSymbols.length > 0 ? (
+                        <button
+                          type="button"
+                          className="portfolio-index-select__clear"
+                          onClick={() => setSelectedMarketSymbols([])}
+                        >
+                          Clear selection
+                        </button>
+                      ) : null}
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
+            </div>
             {seriesLoading ? (
               <div className="portfolio-empty">Building portfolio history...</div>
             ) : !portfolioSeries || portfolioChartData.length === 0 ? (
@@ -756,7 +922,7 @@ export function PortfolioBuilder() {
                   · Current Portfolio Value{" "}
                   <strong>
                     {fmtCurrency.format(
-                      portfolioChartData[portfolioChartData.length - 1].value,
+                      Number(portfolioChartData[portfolioChartData.length - 1].value ?? 0),
                     )}
                   </strong>{" "}
                   · Return{" "}
@@ -765,6 +931,7 @@ export function PortfolioBuilder() {
                       ? "-"
                       : `${fmtPct.format(portfolioSeries.totalReturnPct)}%`}
                   </strong>
+                  {marketLoading ? " · Loading indexes…" : null}
                 </p>
                 {portfolioSeries.excludedFundIds.length > 0 ? (
                   <p className="portfolio-chart__note">
@@ -799,19 +966,35 @@ export function PortfolioBuilder() {
                         width={64}
                       />
                       <Tooltip
-                        formatter={(value) => [
-                          fmtIndex.format(Number(value)),
-                          `Index (base ${PORTFOLIO_BASE})`,
+                        formatter={(value, name) => [
+                          value == null ? "-" : fmtIndex.format(Number(value)),
+                          name === "base" ? `Portfolio (base ${PORTFOLIO_BASE})` : String(name),
                         ]}
                       />
+                      <Legend />
                       <Line
                         type="monotone"
                         dataKey="base"
+                        name="Portfolio"
                         stroke="hsl(210 68% 46%)"
-                        strokeWidth={2}
+                        strokeWidth={2.25}
                         dot={false}
                         animationDuration={500}
                       />
+                      {marketSeries.map((series) => (
+                        <Line
+                          key={series.symbol}
+                          type="monotone"
+                          dataKey={marketIndexDataKey(series.symbol)}
+                          name={series.label}
+                          stroke={MARKET_INDEX_COLORS[series.symbol] ?? "#6c757a"}
+                          strokeWidth={1.75}
+                          strokeDasharray="5 4"
+                          dot={false}
+                          connectNulls
+                          animationDuration={500}
+                        />
+                      ))}
                     </LineChart>
                   </ResponsiveContainer>
                 </div>

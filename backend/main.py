@@ -26,10 +26,21 @@ from config.internal_auth import (
     internal_auth_enabled,
     verify_internal_access,
 )
+from config.market_indexes import (
+    get_all_index_quotes,
+    get_index_history,
+    get_index_quote,
+    get_indexes_history,
+    list_market_indexes,
+)
 from config.nav_history import PERIODS, nav_history_for_fund
 from config.neo4j_session import init_driver
 from data.merge import build_merged_data
-from reports.portfolio_pdf import PortfolioReportPdf, portfolio_pdf_filename
+from reports.portfolio_pdf import (
+    PortfolioReportPdf,
+    portfolio_pdf_filename,
+    resolve_peer_tables,
+)
 from schemas.internal import InternalLoginRequest
 from schemas.portfolio import PortfolioExportRequest
 
@@ -107,6 +118,76 @@ def get_funds(_: None = Depends(verify_internal_access)) -> list[dict[str, Any]]
 def get_search(q: str = Query(default="")) -> list[dict[str, Any]]:
     """Ranked fund matches by name, AMC, or category field."""
     return search.search(FUNDS_INDEX, q)
+
+
+@app.get("/api/market/indexes")
+def get_market_indexes() -> dict[str, Any]:
+    """Fixed broader-market index catalog used by the dashboard."""
+    return {"indexes": list_market_indexes()}
+
+
+@app.get("/api/market/indexes/quotes")
+def get_market_index_quotes() -> dict[str, Any]:
+    """Live quotes for Nifty 50 / 100 / 500 / Midcap 150 / Smallcap 250."""
+    return {"quotes": get_all_index_quotes()}
+
+
+@app.get("/api/market/indexes/history")
+def get_market_indexes_history_route(
+    start: str = Query(..., description="Portfolio / series start date YYYY-MM-DD"),
+    end: str | None = Query(default=None, description="End date YYYY-MM-DD (default: today)"),
+    symbols: str | None = Query(
+        default=None,
+        description="Comma-separated NSE symbols; default = full catalog",
+    ),
+) -> dict[str, Any]:
+    """Daily closes for one or more catalog indexes over a shared date window."""
+    catalog = list_market_indexes()
+    if symbols and symbols.strip():
+        requested = [part.strip() for part in symbols.split(",") if part.strip()]
+    else:
+        requested = [item["symbol"] for item in catalog]
+
+    series = get_indexes_history(requested, start, end)
+    return {"start": start, "end": end, "series": series}
+
+
+@app.get("/api/market/indexes/{symbol}/quote")
+def get_market_index_quote(symbol: str) -> dict[str, Any]:
+    try:
+        return get_index_quote(symbol)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(
+            status_code=502,
+            detail=f"Failed to fetch index quote: {exc}",
+        ) from exc
+
+
+@app.get("/api/market/indexes/{symbol}/history")
+def get_market_index_history_route(
+    symbol: str,
+    start: str = Query(..., description="Start date YYYY-MM-DD"),
+    end: str | None = Query(default=None, description="End date YYYY-MM-DD (default: today)"),
+) -> dict[str, Any]:
+    """Daily closes from start through end for one catalog index."""
+    try:
+        points = get_index_history(symbol, start, end)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except RuntimeError as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    return {
+        "symbol": symbol,
+        "label": next(
+            (item["label"] for item in list_market_indexes() if item["symbol"] == symbol),
+            symbol,
+        ),
+        "start": start,
+        "end": end,
+        "points": points,
+    }
 
 
 @app.get("/api/categories")
@@ -278,8 +359,9 @@ def export_portfolio_pdf(
         raise HTTPException(status_code=400, detail="At least one fund is required.")
 
     payload = body.model_dump(by_alias=False)
+    peer_tables = resolve_peer_tables(payload.get("funds") or [], FUNDS_INDEX, CATEGORIES)
     try:
-        pdf_bytes = PortfolioReportPdf(payload).build()
+        pdf_bytes = PortfolioReportPdf(payload, peer_tables=peer_tables).build()
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(
             status_code=500,

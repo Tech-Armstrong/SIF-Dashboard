@@ -21,6 +21,7 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.platypus import (
     Flowable,
+    KeepTogether,
     PageBreak,
     Paragraph,
     SimpleDocTemplate,
@@ -39,6 +40,17 @@ CHART_COLORS = [
     "#e87ba4",
     "#eb6834",
 ]
+
+# Aligned with frontend PortfolioBuilder MARKET_INDEX_COLORS
+MARKET_INDEX_COLORS = {
+    "NIFTY 50": "#e34948",
+    "NIFTY 100": "#eda100",
+    "NIFTY 500": "#008300",
+    "NIFTY MIDCAP 150": "#4a3aa7",
+    "NIFTY SMLCAP 250": "#eb6834",
+}
+
+PORTFOLIO_LINE_COLOR = "#2a78d6"
 
 RETURN_PERIODS = ("1M", "3M", "6M", "1Y")
 HIDDEN_FACT_KEYS = frozenset(
@@ -92,6 +104,14 @@ NEG = colors.HexColor("#b5341f")
 PAGE_BORDER = colors.black
 BOX_PAD_X = 20
 INNER_WIDTH = CONTENT_WIDTH - BOX_PAD_X
+PAGE_DISCLAIMER = (
+    "*Disclaimer: Investments in Specialised Investment Funds (SIFs) are not "
+    "obligations of or guaranteed by us, and are subject to investment risks. "
+    "The data and analysis shared in this document are offered as part of our "
+    "research service offerings. This is not an explicit recommendation for any "
+    "SIF transactions. Our analysis is not intended to serve as a substitute for "
+    "professional investment advice."
+)
 
 
 def portfolio_pdf_filename(client_name: str) -> str:
@@ -106,8 +126,113 @@ def _sanitize_text(text: str) -> str:
     cleaned = cleaned.replace("₹", "Rs. ")
     cleaned = cleaned.replace("&nbsp;", " ")
     cleaned = cleaned.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
+    cleaned = re.sub(r"<[^>]+>", "", cleaned)
     cleaned = re.sub(r"\s+", " ", cleaned).strip()
     return cleaned
+
+
+def resolve_peer_tables(
+    selected_funds: list[dict[str, Any]],
+    funds_index: list[dict[str, Any]],
+    categories: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Filter category peer-research tables to the funds in the portfolio.
+
+    Returns a list of category blocks:
+      [{ categoryTitle, sections: [{ title, cols, rows }] }]
+    Columns are kept when section col accent matches a selected fund's accent
+    (same rule as the fund Peer Comparison UI).
+    """
+    from search import find_fund
+
+    category_by_id = {str(c.get("id")): c for c in categories if c.get("id")}
+
+    # Preserve portfolio order when grouping by category.
+    category_order: list[str] = []
+    accents_by_category: dict[str, set[str]] = {}
+
+    for selected in selected_funds:
+        fund_id = str(selected.get("fund_id") or selected.get("fundId") or "")
+        if not fund_id:
+            continue
+        index_entry = find_fund(funds_index, fund_id)
+        if index_entry is None:
+            continue
+        category_id = str(index_entry.get("categoryId") or "")
+        accent = str(index_entry.get("accent") or "")
+        if not category_id or not accent:
+            continue
+        if category_id not in accents_by_category:
+            accents_by_category[category_id] = set()
+            category_order.append(category_id)
+        accents_by_category[category_id].add(accent)
+
+    blocks: list[dict[str, Any]] = []
+    for category_id in category_order:
+        category = category_by_id.get(category_id)
+        if not category:
+            continue
+
+        wanted_accents = accents_by_category[category_id]
+        filtered_sections: list[dict[str, Any]] = []
+
+        for section in category.get("sections") or []:
+            if not isinstance(section, dict) or section.get("type") != "table":
+                continue
+
+            cols = section.get("cols") or []
+            if not isinstance(cols, list) or not cols:
+                continue
+
+            kept_idx = [
+                i
+                for i, col in enumerate(cols)
+                if isinstance(col, (list, tuple))
+                and len(col) >= 3
+                and str(col[2]) in wanted_accents
+            ]
+            if not kept_idx:
+                continue
+
+            filtered_cols = [
+                [str(cols[i][0]), str(cols[i][1]), str(cols[i][2])] for i in kept_idx
+            ]
+
+            filtered_rows: list[list[str]] = []
+            for row in section.get("rows") or []:
+                if not isinstance(row, list) or not row:
+                    continue
+                label = _sanitize_text(str(row[0]))
+                cells = [
+                    _sanitize_text(str(row[i + 1]))
+                    if i + 1 < len(row) and row[i + 1]
+                    else "—"
+                    for i in kept_idx
+                ]
+                filtered_rows.append([label, *cells])
+
+            if not filtered_rows:
+                continue
+
+            filtered_sections.append(
+                {
+                    "title": str(section.get("title") or "Comparison"),
+                    "cols": filtered_cols,
+                    "rows": filtered_rows,
+                }
+            )
+
+        if filtered_sections:
+            blocks.append(
+                {
+                    "categoryTitle": str(
+                        category.get("title") or category.get("chip") or category_id
+                    ),
+                    "sections": filtered_sections,
+                }
+            )
+
+    return blocks
 
 
 def _grid_columns(item_count: int, max_facts: int) -> int:
@@ -167,6 +292,41 @@ def _fmt_date_label(date_str: str) -> str:
         return parsed.strftime("%d %b %y")
     except ValueError:
         return _sanitize_text(date_str)
+
+
+def _rebase_index_on_dates(
+    points: list[dict[str, Any]],
+    portfolio_dates: list[str],
+    base: float,
+) -> dict[str, float | None]:
+    """Forward-fill closes onto portfolio dates; rebase to `base` at first close."""
+    if not points or not portfolio_dates:
+        return {}
+
+    by_date: dict[str, float] = {}
+    for point in points:
+        date_key = str(point.get("date") or "")[:10]
+        try:
+            close = float(point.get("close"))
+        except (TypeError, ValueError):
+            continue
+        if date_key:
+            by_date[date_key] = close
+
+    last_close: float | None = None
+    base_close: float | None = None
+    out: dict[str, float | None] = {}
+    for date_key in portfolio_dates:
+        exact = by_date.get(date_key[:10])
+        if exact is not None:
+            last_close = exact
+        if last_close is None:
+            out[date_key] = None
+            continue
+        if base_close is None or base_close == 0:
+            base_close = last_close
+        out[date_key] = (last_close / base_close) * base
+    return out
 
 
 def _truncate_label(text: str, max_len: int = 34) -> str:
@@ -284,8 +444,14 @@ class RoundedCardFlowable(Flowable):
 class PortfolioReportPdf:
     """Build a portfolio PDF that mirrors the on-screen preview grid."""
 
-    def __init__(self, payload: dict[str, Any]) -> None:
+    def __init__(
+        self,
+        payload: dict[str, Any],
+        *,
+        peer_tables: list[dict[str, Any]] | None = None,
+    ) -> None:
         self.payload = payload
+        self.peer_tables = peer_tables or []
         self.styles = getSampleStyleSheet()
         self.title_style = ParagraphStyle(
             "ReportTitle",
@@ -423,22 +589,23 @@ class PortfolioReportPdf:
         )
         canvas.restoreState()
 
-    def _page_footer(self, canvas: Any, doc: Any) -> None:
+    def _on_page(self, canvas: Any, doc: Any) -> None:
         self._draw_page_border(canvas)
-        canvas.saveState()
-        canvas.setFont("Helvetica", 7.5)
-        canvas.setFillColor(MUTED)
-        canvas.drawString(
+        style = ParagraphStyle(
+            "PageDisclaimer",
+            fontName="Helvetica",
+            fontSize=5.5,
+            leading=7,
+            textColor=MUTED,
+            alignment=1,  # centre
+        )
+        paragraph = Paragraph(_sanitize_text(PAGE_DISCLAIMER), style)
+        paragraph.wrap(CONTENT_WIDTH, 28 * mm)
+        paragraph.drawOn(
+            canvas,
             MARGIN_X,
-            10 * mm,
-            f"SIF Research Dashboard  ·  Generated {date.today().strftime('%d %b %Y')}",
+            PAGE_BORDER_INSET + 2.5 * mm,
         )
-        canvas.drawRightString(
-            PAGE_WIDTH - MARGIN_X,
-            10 * mm,
-            f"Page {canvas.getPageNumber()}",
-        )
-        canvas.restoreState()
 
     def build(self) -> bytes:
         buffer = io.BytesIO()
@@ -448,7 +615,7 @@ class PortfolioReportPdf:
             leftMargin=MARGIN_X,
             rightMargin=MARGIN_X,
             topMargin=14 * mm,
-            bottomMargin=16 * mm,
+            bottomMargin=24 * mm,
             title="Portfolio Report",
         )
 
@@ -459,8 +626,12 @@ class PortfolioReportPdf:
         story.extend(self._build_returns_panel())
         story.append(PageBreak())
         story.extend(self._build_visuals_page())
+        peer_story = self._build_peer_comparison_pages()
+        if peer_story:
+            story.append(PageBreak())
+            story.extend(peer_story)
 
-        doc.build(story, onFirstPage=self._page_footer, onLaterPages=self._page_footer)
+        doc.build(story, onFirstPage=self._on_page, onLaterPages=self._on_page)
         return buffer.getvalue()
 
     def _build_visuals_page(self) -> list[Any]:
@@ -820,6 +991,7 @@ class PortfolioReportPdf:
         current_value = float(series.get("current_value") or 0)
         total_return = series.get("total_return_pct")
         excluded = int(series.get("excluded_fund_count") or 0)
+        market_indexes: list[dict[str, Any]] = self.payload.get("market_indexes") or []
 
         max_points = 60
         step = max(1, len(points) // max_points)
@@ -827,10 +999,38 @@ class PortfolioReportPdf:
         if sampled[-1] != points[-1]:
             sampled.append(points[-1])
 
-        plot_data = [
+        sampled_dates = [str(point.get("date") or "") for point in sampled]
+        full_dates = [str(point.get("date") or "") for point in points]
+
+        portfolio_plot = [
             (index, float(point.get("index") or 0) * portfolio_base)
             for index, point in enumerate(sampled)
         ]
+        plot_series: list[list[tuple[int, float]]] = [portfolio_plot]
+        line_meta: list[tuple[str, str]] = [("Portfolio", PORTFOLIO_LINE_COLOR)]
+
+        for index_payload in market_indexes:
+            raw_points = index_payload.get("points") or []
+            if not raw_points:
+                continue
+            rebased = _rebase_index_on_dates(raw_points, full_dates, portfolio_base)
+            index_plot: list[tuple[int, float]] = []
+            for sample_index, date_key in enumerate(sampled_dates):
+                value = rebased.get(date_key)
+                if value is None:
+                    continue
+                index_plot.append((sample_index, float(value)))
+            if len(index_plot) < 2:
+                continue
+            symbol = str(index_payload.get("symbol") or "")
+            label = str(index_payload.get("label") or symbol or "Index")
+            color_hex = (
+                index_payload.get("color")
+                or MARKET_INDEX_COLORS.get(symbol)
+                or CHART_COLORS[len(line_meta) % len(CHART_COLORS)]
+            )
+            plot_series.append(index_plot)
+            line_meta.append((label, str(color_hex)))
 
         chart_width = INNER_WIDTH - 16
         chart_height = 155
@@ -841,10 +1041,14 @@ class PortfolioReportPdf:
         plot.y = 16
         plot.width = chart_width - 46
         plot.height = chart_height - 32
-        plot.data = [plot_data]
-        plot.lines[0].strokeColor = HexColor("#2a78d6")
-        plot.lines[0].strokeWidth = 2
-        plot.lines[0].symbol = makeMarker("FilledCircle", size=0)
+        plot.data = plot_series
+
+        for series_index, (_label, color_hex) in enumerate(line_meta):
+            plot.lines[series_index].strokeColor = _safe_hex_color(
+                color_hex, PORTFOLIO_LINE_COLOR
+            )
+            plot.lines[series_index].strokeWidth = 2 if series_index == 0 else 1.5
+            plot.lines[series_index].symbol = makeMarker("FilledCircle", size=0)
 
         if len(sampled) > 1:
             plot.xValueAxis.valueMin = 0
@@ -874,6 +1078,23 @@ class PortfolioReportPdf:
             [Paragraph(meta, self.meta_style)],
             [DrawingFlowable(drawing, chart_width, chart_height)],
         ]
+
+        if len(line_meta) > 1:
+            legend_bits = []
+            for label, color_hex in line_meta:
+                safe_label = _sanitize_text(label)
+                legend_bits.append(
+                    f'<font color="{color_hex}">●</font> {safe_label}'
+                )
+            box_rows.append(
+                [
+                    Paragraph(
+                        " · ".join(legend_bits),
+                        self.meta_style,
+                    )
+                ]
+            )
+
         if excluded > 0:
             box_rows.append(
                 [
@@ -1014,3 +1235,175 @@ class PortfolioReportPdf:
             Paragraph("Fund returns", self.section_style),
             self._boxed_panel([[table]], background=CARD),
         ]
+
+    def _build_peer_comparison_pages(self) -> list[Any]:
+        """Peer research tables after visuals — filtered to portfolio funds.
+
+        Each section title + table is a KeepTogether unit. Units pack into the
+        remaining page space; if the next unit does not fit, the whole unit
+        moves to the following page (no orphaned headings, no near-empty pages).
+        """
+        if not self.peer_tables:
+            return []
+
+        label_style = ParagraphStyle(
+            "PeerLabel",
+            parent=self.fact_key_style,
+            fontName="Helvetica-Bold",
+            fontSize=7,
+            leading=9,
+            textColor=INK,
+            wordWrap="LTR",
+        )
+        cell_style = ParagraphStyle(
+            "PeerCell",
+            parent=self.fact_value_style,
+            fontSize=7,
+            leading=9,
+            wordWrap="LTR",
+            splitLongWords=1,
+        )
+        col_short_style = ParagraphStyle(
+            "PeerColShort",
+            parent=self.fact_key_style,
+            fontName="Helvetica-Bold",
+            fontSize=7.5,
+            leading=9,
+            textColor=INK,
+            alignment=1,
+        )
+        page_title_style = ParagraphStyle(
+            "PeerPageTitle",
+            parent=self.section_style,
+            spaceBefore=0,
+            spaceAfter=4,
+            keepWithNext=True,
+        )
+        page_intro_style = ParagraphStyle(
+            "PeerPageIntro",
+            parent=self.subtitle_style,
+            spaceAfter=8,
+            keepWithNext=True,
+        )
+        subsection_style = ParagraphStyle(
+            "PeerSectionTitle",
+            parent=self.section_style,
+            fontSize=11,
+            leading=14,
+            spaceBefore=8,
+            spaceAfter=6,
+            keepWithNext=True,
+        )
+        category_style = ParagraphStyle(
+            "PeerCategoryTitle",
+            parent=self.section_style,
+            fontSize=13,
+            leading=16,
+            spaceBefore=10,
+            spaceAfter=4,
+            keepWithNext=True,
+        )
+
+        # Build individual section units first, then pack: first unit carries
+        # the page title so it never sits alone on a page.
+        units: list[Any] = []
+        for block_idx, block in enumerate(self.peer_tables):
+            sections = [
+                section
+                for section in (block.get("sections") or [])
+                if (section.get("cols") or []) and (section.get("rows") or [])
+            ]
+            if not sections:
+                continue
+
+            for section_idx, section in enumerate(sections):
+                cols = section.get("cols") or []
+                rows = section.get("rows") or []
+
+                fund_count = len(cols)
+                label_w = INNER_WIDTH * (0.28 if fund_count <= 2 else 0.22)
+                fund_w = (INNER_WIDTH - label_w) / max(fund_count, 1)
+                col_widths = [label_w, *[fund_w] * fund_count]
+
+                header_cells: list[Any] = [Paragraph("", label_style)]
+                for col in cols:
+                    short = _sanitize_text(str(col[0] if len(col) > 0 else ""))
+                    amc = _sanitize_text(str(col[1] if len(col) > 1 else ""))
+                    header_cells.append(
+                        Paragraph(
+                            f"{short}<br/><font size='6.5' color='#6c757a'>{amc}</font>",
+                            col_short_style,
+                        )
+                    )
+
+                table_rows: list[list[Any]] = [header_cells]
+                for row in rows:
+                    label = _sanitize_text(str(row[0] if row else ""))
+                    cells = row[1:] if len(row) > 1 else []
+                    table_row: list[Any] = [Paragraph(label, label_style)]
+                    for ci in range(fund_count):
+                        value = cells[ci] if ci < len(cells) else "—"
+                        table_row.append(
+                            Paragraph(_sanitize_text(str(value)) or "—", cell_style)
+                        )
+                    table_rows.append(table_row)
+
+                table = Table(table_rows, colWidths=col_widths, repeatRows=1)
+                style_cmds: list[Any] = [
+                    ("BACKGROUND", (0, 0), (-1, 0), WASH),
+                    ("BOX", (0, 0), (-1, -1), 0.75, LINE),
+                    ("INNERGRID", (0, 0), (-1, -1), 0.25, LINE),
+                    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                    ("LEFTPADDING", (0, 0), (-1, -1), 5),
+                    ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+                    ("TOPPADDING", (0, 0), (-1, -1), 5),
+                    ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+                ]
+                for ci, col in enumerate(cols, start=1):
+                    accent = _safe_hex_color(
+                        str(col[2]) if len(col) > 2 else None,
+                        fallback="#1f6b4a",
+                    )
+                    style_cmds.append(("LINEABOVE", (ci, 0), (ci, 0), 2, accent))
+
+                table.setStyle(TableStyle(style_cmds))
+
+                piece: list[Any] = []
+                if section_idx == 0:
+                    if block_idx > 0:
+                        piece.append(Spacer(1, 10))
+                    piece.append(
+                        Paragraph(
+                            _sanitize_text(str(block.get("categoryTitle") or "Category")),
+                            category_style,
+                        )
+                    )
+
+                piece.extend(
+                    [
+                        Paragraph(
+                            _sanitize_text(str(section.get("title") or "Comparison")),
+                            subsection_style,
+                        ),
+                        self._boxed_panel([[table]], background=CARD),
+                        Spacer(1, 6),
+                    ]
+                )
+                units.append(piece)
+
+        if not units:
+            return []
+
+        # Pack title into the first unit so a heading never sits alone when the
+        # first table needs a fresh page. Later units stay independent so the
+        # frame can fit as many complete tables as space allows.
+        first = [
+            Paragraph("Peer research comparison", page_title_style),
+            Paragraph(
+                "Side-by-side peer research for funds in this portfolio, "
+                "grouped by category.",
+                page_intro_style,
+            ),
+            *units[0],
+        ]
+        return [KeepTogether(first), *[KeepTogether(u) for u in units[1:]]]

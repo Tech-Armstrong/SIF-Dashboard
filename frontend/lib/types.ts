@@ -334,12 +334,25 @@ export interface PortfolioExportSeries {
   points: PortfolioExportNavPoint[];
 }
 
+export interface PortfolioExportMarketIndexPoint {
+  date: string;
+  close: number;
+}
+
+export interface PortfolioExportMarketIndex {
+  symbol: string;
+  label: string;
+  points: PortfolioExportMarketIndexPoint[];
+  color?: string | null;
+}
+
 export interface PortfolioExportRequest {
   clientName: string;
   totalAmount: number;
   funds: PortfolioExportFund[];
   portfolioSeries?: PortfolioExportSeries | null;
   portfolioBase?: number;
+  marketIndexes?: PortfolioExportMarketIndex[];
 }
 
 // ---------- /api/meta ----------

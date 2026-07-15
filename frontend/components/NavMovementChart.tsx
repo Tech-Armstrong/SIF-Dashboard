@@ -206,8 +206,8 @@ export function NavMovementChart({
     return () => { cancelled = true; };
   }, [startDate, selectedSymbols]);
 
-  const chartData: Record<string, unknown>[] = useMemo(() => {
-    if (!comparing || points.length === 0) return points;
+  const chartData = useMemo((): Record<string, unknown>[] => {
+    if (!comparing || points.length === 0) return points as Record<string, unknown>[];
 
     const dates = points.map((p) => p.date);
     const baseNav = points[0].nav;

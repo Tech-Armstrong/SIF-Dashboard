@@ -123,6 +123,15 @@ export default function FundDetailPage({
       {activeTab === "return" ? (
         <div className="detail-tab-panel" role="tabpanel">
           <NavMovementChart fundId={fundId} accent={fund.accent} />
+
+          {category?.sections.map((s) => (
+            <SectionRenderer
+              key={s.id}
+              section={s}
+              emphColor={emphColor}
+              visibleCols={ownShort ? new Set([ownShort]) : null}
+            />
+          ))}
         </div>
       ) : null}
 

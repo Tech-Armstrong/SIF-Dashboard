@@ -1826,42 +1826,12 @@ table.cmp thead th.col--emph {
   color: #fff;
 }
 
-.nav-chart__stats {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.nav-chart__stats div {
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 9px 10px;
-  background: color-mix(in srgb, var(--paper-2) 38%, var(--card));
-}
-
-.nav-chart__stats span {
-  display: block;
+.nav-chart__title-meta {
+  font-weight: 400;
+  font-size: 14px;
   color: var(--muted);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-
-.nav-chart__stats strong {
-  display: block;
-  margin-top: 2px;
-  font-size: 16px;
+  margin-left: 10px;
   font-variant-numeric: tabular-nums;
-}
-
-.nav-chart__stats .is-pos {
-  color: var(--pos, #1f7a4d);
-}
-
-.nav-chart__stats .is-neg {
-  color: var(--neg, #b5341f);
 }
 
 /* Trailing-returns summary table above the chart. */
@@ -1909,6 +1879,110 @@ table.cmp thead th.col--emph {
 
 .returns-table td.is-neg {
   color: var(--neg, #b5341f);
+}
+
+.nav-chart__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.nav-chart__index-select {
+  position: relative;
+}
+
+.nav-chart__index-btn {
+  border: 1px solid var(--line);
+  background: var(--card, #fff);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.nav-chart__index-btn:hover {
+  border-color: var(--ink-soft, #4a5560);
+}
+
+.nav-chart__index-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 20;
+  min-width: 220px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card, #fff);
+  box-shadow: 0 8px 24px rgba(26, 29, 33, 0.12);
+}
+
+.nav-chart__index-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.nav-chart__index-option:hover {
+  background: var(--wash, #f4f1ea);
+}
+
+.nav-chart__index-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex: 0 0 auto;
+}
+
+.nav-chart__index-clear {
+  margin-top: 4px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.nav-chart__index-clear:hover {
+  color: var(--ink);
+}
+
+.nav-chart__legend {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  padding-top: 6px;
+  font-size: 11px;
+  color: var(--ink);
+}
+
+.nav-chart__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-chart__legend-line {
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.nav-chart__legend-line--dashed {
+  background: none !important;
+  border-top: 2px dashed;
+  border-color: inherit;
+  height: 0;
 }
 
 .nav-chart__plot {
@@ -1962,14 +2036,6 @@ table.cmp thead th.col--emph {
   bottom: 8px;
 }
 
-.nav-chart__range {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 12px;
-}
 
 .nav-chart__state {
   min-height: 180px;
@@ -1992,9 +2058,6 @@ table.cmp thead th.col--emph {
     justify-content: flex-start;
   }
 
-  .nav-chart__stats {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ---------- misc ---------- */

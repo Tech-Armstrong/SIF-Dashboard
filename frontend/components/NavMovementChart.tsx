@@ -206,7 +206,7 @@ export function NavMovementChart({
     return () => { cancelled = true; };
   }, [startDate, selectedSymbols]);
 
-  const chartData = useMemo(() => {
+  const chartData: Record<string, unknown>[] = useMemo(() => {
     if (!comparing || points.length === 0) return points;
 
     const dates = points.map((p) => p.date);
@@ -220,7 +220,7 @@ export function NavMovementChart({
     }
 
     return points.map((point) => {
-      const row: Record<string, string | number | null> = {
+      const row: Record<string, unknown> = {
         ...point,
         nav: baseNav === 0 ? 0 : (point.nav / baseNav) * GROWTH_BASE,
       };
@@ -241,7 +241,7 @@ export function NavMovementChart({
       const nav = row.nav as number;
       if (nav != null) vals.push(nav);
       for (const series of marketSeries) {
-        const v = (row as Record<string, unknown>)[marketIndexDataKey(series.symbol)] as number | null;
+        const v = row[marketIndexDataKey(series.symbol)] as number | null;
         if (v != null) vals.push(v);
       }
     }

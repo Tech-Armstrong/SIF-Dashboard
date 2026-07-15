@@ -97,6 +97,7 @@ function rebasedIndexValues(
 
 interface ChartPoint extends NavPoint {
   displayDate: string;
+  [key: string]: string | number | null | undefined;
 }
 
 function CustomTooltip({
@@ -206,8 +207,8 @@ export function NavMovementChart({
     return () => { cancelled = true; };
   }, [startDate, selectedSymbols]);
 
-  const chartData = useMemo((): Record<string, unknown>[] => {
-    if (!comparing || points.length === 0) return points as Record<string, unknown>[];
+  const chartData = useMemo((): ChartPoint[] => {
+    if (!comparing || points.length === 0) return points;
 
     const dates = points.map((p) => p.date);
     const baseNav = points[0].nav;
@@ -220,7 +221,7 @@ export function NavMovementChart({
     }
 
     return points.map((point) => {
-      const row: Record<string, unknown> = {
+      const row: ChartPoint = {
         ...point,
         nav: baseNav === 0 ? 0 : (point.nav / baseNav) * GROWTH_BASE,
       };
